@@ -1,0 +1,389 @@
+#vtab {
+        margin: auto;
+        width:980px;
+        height: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    #vtab > ul > li {
+        
+        list-style-type: none;
+            
+    }
+	 #vtab > ul > li a { font-family:"Myriad Pro"; font-size:14px; color:#808080;width:101px;
+       background-color:#f7f7f7!important;
+        display: block;
+        margin: auto;
+        padding:9px 0 6px 39px;
+        position: relative;
+        border-right: none; border:1px #cecece solid;
+        margin-bottom: -1px}
+         #vtab > ul > li a:hover { background-color:#eee!important; }
+	  #vtab > ul > li a:hover { font-family:"Myriad Pro"; font-size:14px; text-decoration:none;}
+    #vtab > ul > li.home a {
+        background: url(../images/profile_icon_1.png) no-repeat 15px 8px;
+    }
+    #vtab > ul > li.wishlist a{
+        background:url(../images/wishlist_icon.png) no-repeat 15px 8px;
+    }
+    #vtab > ul > li.support a{
+        background:url(../images/my_order_icon.png) no-repeat 15px 8px;
+    }
+    #vtab > ul > li.selected a {
+        border: 1px solid #ddd;
+        border-right: none;
+        z-index: 10;
+        background-color:#fff !important;
+        position: relative;
+    }
+	
+	 #vtab > ul > li.add_desigen a{
+        background:url(../images/add_design_icon.png) no-repeat 15px 8px;
+    }
+	
+	 #vtab > ul > li.my_desigen a{
+        background:url(../images/my_design_icon.png) no-repeat 15px 8px;
+    }
+	 #vtab > ul > li.earning a{
+        background:url(../images/earnings_icon.png) no-repeat 15px 8px;
+    }
+	
+    #vtab > ul {
+        float: left;
+        width: 110px;
+        text-align: left;
+        display: block;
+        margin: auto 0;
+        padding: 0;
+        position: relative;
+    }
+    #vtab > div {
+        background-color: #fff;
+        margin-left: 140px;
+        border: 1px solid #ddd;
+        min-height:446px;
+        padding: 12px;
+        position: relative;
+        z-index: 9;
+    }
+    #vtab > div > h4 {
+        color: #800;
+        font-size: 1.2em;
+        border-bottom: 1px dotted #800;
+        padding-top: 5px;
+        margin-top: 0;
+    }
+    #loginForm label {
+        float: left;
+        width: 100px;
+        text-align: right;
+        clear: left;
+        margin-right: 15px;
+    }
+    #loginForm fieldset {
+        border: none;
+    }
+    #loginForm fieldset > div {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    #loginForm #login {
+        margin-left: 115px;
+    }
+	
+	
+.top_button_box{ width:600px;}
+.top_button a, .shipping_in_button a, .shipping_in_button1 a  { width:100px; border:1px #DDDDDD solid; color:#999; float:left; text-align:center; font-size:14px; font-style:italic; padding:7px 0; margin-left:40px; font-family: Georgia, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "Liberation Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;}	
+.shipping_in_button a, .shipping_in_button1 a { margin-left:0px; }
+.top_button a:hover, .shipping_in_button a:hover, .shipping_in_button1 a:hover { background: #eee; text-decoration: none; }
+.point{  font-family:Arial, Helvetica, sans-serif; color:#999999; text-align:center; width:30px; float:left; padding:8px 0;}
+
+.shipping_in_button a{color:#a0a0a0;font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; font-style:italic;}	
+.shipping_in_button1 a{color:#ffca29;font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; font-style:italic;}
+.tab_mid_box{ width:705px;margin-left:40px; padding:0; margin-top:60px;}
+.tab_mid_box .error{color: #CE2700;font-family: "Tahoma"; font-size: 12px; margin-top:5px;}
+.tab_mid_box label{color: #666666;  font: 14px "Myriad Pro" !important;}
+
+.tab_left_box{ width:460px; float:left;}
+.tab_right_box{ width:156px; float:right;}
+.left_input_box{ width:230px; float:left;}
+.right_input_box{ width:230px; float:right; padding: 0;}
+
+.left_input_box input[type="text"], .right_input_box input[type="text"], .taber_select_box, .email_input {
+    border-color: #CCCCCC #F5F5F5 #F5F5F5 #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    color: #444444;
+    float: right;
+    font-size: 12px;
+    margin: 12px 32px 0;
+    padding: 6px 10px;
+    width: 176px;
+}	
+.left_input_box input[type="text"]:focus, .right_input_box input[type="text"]:focus, .taber_select_box:focus, .email_input:focus {
+	
+	background:#fff;border: 1px solid #c9c9c9;
+    box-shadow: 0 0 4px #CCCCCC;
+	
+}
+.taber_select_box {
+	
+	width: 198px;
+}
+.email_input{
+    width:406px;}	
+.tab_left_box label{color: #666666;font-family:Arial, Helvetica, sans-serif;font-size: 14px;}
+.tab_check_box{ width:19px;border: 1px solid #999999;}	
+.save_button{ width:101px; height:28px; border:0px; background:url(../images/save_button.png) no-repeat; cursor:pointer; margin-top:20px;}
+
+.tab_right_box label{ color: #666666;
+    font-family: "Myriad Pro";
+    font-size: 14px;}
+    #vtab > ul > li.support1{  background:url(../images/red_icon.jpg) no-repeat  !important; height:17px;}	
+
+#vtab > ul > li.support1 a{ color:#FFFFFF;} 
+.scegli_file_button{ width:77px; height:20px; background:url(../images/scegli_file.png) no-repeat; border:0px; cursor:pointer; margin-top:10px;}
+
+/*my Order css start*/
+.top_font{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#7c7c7c; text-align:center;}
+.tab_mid_box1 {
+    margin-left: 40px;
+    margin-top: 60px;
+    padding: 0;
+    width: 761px;
+}
+.bottem_border1 {
+    border-bottom: 2px dotted #BFBFBF;
+    margin: 20px;
+    width: 684px;
+}
+.yello_text{ color:#FFCA29;}
+/*wish list css start*/
+.tab_mid_box2 {
+    margin-left: 40px;
+    margin-top:0px;
+    padding: 0;
+    width: 761px;
+}
+.tab_mid_box2 h3{ font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; color:#7c7c7c; margin:0px; padding:0px; font-weight:normal;}
+.wish_list_image_box{ width:730px; padding:20px 0;}
+.wish_list_image_box_left{ width:150px; border:1px #CCCCCC solid; float:left; position:relative; margin:0 0 5px 0}
+.wishlist_image{ width:137px; margin:3px;}
+.delet_image {
+    position: absolute;
+    right: -11px;
+    top: -12px;
+    width: 20px;
+}
+.wish_list_image_box_left1{ width:143px;float:left; margin-right:50px;}
+.wish_list_image_box_left1 h3{ font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; color:#29b409; text-align:center; margin:0px; padding:0px; font-weight:normal;}
+.wish_list_image_box_left2{ width:143px;float:right;}
+.wish_list_image_box_left2 h3{ font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; color:#c32020; text-align:center; margin:0px; padding:0px; font-weight:normal;}
+/*earining css start*/
+.earning_box_left{ width:420px; float:left;border-right:1px dotted #666666; padding:0 40px 0 0;}
+.earning_box_right{ width:264px; float:right;}
+.earning_box_left h2{ font-family:Oswald; font-size:20px; color:#999999; font-weight:normal; margin:0px; padding:0px;}
+.earning_box_right h2{ font-family:Oswald; font-size:20px; color:#999999; font-weight:normal; margin:0px; padding:0px;}
+.earning_box_right h1{ font-family:Oswald!important; font-size:20px!important; color:#999999!important; font-weight:normal!important; margin:0px!important; padding:0px!important;}
+.earning_box_left h1{ font-family:Oswald!important; font-size:20px!important; color:#999999!important; font-weight:normal!important; margin:0px!important; padding:0px!important;}
+.earning_box_right p{  font-size:14px; color:#999999; padding:10px 0; margin:0px;}
+.earning_box_left p{  font-size:14px; color:#999999; padding:10px 0 10px 30px; margin:0px;}
+.earning_box_left p span{  padding:0 0 0 30px; float:right;}
+.earning_box_left p span img{padding:0 5px 0 0; }
+.terms-conditions{ background:url(../images/down_arrow.png) no-repeat left; padding:0 0 0 28px; font-size:14px;color:#999999;}
+.earning_box_left h3{ font-family:Oswald; font-size:14px; color:#999999; font-weight:normal; margin:0px; padding:0 0 0 30px;}
+.last_week_box{ width:266px; margin-left:30px; margin-top:5px;}
+.top_font2 {
+    color: #7C7C7C;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    
+}
+.last_week_text{width:88px; border-bottom:1px #efefef solid; padding:6px 0;}
+
+/*add design css start*/
+.open_button{ background:#b8ebb6; border:1px #2ab320 solid; padding:3px 10px; font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; font-style:italic; text-align:center; color:#1c9016; width:38px; margin:0 0 0 30px;}
+.tab_mid_box3 {
+    margin-left: 30px;
+    margin-top:0px;
+    padding:10px 0;
+    width: 775px;
+}
+
+.earning_box_left p a{  font-size:14px; color:#999999; text-decoration:underline;}
+.tshirt_imagebox{ width:403px; padding:25px 0 10px 0;}
+.tshirt_imagebox_left{ float: left;
+    height: 141px;
+    margin-right: 18px;
+    width: 109px;  }
+.tshirt_imagebox_left_in{ width:107px;border:1px #d0d0d0 solid; position:relative;}
+.tshirt_image{ width:101px; margin:3px;}
+.green_box {
+    background:#0ece0a;
+    bottom: 0;
+    color: #fff;
+    font-size: 10px;
+    height:20px;
+    line-height: 25px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width:20px;
+}
+.open_button2 {
+    background: none repeat scroll 0 0 #B8EBB6;
+    border: 1px solid #2AB320;
+    color: #1C9016;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 14px;
+    font-style: italic;
+    margin: 15px 0 0 0;
+    padding: 3px 10px;
+    text-align: center;
+    width:300px;
+}
+.order_selected{background: none repeat scroll 0 0 #F7F7F7;}
+.open_button a{ color: #1C9016;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 14px; font-style: italic;}
+.select_file_box{ width:226px; padding:0;}	
+.scegli_file_button1 {
+    background: url("../images/scegli_file.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 20px;
+    margin:0 10px;
+    width: 77px;
+}
+.select_file_box label{color: #666666;
+    
+    font-size: 14px;}
+.select_file_box p{ font-family:Georgia, "Times New Roman", Times, serif; font-size:10px; padding:5px 0; font-style:italic; color:#666666}	
+.upload_now_btn{ width:255px; height:32px; background:url(../images/upload_now_button.png) no-repeat; border:0px; cursor:pointer; margin:10px 0;}
+.comment_box_left1 {
+    float: left;
+    width:431px;
+}
+.add_comment_button {
+    background: url("../images/add_this_comment_button.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 19px;
+    margin: 20px 0 0 52px;
+    width: 119px;
+}
+.item_box2 {
+    margin: 0;
+    width:744px;
+}
+.item_image3 {
+    
+     border: 1px solid #D0D0D0;
+  
+    width:101px; padding:2px;
+}
+
+
+#vtab2 {
+        margin:0 0 10px 16px;
+        width:980px;
+        height: 100%;
+        padding-bottom: 30px;
+    }
+    #vtab2 > ul > li {
+       background-color:#f7f7f7!important;
+        list-style-type: none;
+        display: block;float:left;
+        margin: auto;
+        padding:6px 25px 6px 25px;
+        position: relative;
+        border-right: none; border:1px #cecece solid;
+     
+       
+    }
+
+	 #vtab2 > ul > li a { font-family:"Myriad Pro"; font-size:14px; color:#808080;}
+	  #vtab2 > ul > li a:hover { font-family:"Myriad Pro"; font-size:14px; text-decoration:none;}
+
+.earning_product{background: url("../images/l.png") no-repeat; padding:12px 0 0 15px;     color: #999999;
+    font-size: 14px; width:250px; margin: -12px 0 0 49px;}
+
+.earning_product1{background: url("../images/l.png") no-repeat; padding:12px 0 0 15px;     color: #999999;
+    font-size: 14px; width:250px; margin: -7px 0 0 49px; }
+ .select1 {background:#F7F7F7;}
+
+
+
+.gap{ height:12px; display:block; clear:both; }
+
+
+
+
+
+
+
+
+#order-product-table	{
+	margin-bottom: 20px;
+	border: 1px solid #d2d2d2;
+	border-right:0px;
+	}
+#order-product-table td a{
+	color: #393939;
+	}
+#order-product-table td a:hover	{
+	text-decoration: underline;
+	}
+#order-product-table th	{
+	padding: 5px 0 5px 5px;
+	text-align: left;
+	border: 1px solid #d2d2d2;
+	background:#d2d2d2;
+	}
+#order-product-table	.minwidth-1	{
+	min-width: 110px;
+	}
+#order-product-table td	{
+	border: 1px solid #d2d2d2;
+	padding: 5px 0 5px 5px;
+	border-left:0px;
+	border-bottom:0px;
+	}
+
+#order-product-table td.noborder{
+	border:0px;
+	}
+#order-product-table td.right_align,#order-product-table th.right_align{
+text-align:right;
+padding-right:5px;
+}
+
+#order-product-table td.center_align,#order-product-table th.center_align{
+text-align:center !important;
+}
+	
+#order-product-table tr.alternate-row	{
+	background: #ececec;
+	}
+
+
+
+
+.refund_request_textarea{
+    border-color: #CCCCCC #F5F5F5 #F5F5F5 #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    color: #444444;
+    font-size: 12px;
+    width: 450px;
+	height:150px;
+	margin-bottom:15px;
+	margin-top:10px;
+}	
+.refund_request_textarea:focus{
+	
+	background:#fff;border: 1px solid #c9c9c9;
+    box-shadow: 0 0 4px #CCCCCC;
+	
+}
+

@@ -1,0 +1,41 @@
+.file-wrapper {
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.file-wrapper .button {
+  background:url(../images/scegli_file.png) no-repeat 0 0;
+  cursor: pointer;
+  display: inline-block;
+
+  height:20px;
+  width:72px;
+}
+
+.file-wrapper input {
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.file-wrapper input {
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
+
+.file-wrapper input {
+  filter: alpha(opacity=1);
+  -moz-opacity: 0.01;
+  opacity: 0.01;
+}
+
+.file-wrapper input {
+  font-size: 100px;
+}

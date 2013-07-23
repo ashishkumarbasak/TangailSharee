@@ -1,0 +1,148 @@
+
+		div.domtab{
+			padding:0;
+			width:100%;
+			font-size:90%;
+		}
+		ul.domtabs{
+			 float: left;
+    margin:0; padding:0px;
+    width:139px; list-style:none;			
+		}
+		ul.domtabs li{
+			padding:8px 0 8px 13px; border-top:1px #cecece solid;border-left:1px #cecece solid;border-right:1px #cecece solid;
+		}
+		ul.domtabs li:hover{
+			padding:8px 0 8px 13px; border-top:1px #cecece solid;border-left:1px #cecece solid;border-right:1px #cecece solid; background:#000033;
+		}
+		
+		
+		ul.domtabs a:link,
+		ul.domtabs a:visited,
+		ul.domtabs a:active,
+		ul.domtabs a:hover{
+			width:139;
+			padding:0 0 0 25px;
+			display:block;
+			background:#f7f7f7;
+			color:#ccc;
+			height:3em;
+			font-weight:bold;
+			text-decoration:none; font-family:"Myriad Pro"; font-size:14px;
+		}
+		html>body ul.domtabs a:link,
+		html>body ul.domtabs a:visited,
+		html>body ul.domtabs a:active,
+		html>body ul.domtabs a:hover{
+			height:auto; background:#f7f7f7;
+			
+		}
+		ul.domtabs a:hover{
+			background:#696;
+		}
+		div.domtab div{
+			clear:both;
+			width:auto;
+			background:#696;
+			color:#fff;
+			padding:1em 3em;
+		}
+		ul.domtabs li.active a:link,
+		ul.domtabs li.active a:visited,
+		ul.domtabs li.active a:active,
+		ul.domtabs li.active a:hover{
+			background:#696;
+			color:#fff;
+		}
+		#domtabprintview{
+			float:right;
+			padding-right:1em;
+			text-align:right;
+		}
+		#domtabprintview a:link,
+		#domtabprintview a:visited,
+		#domtabprintview a:active,
+		#domtabprintview a:hover{
+			color:#fff;
+		}
+		
+		div.domtab div a:link,
+		div.domtab div a:visited,
+		div.domtab div a:active
+		{
+			color:#fff;
+			display:block;
+			padding:1em .5em;
+			font-weight:bold;
+			font-size:1.3em;
+		}
+		div.domtab div h2 a,
+		div.domtab div h2 a:hover,
+		div.domtab div h2 a:active
+		{
+			color:#cfc;
+			display:inline;
+			padding:0;
+			font-weight:normal;
+			font-size:1em;
+		}
+		
+/* other scheme! */
+#other{
+	font-size:.8em;
+	margin-left:0;
+	margin-bottom:0;
+	float:left; width:980px; padding:30px 0 0 0;
+}
+div#other.domtab div{
+	  background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CECECE;
+    color: #FFFFFF;
+    float: right;
+    position: relative;
+    top: -137px;
+    width: 787px;
+}
+		
+#other ul.domtabs a:hover{
+	background:#669;
+}
+div#other ul.domtabs li.active a:link,
+div#other ul.domtabs li.active a:visited,
+div#other ul.domtabs li.active a:active,
+div#other ul.domtabs li.active a:hover{
+	background:#fff;
+	color:#000; border-right:1px #fff  solid; padding:0 0 0 23px
+}
+
+div#other ul.domtabs li:last-child{ border-bottom:1px #CECECE solid; background:#f74e4e;}
+div#other ul.domtabs li:last-child a{ color:#fff;}
+{ background:#66FF66;} 
+#other div{
+	float:left;
+}
+ul.prevnext{
+	float:left;
+	width:100%;
+}
+ul.prevnext li{
+	float:left;
+	width:49%;
+}
+ul.prevnext li.next{
+	float:right;
+	text-align:right;
+}
+
+li.profile_icon a{background:url(../images/profile_icon_1.png) no-repeat  !important;}
+li.my_order_box{ width:762px; margin:10px;}
+li.my_order a{background:url(../images/my_order_icon.png) no-repeat  !important;}
+li.my_wish a{background:url(../images/wishlist_icon.png) no-repeat  !important;}
+li.my_new a{background:url(../images/new_icon.png) no-repeat  !important;}
+ul.prevnext{ display:none;}
+.taber2{
+    left: 28px;
+    position: relative !important;
+    top: -48px !important;
+}
+.top_button{ width:750px;}

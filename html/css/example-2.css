@@ -1,0 +1,182 @@
+/* $Id: example.css,v 1.5 2006/03/27 02:44:36 pat Exp $ */
+
+/*--------------------------------------------------
+  REQUIRED to hide the non-active tab content.
+  But do not hide them in the print stylesheet!
+  --------------------------------------------------*/
+.tabberlive .tabbertabhide {
+ display:none;
+}
+
+/*--------------------------------------------------
+  .tabber = before the tabber interface is set up
+  .tabberlive = after the tabber interface is set up
+  --------------------------------------------------*/
+.tabber {
+}
+.tabberlive {
+ margin-top:0;
+}
+
+/*--------------------------------------------------
+  ul.tabbernav = the tab navigation list
+  li.tabberactive = the active tab
+  --------------------------------------------------*/
+ul.tabbernav
+{
+ margin:0;
+ padding: 3px 0 3px 0;
+ border-bottom: 1px solid #d2d2d2;
+ font: bold 12px Verdana, sans-serif;
+}
+
+ul.tabbernav li
+{
+ list-style: none;
+ margin: 0;
+ display: inline;
+}
+
+ul.tabbernav li a
+{
+ padding: 3px 10px;
+ margin-left: 3px;
+ border: 1px solid #cecece;
+ border-bottom: none;
+ background: #f7f7f7;
+ text-decoration: none;
+}
+
+ul.tabbernav li a:link { color: #cdcdcd; }
+ul.tabbernav li a:visited { color: #667; }
+
+ul.tabbernav li a:hover
+{
+
+ background: #fff;
+
+}
+
+ul.tabbernav li.tabberactive a
+{
+ background-color: #fff;
+ border-bottom: 1px solid #fff;
+ color:#cdcdcd; font-family:"Myriad Pro"; font-size:13px; font-weight:normal;
+}
+
+ul.tabbernav li.tabberactive a:hover
+{
+ color: #000;
+ background: white;
+ border-bottom: 1px solid white;
+}
+
+/*--------------------------------------------------
+  .tabbertab = the tab content
+  Add style only after the tabber interface is set up (.tabberlive)
+  --------------------------------------------------*/
+.tabberlive .tabbertab {
+ padding:0;
+ border:1px solid #cecece;
+ border-top:0;
+
+ /* If you don't want the tab size changing whenever a tab is changed
+    you can set a fixed height */
+
+ /* height:200px; */
+
+ /* If you set a fix height set overflow to auto and you will get a
+    scrollbar when necessary */
+
+ /* overflow:auto; */
+}
+
+/* If desired, hide the heading since a heading is provided by the tab */
+.tabberlive .tabbertab h2 {
+ display:none;
+}
+.tabberlive .tabbertab h3 {
+ display:none;
+}
+
+/* Example of using an ID to set different styles for the tabs on the page */
+.tabberlive#tab1 {
+}
+.tabberlive#tab2 {
+}
+.tabberlive#tab2 .tabbertab {
+ height:200px;
+ overflow:auto;
+}
+
+.single_product_down_tab{}
+.single_product_down_tab p{   border-bottom: 2px dotted #BFBFBF;color: #808080;font-family: Oswald; font-size: 16px;font-weight: normal; margin: 0 0 0 15px;padding: 8px 15px;width: 243px;}
+.register_content{ width:906px;}
+.register_content_left{ width:526px; float:left; clear:both;}
+.register_content_right{   border-left: 1px dotted #666666;
+    float: right;
+    padding: 0 0 0 39px;
+    width: 275px;}
+.register_heading{ float:left!important; width:100px!important; font-family:Oswald!important; font-size:20px!important; color:#808080!important; margin:0px!important; padding:0px!important; font-weight:normal!important; border:0px!important;}
+.register_form{ float:left; width:400px; padding-top:10px;}
+.register_form label{ float:left;  color: #919191;
+    font-family: "Myriad Pro";
+    font-size: 14px; width:125px; text-align:right; line-height:25px; font-weight:bold;}
+.register_form input[type="text"] {
+    border: 1px solid #999999;
+    font-size: 12px;
+    margin: 0 32px 12px;
+    padding: 6px 0;
+    width: 203px; float:right;
+}
+.register_check_box{ margin:0 0 0 162px;}
+.register_check_box input[type="checkbox"]{ width:15px; float:left; margin:0 10px 0 0;}  
+.register_check_text{  color: #666666;
+    font-family: "Myriad Pro"; width:262px;
+    font-size: 14px; margin:0px; padding:0px; }
+.register_check_box input[type="button"]{ width:76px; height:26px; background:url(../images/login_btn.png) no-repeat; cursor:pointer; border:0px; float:left; margin:30px 10px 0 0;} 
+.register_check_text1{  color: #666666;
+    font-family: "Myriad Pro";
+    font-size: 14px; margin:0px; padding:0px; margin-top:30px; }
+ .or {
+    color: #666666;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+.or span a {
+    background: url("../images/yello_arrow.png") no-repeat scroll right center transparent;
+    color: #eeb400;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    margin: 5px 0 0 0;
+    padding: 0 20px 0 0;
+    text-decoration: underline;
+}
+.join_commiti{ width:185px; height:26px; background:url(../images/Join_the_btn.png) no-repeat; border:0px; cursor:pointer;}	
+.register_form input[type="password"] {
+    border: 1px solid #999999;
+    float: right;
+    font-size: 12px;
+    margin: 0 32px 12px;
+    padding: 6px 0;
+    width: 203px;
+}
+.register_check_box input[type="submit"] {
+    background: url("../images/login_btn.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    float: left;
+    height: 26px;
+    margin: 30px 10px 0 0;
+    width: 76px;
+}
+
+.submit_btn_box input[type="submit"] {
+    background: url("../images/Join_the_btn.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 26px;
+    width: 185px;
+}

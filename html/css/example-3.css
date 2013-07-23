@@ -1,0 +1,211 @@
+/* $Id: example.css,v 1.5 2006/03/27 02:44:36 pat Exp $ */
+
+/*--------------------------------------------------
+  REQUIRED to hide the non-active tab content.
+  But do not hide them in the print stylesheet!
+  --------------------------------------------------*/
+.tabberlive .tabbertabhide {
+ display:none;
+}
+
+/*--------------------------------------------------
+  .tabber = before the tabber interface is set up
+  .tabberlive = after the tabber interface is set up
+  --------------------------------------------------*/
+.tabber {
+}
+.tabberlive {
+ margin-top:0;
+}
+
+/*--------------------------------------------------
+  ul.tabbernav = the tab navigation list
+  li.tabberactive = the active tab
+  --------------------------------------------------*/
+ul.tabbernav
+{
+ margin:0;
+ padding:0;
+
+ font: bold 12px Verdana, sans-serif;
+}
+
+ul.tabbernav li
+{
+ list-style: none;
+ margin: 0;
+ display: inline; font-size:18px; font-weight:normal;
+}
+
+ul.tabbernav li a
+{
+ padding: 3px 0px;
+ margin-left: 0px;margin-right:78px;
+text-decoration: none; font-family:Oswald;
+}
+
+ul.tabbernav li a:link { color: #cdcdcd; }
+ul.tabbernav li a:visited { color: #667; }
+
+ul.tabbernav li a:hover
+{
+ color:#cecece;
+ font-size:18px;
+}
+
+ul.tabbernav li.tabberactive a
+{
+ background:url(../images/Untitled-3.png) no-repeat center bottom; margin-right:78px;
+color:#7e7e7e; font-family:Oswald;  font-size:18px; padding: 3px 0px 25px 0px;
+}
+
+
+
+/*--------------------------------------------------
+  .tabbertab = the tab content
+  Add style only after the tabber interface is set up (.tabberlive)
+  --------------------------------------------------*/
+.tabberlive .tabbertab {
+ padding:0; margin-top:21px; border-top:2px #e7e7e7 solid;
+
+ /* If you don't want the tab size changing whenever a tab is changed
+    you can set a fixed height */
+
+ /* height:200px; */
+
+ /* If you set a fix height set overflow to auto and you will get a
+    scrollbar when necessary */
+
+ /* overflow:auto; */
+}
+
+/* If desired, hide the heading since a heading is provided by the tab */
+.tabberlive .tabbertab h2 {
+ display:none;
+}
+.tabberlive .tabbertab h3 {
+ display:none;
+}
+
+/* Example of using an ID to set different styles for the tabs on the page */
+.tabberlive#tab1 {
+}
+.tabberlive#tab2 {
+}
+.tabberlive#tab2 .tabbertab {
+ height:200px;
+ overflow:auto;
+}
+
+.single_product_down_tab{}
+.single_product_down_tab p{   border-bottom: 2px dotted #BFBFBF;color: #808080;font-family: Oswald; font-size: 16px;font-weight: normal; margin: 0 0 0 15px;padding: 8px 15px;width: 243px;}
+.shipping_box{ width:900px; margin:0 0 0 51px;}
+.shipping_box_left{ width:544px;float:left;}
+.shipping_box_right{ width:256px;float:right; border:1px #cecece solid; margin-top:40px; padding:12px;}
+.shipping_heading{ font-family:Oswald; font-size:18px; padding:10px 0; color:#7e7e7e; border-bottom:1px #bfbfbf dotted; margin-top:25px; margin-bottom:25px;}
+.shipping_box_left label{ font-family:"Myriad Pro"; text-align:right; width:66px; font-size:14px; float:left; color:#808080; line-height:25px;}
+.name_input{ width:164px; border:#CECECE 1px solid; float:left; margin:0 0 0 16px; padding:5px 0;}
+.add_input{ width:455px;border:#CECECE 1px solid; float:left; margin:0 0 0 17px; padding:5px 0;}
+.city_input{ width:455px;border:#CECECE 1px solid; float:left; margin:0 0 0 17px; padding:5px 0;}
+.shipping_select_box{ width:162px;border:#CECECE 1px solid; padding:5px 0; float:left; margin:0 0 0 17px;}
+.state_select_box{ width:162px;border:#CECECE 1px solid; padding:5px 0; float:left; margin:0 0 0 15px;}
+.billing_box{ width:300px;}
+.billing_box input[type="checkbox"]{  width:5px; float:left; margin-top:2px;}
+.billing_text{ color: #808080;font-family: "Myriad Pro"; margin:0 0 0 23px;font-size: 14px;}
+.name_input2{ width:164px; border:#CECECE 1px solid; float:left; margin:0; padding:5px 0;}
+.apply_button{ width:100px; height:22px; background:url(../images/apply_button.png) no-repeat; border:0px; float:left; margin:3px 0 0 21px; cursor:pointer;}
+.shipping_method_button{ width:207px; height:32px; background:url(../images/shipping_method_button.png) no-repeat; border:0px; float:right; cursor:pointer; margin:20px 0;}
+.order_summary_box{ font-family:"Helvetica Neue"; font-size:14px; color:#808080; font-weight:bold;}
+.order_summary_box span{ font-size:12px; padding:0 0 0 98px; color:#939393;}
+.shipping_box_items{ color:#989898; font-family:"Myriad Pro"; margin-top:12px; font-size:14px; border-bottom: 1px dotted #BFBFBF; padding:0 0 10px 0;}
+.order_summary_box2{ font-family:"Helvetica Neue"; font-size:14px; color:#808080; font-weight:bold; margin-top:12px;}
+small{ color:#999999;}
+.order_summary_box3 {
+    color: #808080;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-weight: bold;
+    margin-top:35px; float:right; width:131px;
+}
+.payment_method_button{ width:207px; height:32px; background:url(../images/payment_button.png) no-repeat; border:0px; float:right; cursor:pointer; margin:216px 0 0 0;}
+.billing_title{ color: #808080;
+    float: left;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    line-height: 25px;
+    text-align: right;
+    width:150px;}
+.payment_input{  border: 1px solid #CECECE;
+    float: right;
+    margin: 0 0 0 17px;
+    padding: 5px 0;
+    width: 370px;}	
+.month_select_box{   border: 1px solid #CECECE;
+    float: left;
+    margin: 0 0 0 17px;
+    padding: 4px 0;
+    width: 100px;}
+.year_select_box{   border: 1px solid #CECECE;
+    float: left;
+    margin: 0 0 0 17px;
+    padding: 4px 0;
+    width:60px;}
+.billing_title2 {
+    color: #808080;
+    float: left;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    line-height: 25px;
+    text-align: right;
+    width:110px;
+}
+.code_input {
+    border: 1px solid #CECECE;
+    float:right;
+    margin: 0 0 0 16px;
+    padding: 5px 0;
+    width: 72px;
+}
+.review_button{width:279px; height:32px; background:url(../images/review_and_place_order_button.png) no-repeat; border:0px; float:right; cursor:pointer; margin:103px 0 0 0;}
+
+.review_place_order_left{ width:260px; float:left; margin:10px 0 0 0;}
+.review_place_order_right{ width:260px; float:right; margin:10px 0 0 0;}
+.review_title{ border-bottom: 1px dotted #BFBFBF;
+    color: #7E7E7E;
+    font-family: Oswald;
+    font-size: 18px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    padding: 10px 0;}
+.review_place_order_text{ margin:0px; padding:0;font-size:14px; font-family:"Myriad Pro"; color:#999999; width:164px;}
+.place_the_order_button{width:206px; height:32px; background:url(../images/place_the_order_button.png) no-repeat; border:0px; float:right; cursor:pointer; margin:103px 0 0 0;}	
+
+/* Example of using an ID to set different styles for the tabs on the page */
+.login_taber_box{ width:980px; padding:34px 0;}
+.login_taber_login{ width:246px; background:#f7f7f7; padding:30px; float:left; margin-right:29px;}
+.login_taber_login_2{ width:246px; background:#f7f7f7; padding:30px; float:right;}
+.register_heading{ float:left; width:292px!important; font-family:Oswald!important; font-size:20px!important; color:#808080!important; margin:0px!important; padding:0px!important; font-weight:normal!important;}
+.join_commiti {
+    background: url("../images/Join_the_btn.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 26px;
+    width: 185px; margin-top:15px;
+}
+.login_taber_box p{ font-family:"Myriad Pro"; font-size:14px; color:#666666;padding:0px; float:left; margin:0px; width:640px; text-align:justify;}
+.t-shirt{ width:304px; float:right;}
+.templeat_image{ background:#f7f7f7; text-align:center; padding:67px 0;}
+.submit_your_desigen {
+    background: url("../images/submit_your_desigen_button.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 33px;
+    width:233px; margin-top:15px; margin-left:71px;
+}
+
+
+
+
+
+
+

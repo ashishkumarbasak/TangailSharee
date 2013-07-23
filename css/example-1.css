@@ -1,0 +1,227 @@
+/* $Id: example.css,v 1.5 2006/03/27 02:44:36 pat Exp $ */
+
+/*--------------------------------------------------
+  REQUIRED to hide the non-active tab content.
+  But do not hide them in the print stylesheet!
+  --------------------------------------------------*/
+.tabberlive .tabbertabhide {
+ display:none;
+}
+
+/*--------------------------------------------------
+  .tabber = before the tabber interface is set up
+  .tabberlive = after the tabber interface is set up
+  --------------------------------------------------*/
+.tabber {
+}
+.tabberlive {
+ margin-top:0;
+}
+
+/*--------------------------------------------------
+  ul.tabbernav = the tab navigation list
+  li.tabberactive = the active tab
+  --------------------------------------------------*/
+ul.tabbernav
+{
+ margin:0;
+ padding:0;
+
+ font: bold 12px Verdana, sans-serif;
+}
+
+ul.tabbernav li
+{
+ list-style: none;
+ margin: 0;
+ display: inline; font-size:16px; font-weight:normal;
+}
+
+ul.tabbernav li a
+{
+ padding: 3px 10px;
+ margin-left: 3px;
+text-decoration: none; font-family:Oswald;
+}
+
+ul.tabbernav li a:link { color: #cdcdcd; }
+ul.tabbernav li a:visited { color: #667; }
+
+ul.tabbernav li a:hover
+{
+ color:#cecece;
+ font-size:17px;
+}
+
+ul.tabbernav li.tabberactive a
+{
+ background:url(../images/Untitled-3.png) no-repeat center bottom;
+color:#7e7e7e; font-family:Oswald;  font-size:16px; padding: 3px 20px 25px 3px;
+}
+
+
+
+/*--------------------------------------------------
+  .tabbertab = the tab content
+  Add style only after the tabber interface is set up (.tabberlive)
+  --------------------------------------------------*/
+.tabberlive .tabbertab {
+ padding:0; margin-top:21px; border-top:2px #e7e7e7 solid;
+
+ /* If you don't want the tab size changing whenever a tab is changed
+    you can set a fixed height */
+
+ /* height:200px; */
+
+ /* If you set a fix height set overflow to auto and you will get a
+    scrollbar when necessary */
+
+ /* overflow:auto; */
+}
+
+/* If desired, hide the heading since a heading is provided by the tab */
+.tabberlive .tabbertab h2 {
+ display:none;
+}
+.tabberlive .tabbertab h3 {
+ display:none;
+}
+
+/* Example of using an ID to set different styles for the tabs on the page */
+.tabberlive#tab1 {
+}
+.tabberlive#tab2 {
+}
+.tabberlive#tab2 .tabbertab {
+ height:200px;
+ overflow:auto;
+}
+
+.single_product_down_tab{}
+.single_product_down_tab p{   border-bottom: 2px dotted #BFBFBF;color: #808080;font-family: Oswald; font-size: 16px;font-weight: normal; margin: 0 0 0 15px;padding: 8px 15px;width: 243px;}
+.shipping_box{ width:900px; margin:0 0 0 51px;}
+.shipping_box_left{ width:544px;float:left;}
+.shipping_box_right{ width:256px;float:right; border:1px #cecece solid; margin-top:40px; padding:12px;}
+.shipping_heading{ font-family:Oswald !important; font-size:18px!important; padding:10px 0!important; color:#7e7e7e!important; border-bottom:1px #bfbfbf dotted!important; margin-top:25px!important; margin-bottom:25px!important;}
+.shipping_box_left label{ font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans serif; text-align:right; width:66px; font-size:12px; float:left; color:#808080; line-height:25px;}
+.shipping_box_left label.checkbox_bil { width: 400px; float: none; position: relative; top: -3px; }
+.name_input{ width:154px; float:left; margin:0 0 0 16px; padding:5px 5px; border-color: #CCCCCC #F5F5F5 #F5F5F5 #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    color: #444444;}
+.name_input:focus, .add_input:focus { border-color: #bbb;
+ 	box-shadow: 0px 0px 3px #ccc; }
+.add_input{ width:445px;border:#CECECE 1px solid; float:left; margin:0 0 0 17px; padding:5px 5px;border-color: #CCCCCC #F5F5F5 #F5F5F5 #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    color: #444444;}
+.city_input{ width:445px; float:left; margin:0 0 0 17px; padding:5px 5px;}
+.shipping_select_box{ width:162px;border:#CECECE 1px solid; padding:5px 0; float:left; margin:0 0 0 17px;}
+.state_select_box{ width:162px;border:#CECECE 1px solid; padding:5px 0; float:left; margin:0 0 0 15px;}
+.billing_box{ width:300px;position: relative;}
+.billing_box input[type="checkbox"]{  width:15px; float:left; margin-top:2px;}
+.billing_box input[type="radio"] { float: left; margin-top: 2px; width: 15px;}
+.billing_text{ color: #808080; font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans serif; padding: 0 0 0 9px;
+    position: relative;
+    z-index: 99999;font-size: 12px; width: 400px;}
+.name_input2{ width:164px; border:#CECECE 1px solid; float:left; margin:0; padding:5px 0;}
+.apply_button{ width:100px; height:22px; background:url(../images/apply_button.png) no-repeat; border:0px; float:left; margin:3px 0 0 21px; cursor:pointer;}
+.shipping_method_button{ width:207px; height:32px; background:url(../images/all_ico_but_2.png) no-repeat 0 -611px; border:0px; float:right; cursor:pointer; margin:20px 0;}
+.shipping_method_button:hover { background-position: 0 -648px; }
+.order_summary_box{ font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans serif !important; font-size:14px!important; color:#808080!important; font-weight:bold!important;}
+.order_summary_box span{ font-size:12px; padding:0 0 0 98px; color:#939393;}
+.shipping_box_items{ color:#989898; font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans serif; margin-top:12px; font-size:14px; border-bottom: 1px dotted #BFBFBF; padding:0 0 10px 0;}
+.order_summary_box2{ font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans serif; font-size:14px; color:#808080; font-weight:bold; margin-top:12px;}
+small{ color:#999999;}
+.order_summary_box3 {
+    color: #808080;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-weight: bold;
+    margin-top:35px; float:right; width:131px;
+}
+.curr_summary_box3 {
+    color: #808080;
+    font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans serif;
+    font-size: 14px;
+    margin-top:10px; float:right; width:200px;
+}
+.payment_method_button{ width:207px; height:32px; background:url(../images/all_ico_but_2.png) no-repeat 0 -699px; border:0px; float:right; cursor:pointer; margin:216px 0 0 0;}
+.payment_method_button:hover { background-position: 0 -736px; }
+.billing_title{ color: #808080;
+    float: left;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    line-height: 25px;
+    text-align: right;
+    width:150px;}
+.payment_input{  border: 1px solid #CECECE;
+    float: right;
+    margin: 0 0 0 17px;
+    padding: 5px 5px;
+    width: 360px;
+    border-color: #CCCCCC #F5F5F5 #F5F5F5 #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    color: #444444;}
+.payment_input:focus, .month_select_box:focus, .year_select_box:focus, .code_input:focus {
+	border-color: #bbb;
+ 	box-shadow: 0px 0px 3px #ccc;
+}	
+.month_select_box{   border: 1px solid #CECECE;
+    float: left;
+    margin: 0 0 0 17px;
+    padding: 4px 5px;
+    width: 65px;
+    border-color: #CCCCCC #F5F5F5 #F5F5F5 #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    color: #444444;}
+.year_select_box{   border: 1px solid #CECECE;
+    float: left;
+    margin: 0 0 0 17px;
+    padding: 4px 5px;
+    width:65px;
+    border-color: #CCCCCC #F5F5F5 #F5F5F5 #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    color: #444444;}
+.billing_title2 {
+    color: #808080;
+    float: left;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    line-height: 25px;
+    text-align: right;
+    width:110px;
+}
+.code_input {
+    border: 1px solid #CECECE;
+    float:right;
+    margin: 0 0 0 16px;
+    padding: 5px 5px;
+    width: 62px;
+    border-color: #CCCCCC #F5F5F5 #F5F5F5 #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    color: #444444;
+}
+.review_button{width:279px; height:32px; background:url(../images/all_ico_but_2.png) no-repeat 0 -786px; border:0px; float:right; cursor:pointer; margin:103px 0 0 0;}
+.review_button:hover { background-position: 0 -823px; }
+.review_place_order_left{ width:260px; float:left; margin:10px 0 0 0;}
+.review_place_order_right{ width:260px; float:right; margin:10px 0 0 0;}
+.review_title{ border-bottom: 1px dotted #BFBFBF!important;
+    color: #7E7E7E!important;
+    font-family: Oswald!important;
+    font-size: 18px!important;
+    margin-bottom: 25px!important;
+    margin-top: 25px!important;
+    padding: 10px 0!important;}
+.review_place_order_text{ margin:0px; padding:0;font-size:14px; font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans serif; color:#999999; width:164px;}
+.place_the_order_button{width:206px; height:32px; background:url(../images/all_ico_but_2.png) no-repeat 0 -873px; border:0px; float:right; cursor:pointer; margin:103px 0 0 0; position: relative; z-index: 999999; display: block;}
+.place_the_order_button:hover { background-position: 0 -910px; }
+.warning {border:1px solid red !important; color:red }
+label.warning {display:none !important;}
+
+
+.credit_card_error{margin-left:172px; margin-bottom:15px;color: #CE2700;font-family: "Tahoma"; font-size: 12px; }

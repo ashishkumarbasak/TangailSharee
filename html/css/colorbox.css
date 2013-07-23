@@ -1,0 +1,122 @@
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:visible;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+/* 
+    ColorBox example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+#cboxOverlay{background:#000;}
+
+#colorbox{}
+    #cboxTopLeft{width:14px; height:14px; background:url(images/controls.png) no-repeat 0 0;}
+    #cboxTopCenter{height:14px; background:url(images/border.png) repeat-x top left;}
+    #cboxTopRight{width:14px; height:14px; background:url(images/controls.png) no-repeat -36px 0;}
+    #cboxBottomLeft{width:14px; height:43px; background:url(images/controls.png) no-repeat 0 -32px;}
+    #cboxBottomCenter{height:43px; background:url(images/border.png) repeat-x bottom left;}
+    #cboxBottomRight{width:14px; height:43px; background:url(images/controls.png) no-repeat -36px -32px;}
+    #cboxMiddleLeft{width:14px; background:url(images/controls.png) repeat-y -175px 0;}
+    #cboxMiddleRight{width:14px; background:url(images/controls.png) repeat-y -211px 0;}
+    #cboxContent{background:#fff;}
+        #cboxLoadedContent{margin-bottom:5px;}
+        #cboxLoadingOverlay{background:url(images/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+        #cboxTitle{position:absolute; bottom:-25px; left:0; text-align:center; width:100%; font-weight:bold; color:#7C7C7C;}
+        #cboxCurrent{position:absolute; bottom:-25px; left:58px; font-weight:bold; color:#7C7C7C;}
+        
+        #cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{position:absolute; bottom:-29px; background:url(images/controls.png) no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
+        #cboxPrevious{left:0px; background-position: -51px -25px;}
+        #cboxPrevious.hover{background-position:-51px 0px;}
+        #cboxNext{left:27px; background-position:-75px -25px;}
+        #cboxNext.hover{background-position:-75px 0px;}
+        #cboxClose{right:0; background-position:-100px -25px;}
+        #cboxClose.hover{background-position:-100px 0px;}
+        
+        .cboxSlideshow_on #cboxSlideshow{background-position:-125px 0px; right:27px;}
+        .cboxSlideshow_on #cboxSlideshow.hover{background-position:-150px 0px;}
+        .cboxSlideshow_off #cboxSlideshow{background-position:-150px -25px; right:27px;}
+        .cboxSlideshow_off #cboxSlideshow.hover{background-position:-125px 0px;}
+		
+.login_page{ width:495px; margin:auto; background:#000; padding:25px;}	
+#inline_example1 h2{ font-size:24px; color:#666666; margin:0px; text-align:center; border-bottom:3px #e7e7e7 solid; padding-bottom:10px; font-family:Oswald;}
+.login_content{ width:498px; padding:50px 0;}
+#inline_example1 h1{ font-size:24px; color:#666666; margin:0px; text-align:center; border-bottom:3px #e7e7e7 solid; padding-bottom:10px; font-family:Oswald;}
+
+.login_content_left{ width:246px; float:left;}
+.login_content_right{ width:226px; float:right; border-left:1px #666666 dotted; padding-left:20px; padding-bottom:30px;}
+.login_content_left label{ font-family:"Myriad Pro"; color:#666666; font-size:14px;}
+.login_content_left input[type="text"]{ width:210px; border:#999999 1px solid; font-size:12px; padding:3px 0; margin:0 0 8px 0;}
+.login_content_left input[type="password"]{ width:210px; border:#999999 1px solid; font-size:12px; padding:3px 0; margin:0 0 8px 0;}
+.check_box{ width:120px; padding:13px 0 0 0;}
+.check_box input[type="checkbox"]{ border:1px #333333 solid; float:left; margin:3px 0 0 0;}
+.check_box label{ font-family:"Myriad Pro"; color:#666666; font-size:14px; float:right;}
+.loginbutton-box{ width:231px; padding:25px 0 0 0; line-height:23px;}
+.loginbutton-box input[type="button"]{ width:74px; height:26px; border:0px; background:url(../images/login_btn.png) no-repeat; cursor:pointer; float:left;}
+.loginbutton-box input[type="submit"]{ width:74px; height:26px; border:0px; background:url(../images/login_btn.png) no-repeat; cursor:pointer; float:left;}
+.loginbutton-box label{font-family:"Myriad Pro"; color:#666666; font-size:14px; float:right;}
+.login_content_right p{font-family:"Myriad Pro"; color:#666666; font-size:14px; margin:0px; padding:0px;}
+.facebook_btn{ width:169px; height:29px; background:url(../images/sign_in-Facebook.png) no-repeat; border:0px; cursor:pointer; margin-top:18px;}
+.login_content_right p span a{font-family:"Myriad Pro"; color:#F3B700; font-size:14px; margin:0px;background:url(../images/yello_arrow.png) no-repeat right center ; padding:0 20px 0 0; text-decoration:underline;}
+
+/*Rigister css start*/
+#inline_example2 h2{ font-size:24px; color:#666666; margin:0px; text-align:center; border-bottom:3px #e7e7e7 solid; padding-bottom:10px; font-family:Oswald;}
+#inline_example2 h1{ font-size:24px; color:#666666; margin:0px; text-align:center; border-bottom:3px #e7e7e7 solid; padding-bottom:10px; font-family:Oswald;}
+.login_content_left2{ width:246px; float:left;}
+.login_content_right2{ width:226px; float:right; border-left:1px #666666 dotted; padding-left:20px; padding-bottom:211px;}
+.login_content_left2 label{ font-family:"Myriad Pro"; color:#666666; font-size:14px;}
+.login_content_left2 input[type="text"]{ width:210px; border:#999999 1px solid; font-size:12px; padding:3px 0; margin:0 0 12px 0;}
+.check_box2{ width:220px; padding:13px 0 0 0;}
+.check_box2 input[type="checkbox"]{ border:1px #333333 solid; float:left; margin:3px 0 0 0; }
+.check_box2 label{ font-family:"Myriad Pro"; color:#666666; font-size:12px; float:right; width:191px; }
+.account{ width:159px; height:26px; border:0px; cursor:pointer; background:url(../images/create-account_btn.png) no-repeat; margin:20px 0;}
+.login_content_right2 p {
+    color: #666666;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+.facebook_btn {
+    background: url("../images/sign_in-Facebook.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 29px;
+    margin-top: 18px;
+    width: 169px;
+}
+.login_content_right2 p span a {
+    background: url("../images/yello_arrow.png") no-repeat scroll right center transparent;
+    color: #F3B700;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    margin: 0;
+    padding: 0 20px 0 0;
+    text-decoration: underline;
+}
+.join_button_box input[type="text"] {
+    background: url("../images/create-account_btn.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 26px;
+    margin: 20px 0;
+    width: 159px;
+}
+.login_content_left2 input[type="password"] {
+    border: 1px solid #999999;
+    font-size: 12px;
+    margin: 0 0 12px;
+    padding: 3px 0;
+    width: 210px;
+}

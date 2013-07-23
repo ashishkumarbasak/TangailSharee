@@ -1,0 +1,136 @@
+/* $Id: example.css,v 1.5 2006/03/27 02:44:36 pat Exp $ */
+
+/*--------------------------------------------------
+  REQUIRED to hide the non-active tab content.
+  But do not hide them in the print stylesheet!
+  --------------------------------------------------*/
+.tabberlive .tabbertabhide {
+ display:none;
+}
+
+/*--------------------------------------------------
+  .tabber = before the tabber interface is set up
+  .tabberlive = after the tabber interface is set up
+  --------------------------------------------------*/
+.tabber {
+}
+.tabberlive {
+ margin-top:0;
+}
+
+/*--------------------------------------------------
+  ul.tabbernav = the tab navigation list
+  li.tabberactive = the active tab
+  --------------------------------------------------*/
+ul.tabbernav
+{
+ margin:0;
+ padding: 3px 0 3px 0px;
+ border-bottom: 1px solid #d2d2d2;
+ font: bold 12px Verdana, sans-serif; text-align:right;
+}
+
+ul.tabbernav li
+{
+ list-style: none;
+ margin: 0;
+ display: inline;
+}
+
+ul.tabbernav li a
+{
+ padding: 3px 6px;
+ margin-left: 3px;
+ border: 1px solid #cecece;
+ border-bottom: none;
+ background: #f7f7f7;
+ text-decoration: none;
+}
+
+ul.tabbernav li a:link { color: #cdcdcd; }
+ul.tabbernav li a:visited { color: #667; }
+
+ul.tabbernav li a:hover
+{
+ color:#cecece;
+ background: #fff;
+
+}
+
+ul.tabbernav li.tabberactive a
+{
+ background-color: #fff;
+ border-bottom: 1px solid #fff;
+ color:#cdcdcd; font-family:"Myriad Pro"; font-size:12px;
+}
+
+ul.tabbernav li.tabberactive a:hover
+{
+ color: #000;
+ background: white;
+ border-bottom: 1px solid white;
+}
+
+/*--------------------------------------------------
+  .tabbertab = the tab content
+  Add style only after the tabber interface is set up (.tabberlive)
+  --------------------------------------------------*/
+.tabberlive .tabbertab {
+ padding:0;
+ border:1px solid #cecece;
+ border-top:0;min-height: 350px;
+
+ /* If you don't want the tab size changing whenever a tab is changed
+    you can set a fixed height */
+
+ /* height:200px; */
+
+ /* If you set a fix height set overflow to auto and you will get a
+    scrollbar when necessary */
+
+ /* overflow:auto; */
+}
+
+/* If desired, hide the heading since a heading is provided by the tab */
+.tabberlive .tabbertab h2 {
+ display:none;
+}
+.tabberlive .tabbertab h3 {
+ display:none;
+}
+
+/* Example of using an ID to set different styles for the tabs on the page */
+.tabberlive#tab1 {
+}
+.tabberlive#tab2 {
+}
+.tabberlive#tab2 .tabbertab {
+ height:200px;
+ overflow:auto;
+}
+
+.single_product_down_tab{}
+.single_product_down_tab p{   border-bottom: 2px dotted #BFBFBF;color: #808080;font-family: Oswald; font-size: 16px;font-weight: normal; margin: 0 0 0 15px;padding: 8px 15px;width: 243px;}
+.single_product_down_tab h1{    border-bottom: 2px dotted #BFBFBF;
+    color: #808080!important;
+    font-family: Oswald!important;
+    font-size: 16px!important;
+    font-weight: normal!important;
+    margin: 0 0 0 15px!important;
+    padding: 8px 15px!important;
+    width: 243px;}
+.single_product_down_tab h1 span{  float:right;}
+.single_product_select_box{ width:264px; margin:25px 0 0 19px;}
+.single_product_select_box label{  font-family:"Myriad Pro"; font-size:13px; color:#808080;}
+.single_product_select{ width:116px; border:1px #cecece solid; margin-left:8px; padding:3px 2px; font-family:"Myriad Pro"; color:#808080;  }
+.single_product_select1{ width:45px; border:1px #cecece solid; margin-left:8px; padding:3px 2px; font-family:"Myriad Pro";  color:#808080; }
+.add_cart_button{ width:260px; height:34px; background:url(../images/Add_to_cart_btn.png) no-repeat; cursor:pointer; border:0px; margin:30px 0 0 23px;}
+.add_text{ text-align:center; font-family:Georgia, "Times New Roman", Times, serif; font-size:12px; font-style:italic; color:#666666; padding:10px;}
+.add_text a{text-align:center; font-family:Georgia, "Times New Roman", Times, serif; font-size:12px; font-style:italic; color:#666666;}
+.like_faceboob_box{ border-bottom:1px #CECECE solid;border-top:1px #CECECE solid; padding:23px 11px;}
+.like_faceboob_box p{ margin:0px;float:left; padding:0px; font-family:"Myriad Pro"; font-size:14px; color:#666666;}
+.like_faceboob_box_image{ width:90px; float:left; margin:0 0 0 10px;}
+.single_product_arrow_box{ margin:18px 15px;}
+.single_product_arrow_box_text {font-family:"Myriad Pro"; font-size:14px; color:#999999; margin:0px; float:left; font-weight:normal; padding-left:12px;}
+.single_product_arrow_box_text span{ font-family:Georgia, "Times New Roman", Times, serif; color:#808080; font-style:italic; }
+.single_product_arrow_box_arrow{ width:20px; float:right;}

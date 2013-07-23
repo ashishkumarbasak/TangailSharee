@@ -1,0 +1,284 @@
+#vtab {
+        margin: auto;
+        width:980px;
+        height: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    #vtab > ul > li {
+        width:101px;
+       background-color:#f7f7f7!important;
+        list-style-type: none;
+        display: block;
+        margin: auto;
+        padding:6px 0 6px 39px;
+        position: relative;
+        border-right: none; border:1px #cecece solid;
+     
+       
+    }
+	 #vtab > ul > li a { font-family:"Myriad Pro"; font-size:14px; color:#808080;}
+	  #vtab > ul > li a:hover { font-family:"Myriad Pro"; font-size:14px; text-decoration:none;}
+    #vtab > ul > li.home {
+        background: url(../images/profile_icon_1.png) no-repeat 15px 8px;
+    }
+    #vtab > ul > li.wishlist {
+        background:url(../images/wishlist_icon.png) no-repeat 15px 8px;
+    }
+    #vtab > ul > li.support {
+        background:url(../images/my_order_icon.png) no-repeat 15px 8px;
+    }
+    #vtab > ul > li.selected {
+        border: 1px solid #ddd;
+        border-right: none;
+        z-index: 10;
+        background-color:#fff !important;
+        position: relative;
+    }
+	
+	 #vtab > ul > li.add_desigen {
+        background:url(../images/add_design_icon.png) no-repeat 15px 8px;
+    }
+	
+	 #vtab > ul > li.my_desigen {
+        background:url(../images/my_design_icon.png) no-repeat 15px 8px;
+    }
+	 #vtab > ul > li.earning {
+        background:url(../images/earnings_icon.png) no-repeat 15px 8px;
+    }
+	
+    #vtab > ul {
+        float: left;
+        width: 110px;
+        text-align: left;
+        display: block;
+        margin: auto 0;
+        padding: 0;
+        position: relative;
+    }
+    #vtab > div {
+        background-color: #fff;
+        margin-left: 140px;
+        border: 1px solid #ddd;
+        min-height:446px;
+        padding: 12px;
+        position: relative;
+        z-index: 9;
+    }
+    #vtab > div > h4 {
+        color: #800;
+        font-size: 1.2em;
+        border-bottom: 1px dotted #800;
+        padding-top: 5px;
+        margin-top: 0;
+    }
+    #loginForm label {
+        float: left;
+        width: 100px;
+        text-align: right;
+        clear: left;
+        margin-right: 15px;
+    }
+    #loginForm fieldset {
+        border: none;
+    }
+    #loginForm fieldset > div {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    #loginForm #login {
+        margin-left: 115px;
+    }
+	
+	
+.top_button_box{ width:600px;}
+.top_button{ width:100px; border:1px #DDDDDD solid; background:#f7f7f7; color:#a0a0a0; float:left; text-align:center; font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; font-style:italic; padding:7px 0; margin-left:40px;}	
+.point{  font-family:Arial, Helvetica, sans-serif; color:#999999; text-align:center; width:30px; float:left; padding:8px 0;}
+.shipping_in_button{  border:1px #DDDDDD solid; color:#a0a0a0; float:left; text-align:center; font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; font-style:italic; padding:7px 10px;}
+.shipping_in_button1{ width:100px; border:1px #DDDDDD solid; color:#a0a0a0; float:left; text-align:center; font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; font-style:italic; padding:7px 0;}
+.top_button a{color:#a0a0a0;font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; font-style:italic;}	
+.shipping_in_button a{color:#a0a0a0;font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; font-style:italic;}	
+.shipping_in_button1 a{color:#ffca29;font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; font-style:italic;}
+.tab_mid_box{ width:705px;margin-left:40px; padding:0; margin-top:60px;}
+.tab_left_box{ width:460px; float:left;}
+.tab_right_box{ width:156px; float:right;}
+.left_input_box{ width:230px; float:left;}
+.right_input_box{ width:230px; float:right; padding: 0;}
+.left_input_box label{ color: #666666;
+    font-family: "Myriad Pro";
+    font-size: 14px;}	
+.left_input_box input[type="text"] {
+    border: 1px solid #999999;
+    font-size: 12px;
+    margin:7px 0 12px 0;
+    padding: 3px 0;
+    width: 210px;
+}	
+
+.right_input_box label{ color: #666666;
+    font-family: "Myriad Pro";
+    font-size: 14px;}	
+.right_input_box input[type="text"] {
+    border: 1px solid #999999;
+    font-size: 12px;
+    margin:7px 0 12px 0;
+    padding: 3px 0;
+    width: 210px;
+}
+.taber_select_box{ border: 1px solid #999999;
+    font-size: 12px;
+    margin:7px 0 12px 0;
+    padding: 3px 0;
+    width: 210px;}
+.email_input{border: 1px solid #999999;
+    font-size: 12px;
+    margin:7px 0 12px 0;
+    padding: 3px 0;
+    width:437px;}	
+.tab_left_box label{ color: #666666;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;}
+.tab_check_box{ width:19px;border: 1px solid #999999;}	
+.save_button{ width:101px; height:28px; border:0px; background:url(../images/save_button.png) no-repeat; cursor:pointer; margin:20px 0 0 5px;}
+
+.tab_right_box label{ color: #666666;
+    font-family: "Myriad Pro";
+    font-size: 14px;}
+    #vtab > ul > li.support1{  background:url(../images/new_icon.png) no-repeat 15px 8px !important;}	
+#vtab > ul > li:last-child{background:url(../images/red_icon.jpg) no-repeat  !important; height:17px;}
+#vtab > ul > li.support1 a{ color:#FFFFFF;} 
+.scegli_file_button{ width:77px; height:20px; background:url(../images/scegli_file.png) no-repeat; border:0px; cursor:pointer; margin-top:10px;}
+
+/*my Order css start*/
+.top_font{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#7c7c7c; text-align:center;}
+.tab_mid_box1 {
+    margin-left: 40px;
+    margin-top: 60px;
+    padding: 0;
+    width: 761px;
+}
+.bottem_border1 {
+    border-bottom: 2px dotted #BFBFBF;
+    margin: 20px;
+    width: 684px;
+}
+.yello_text{ color:#FFCA29;}
+/*wish list css start*/
+.tab_mid_box2 {
+    margin-left: 40px;
+    margin-top:0px;
+    padding: 0;
+    width: 761px;
+}
+.tab_mid_box2 h3{ font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; color:#7c7c7c; margin:0px; padding:0px; font-weight:normal;}
+.wish_list_image_box{ width:730px; padding:20px 0;}
+.wish_list_image_box_left{ width:143px; border:1px #CCCCCC solid;  float:left; position:relative; margin:0 0 5px 0}
+.wishlist_image{ width:137px; margin:3px;}
+.delet_image {
+    position: absolute;
+    right: -11px;
+    top: -12px;
+    width: 20px;
+}
+.wish_list_image_box_left1{ width:143px;float:left; margin-right:50px;}
+.wish_list_image_box_left1 h3{ font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; color:#29b409; text-align:center; margin:0px; padding:0px; font-weight:normal;}
+.wish_list_image_box_left2{ width:143px;float:right;}
+.wish_list_image_box_left2 h3{ font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; color:#c32020; text-align:center; margin:0px; padding:0px; font-weight:normal;}
+/*earining css start*/
+.earning_box_left{ width:420px; float:left;border-right:1px dotted #666666; padding:0 40px 0 0;}
+.earning_box_right{ width:264px; float:right;}
+.earning_box_left h2{ font-family:Oswald; font-size:20px; color:#999999; font-weight:normal; margin:0px; padding:0px;}
+.earning_box_right h2{ font-family:Oswald; font-size:20px; color:#999999; font-weight:normal; margin:0px; padding:0px;}
+.earning_box_right h1{ font-family:Oswald!important; font-size:20px!important; color:#999999!important; font-weight:normal!important; margin:0px!important; padding:0px!important;}
+.earning_box_left h1{ font-family:Oswald!important; font-size:20px!important; color:#999999!important; font-weight:normal!important; margin:0px!important; padding:0px!important;}
+.earning_box_right p{  font-size:14px; color:#999999; padding:10px 0; margin:0px;}
+.earning_box_left p{  font-size:14px; color:#999999; padding:10px 0 10px 30px; margin:0px;}
+.earning_box_left p span{ background:url(../images/right_icon.png) no-repeat left; padding:0 0 0 30px; float:right;}
+.terms-conditions{ background:url(../images/down_arrow.png) no-repeat left; padding:0 0 0 28px; font-size:14px;color:#999999;}
+.earning_box_left h3{ font-family:Oswald; font-size:14px; color:#999999; font-weight:normal; margin:0px; padding:0 0 0 30px;}
+.last_week_box{ width:266px; margin-left:30px; margin-top:5px;}
+.top_font2 {
+    color: #7C7C7C;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    
+}
+.last_week_text{width:88px; border-bottom:1px #efefef solid; padding:6px 0;}
+
+/*add design css start*/
+.open_button{ background:#b8ebb6; border:1px #2ab320 solid; padding:3px 10px; font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; font-style:italic; text-align:center; color:#1c9016; width:38px; margin:0 0 0 30px;}
+.tab_mid_box3 {
+    margin-left: 30px;
+    margin-top:0px;
+    padding:10px 0;
+    width: 761px;
+}
+
+.earning_box_left p a{  font-size:14px; color:#999999; text-decoration:underline;}
+.tshirt_imagebox{ width:403px; padding:25px 0 10px 0;}
+.tshirt_imagebox_left{ width:109px; float:left; margin-right:18px;  }
+.tshirt_imagebox_left_in{ width:107px;border:1px #d0d0d0 solid; position:relative;}
+.tshirt_image{ width:101px; margin:3px;}
+.green_box {
+    background:#0ece0a;
+    bottom: 0;
+    color: #fff;
+    font-size: 10px;
+    height:20px;
+    line-height: 25px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width:20px;
+}
+.open_button2 {
+    background: none repeat scroll 0 0 #B8EBB6;
+    border: 1px solid #2AB320;
+    color: #1C9016;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 14px;
+    font-style: italic;
+    margin: 15px 0 0 0;
+    padding: 3px 10px;
+    text-align: center;
+    width:300px;
+}
+.open_button a{ color: #1C9016;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 14px; font-style: italic;}
+.select_file_box{ width:226px; padding:0;}	
+.scegli_file_button1 {
+    background: url("../images/scegli_file.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 20px;
+    margin:0 10px;
+    width: 77px;
+}
+.select_file_box label{color: #666666;
+    
+    font-size: 14px;}
+.select_file_box p{ font-family:Georgia, "Times New Roman", Times, serif; font-size:10px; padding:5px 0; font-style:italic; color:#666666}	
+.upload_now_btn{ width:255px; height:32px; background:url(../images/upload_now_button.png) no-repeat; border:0px; cursor:pointer; margin:10px 0;}
+.comment_box_left1 {
+    float: left;
+    width:431px;
+}
+.add_comment_button {
+    background: url("../images/add_this_comment_button.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 19px;
+    margin: 20px 0 0 52px;
+    width: 119px;
+}
+.item_box2 {
+    margin: 0;
+    width:744px;
+}
+.item_image3 {
+    
+     border: 1px solid #D0D0D0;
+  
+    width:101px; padding:2px;
+}

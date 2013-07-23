@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TWINNE</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/colorbox.css" type="text/css" media="screen" />
+<!--Select Box Js Start-->
+<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".toggle_container").hide();
+	$("h2.trigger").click(function(){
+		$(this).toggleClass("active").next().slideToggle("slow");
+	});
+});
+</script>
+<!--Select Box Js End-->
+<!--LightBox Js-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script src="js/jquery.colorbox.js"></script>
+<script src="ja/jquery.colorbox-min.js"></script>
+<script>
+		$(document).ready(function(){
+			//Examples of how to assign the ColorBox event to elements
+			$("a[rel='example1']").colorbox();
+			$("a[rel='example2']").colorbox({transition:"fade"});
+			$("a[rel='example3']").colorbox({transition:"none", width:"75%"});
+			$("a[rel='example4']").colorbox({slideshow:true});
+			$(".example5").colorbox();
+			$(".example6").colorbox({iframe:true, innerWidth:425,});
+			$(".example7").colorbox({width:"580px", inline:true, height:"auto", href:"#inline_example2"});
+			$(".example8").colorbox({width:"580px", inline:true, height:"auto", href:"#inline_example1"});
+			$(".example9").colorbox({
+				onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+				onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+				onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+				onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+				onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+			});
+			
+			//Example of preserving a JavaScript event for inline calls.
+			$("#click").click(function(){ 
+				$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+				return false;
+			});
+		});
+	</script>
+<!--cufon Js-->
+<script src="js/cufon_min.js"></script>
+<script src="js/Oswald_400.font.js"></script>
+<script type="text/javascript">
+        Cufon.replace('.nav_box'); // Works without a selector engine
+	
+		Cufon.replace('.footer_menu_1 h2 ,.footer_menu_2 h2 ,.footer_menu_3 h2 ,.footer_menu_4 h2'); // Works without a selector engine
+</script>
+</head>
+<body>
+<div id="top"></div>
+<div id="wrapper">
+  <!--Header Start-->
+  <div class="header">
+    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo" /></a></div>
+    <!--Nav Start-->
+    <div class="nav_box">
+      <ul>
+        <li class="active"><a href="index.html">HOME</a></li>
+        <li><a href="gallery.html">WOMEN</a></li>
+        <li><a href="gallery_1.html">MEN</a></li>
+        <li><a href="twilab.html">TWILAB</a></li>
+        <li><a href="support.html">SUPPORT</a></li>
+      </ul>
+    </div>
+    <!--Nav End-->
+    <!--Login Panel start-->
+    <div id="login_part">
+      <div class="login_top">
+         <!--Login colorBox start-->
+        <div class="login">
+          <p><a class='example8' href="#">Login</a></p>
+          <!-- This contains the hidden content for inline calls -->
+          <div style='display:none' class="login_page">
+            <div id='inline_example1' style='padding:20px; background:#fff;'>
+              <h2>LOGIN</h2>
+              <div class="login_content">
+                <div class="login_content_left">
+                 <label>e-mail or username</label>
+                  <input type="text" value="" />
+                  <label>Password</label>
+                  <input type="text" value="" />
+                  <div class="check_box">
+                   <input type="checkbox" value="" />
+                   <label>Remember me</label>
+                   <div class="clear"></div>
+                  </div>
+                 <div class="loginbutton-box">
+                   <input type="button" value="" />
+                   <label>Forgot your password?</label>
+                  <div class="clear"></div>
+                 </div>
+                
+                </div>
+                <div class="login_content_right">
+                 <p>or</p>
+                 <input type="button" class="facebook_btn" value="" />
+                <p style="padding:30px 0 0 0;">Not still a member?</p>
+                <p><span><a href="#">Create your account now</a></span></p>
+                <div class="clear"></div>
+                </div>
+              <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Login colorBox End-->
+         <!--Rigister colorBox Start-->
+        <div class="rigister">
+          <p><a class='example7' href="#">Register</a></p>
+          <!-- This contains the hidden content for inline calls -->
+          <div style='display:none' class="login_page">
+            <div id='inline_example2' style='padding:20px; background:#fff;'>
+              <h2>JOIN THE COMMUNITY</h2>
+              <div class="login_content">
+                <div class="login_content_left2">
+                  <label>Username</label>
+                   <input type="text" value="" />
+                   <label>Password</label>
+                   <input type="text" value="" />
+                   <label>Re-type password</label>
+                   <input type="text" value="" />
+                   <label>e-mail</label>
+                   <input type="text" value="" />
+                  <div class="check_box2">
+                   <input type="checkbox" value="" />
+                   <label>I accept Twinne’s Privacy Policy</label>
+                    <div class="clear" style="height:10px;"></div>
+                    <input type="checkbox" value="" />
+                   <label> I accept Twinne’s Terms & Conditions</label>
+                   <div class="clear" style="height:10px;"></div>
+                   <input type="checkbox" value="" />
+                   <label>Notify me by e-mail about Twinne’s 
+discounts and news</label>
+                   <div class="clear"></div>
+                  </div>
+                <input type="button" class="account" value="" />
+                
+                <div class="clear"></div>
+                </div>
+                <div class="login_content_right2"> <p>Have a Facebook account?</p>
+                 <input type="button" class="facebook_btn" value="" />
+                <p style="padding:30px 0 0 0;">Already a member?</p>
+                <p><span><a href="#">Sign in here</a></span></p>
+                <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Rigister colorBox End-->
+        <div class="clear"></div>
+      </div>
+      <div class="search_box">
+        <input type="text" class="search_input" value="Search" />
+        <div class="search_btn"></div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="wish_list">
+      <h3>Wish-list</h3>
+      <select class="dollar_select_box">
+        <option>$</option>
+      </select>
+      <div class="green_image">11</div>
+      <div class="touch">
+        <div class="container">
+          <h2 class="trigger"><a href="#">View Cart</a></h2>
+          <div style="display: none;" class="toggle_container">
+            <div class="block">
+             <div class="down_arrow"></div> 
+			 <div class="Product_detail_box">
+			  <div class="Product_detail_image"><img src="images/view-cart-product-image.jpg" alt="shirt" /></div>
+			  <div class="Product_detail_box_right">
+			   <h2>T-Shirt Title<span><br />Size: M<br />Qty: 1<br />$25</span></h2>
+			   <div class="Product_detail_box_right_image"><img src="images/Edit_btn.png" alt="croc"/></div>
+			  <div class="clear"></div>
+			  </div>
+			  <div class="clear"></div>
+			 </div>
+              <div class="top_arrow"></div>  
+             <h4>Total: $60</h4>
+			 <div class="cart_page_button"><a href="#"><img src="images/cart_page_btn.png" alt="cart_btn" /></a></div>
+			 <div class="view_cart_check_out_button"><a href="#"><img src="images/Check_out_btn_2.png" alt="check" /></a></div>
+			<div class="clear"></div>
+			</div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <!--Login Panel End-->
+    <div class="clear"></div>
+  </div>
+  <!--Header End-->
+  <div id="top_banner"><img src="images/top_banner.jpg" alt="Banner" /></div>
+  <div class="bottem_border"></div>
+  <!--Home Page Content Start-->
+  <div id="mid_content">
+    <div class="mid_content_top">
+      <div class="mid_content_top_left">
+        <ul>
+          <li class="mid_active"><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div class="mid_content_top_mid"><a href="#"><img src="images/9$-europe_image.jpg" alt="Image1" /></a></div>
+      <div class="mid_content_top_right">
+        <h3>Stay tuned!</h3>
+        <div class="facebook">
+          <div id="fb-root"></div>
+          <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+          <fb:like href="http://www.facebook.com/deemtech"  layout="button_count" width="50" show_faces="true" font=""></fb:like>
+          </li>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <!--Product Image  Start-->
+    <div class="image_gallery">
+      <div class="product_image_box">
+         <a href="single_product.html" class="hoverClass"><div class="star"></div>
+        <div class="add_wish"></div>
+        <div class="new_tag"></div>
+        <div class="product_image"><img src="images/product_image_1.jpg" alt="Product 1" /></div>
+        <div class="title">
+          <h2>T-shirt title here</h2>
+          <p>by Sebastiano Guerriero</p>
+        </div>
+        <div class="price_box">$36</div>
+    </a>
+      </div>
+      <div class="product_image_box">
+        <a href="single_product.html" class="hoverClass active"><div class="star"></div>
+        <div class="add_wish"></div>
+        <div class="new_tag"></div>
+        <div class="product_image"><img src="images/product_image_2.jpg" alt="Product 1" /></div>
+        <div class="title">
+          <h2>T-shirt title here</h2>
+          <p>by Sebastiano Guerriero</p>
+        </div>
+        <div class="price_box">$36</div>
+    </a>
+      </div>
+      <div class="product_image_box">
+       
+        <a href="single_product.html" class="hoverClass"><div class="star"></div>
+        <div class="add_wish"></div>
+        <div class="new_tag"></div>
+        <div class="product_image"><img src="images/product_image_3.jpg" alt="Product 1" /></div>
+        <div class="title">
+          <h2>T-shirt title here</h2>
+          <p>by Sebastiano Guerriero</p>
+        </div>
+        <div class="price_box">$36</div>
+    </a>
+      </div>
+      <div class="product_image_box2">
+        <a href="single_product.html" class="hoverClass"><div class="star"></div>
+        <div class="add_wish"></div>
+        <div class="new_tag"></div>
+        <div class="product_image"><img src="images/product_image_4.jpg" alt="Product 1" /></div>
+        <div class="title">
+          <h2>T-shirt title here</h2>
+          <p>by Sebastiano Guerriero</p>
+        </div>
+        <div class="price_box">$36</div>
+    </a>
+      </div>
+      <div class="clear" style="height:11px;"></div>
+      <div class="product_image_box">
+       <a href="single_product.html" class="hoverClass"><div class="star"></div>
+        <div class="add_wish"></div>
+        <div class="new_tag"></div>
+        <div class="product_image"><img src="images/product_image_5.jpg" alt="Product 1" /></div>
+        <div class="title">
+          <h2>T-shirt title here</h2>
+          <p>by Sebastiano Guerriero</p>
+        </div>
+        <div class="price_box">$36</div>
+    </a>
+      </div>
+      <div class="product_image_box">
+        <a href="single_product.html" class="hoverClass"><div class="star"></div>
+        <div class="add_wish"></div>
+        <div class="new_tag"></div>
+        <div class="product_image"><img src="images/product_image_6.jpg" alt="Product 1" /></div>
+        <div class="title">
+          <h2>T-shirt title here</h2>
+          <p>by Sebastiano Guerriero</p>
+        </div>
+        <div class="price_box">$36</div>
+    </a>
+      </div>
+      <div class="product_image_box">
+        <a href="single_product.html" class="hoverClass"><div class="star"></div>
+        <div class="add_wish"></div>
+        <div class="new_tag"></div>
+        <div class="product_image"><img src="images/product_image_7.jpg" alt="Product 1" /></div>
+        <div class="title">
+          <h2>T-shirt title here</h2>
+          <p>by Sebastiano Guerriero</p>
+        </div>
+        <div class="price2_box">$36</div>
+    </a>
+      </div>
+      <div class="product_image_box2">
+       <a href="single_product.html" class="hoverClass"><div class="star"></div>
+        <div class="add_wish"></div>
+        <div class="new_tag"></div>
+        <div class="product_image"><img src="images/product_image_8.jpg" alt="Product 1" /></div>
+        <div class="title">
+          <h2>T-shirt title here</h2>
+          <p>by Sebastiano Guerriero</p>
+        </div>
+        <div class="price_box">$36</div>
+    </a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <!--Product Image  end-->
+    <div class="clear"></div>
+    <div class="shop_box">
+      <div class="men">SHOP MEN</div>
+      <div class="women">SHOP WOMEN</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <!--Home Page Content End-->
+  <!--Footer Start -->
+  <div class="footer">
+    <div class="footer_top"></div>
+    <div class="discounts-news-box">
+      <div class="discounts-news-box_left">
+        <label>Get exclusive discounts & news!</label>
+        <input type="text" value="Name"/>
+        <input type="text" value="Email"/>
+        <input class="discounts-button" value="WOMEN" />
+        <input class="discounts-button" value="MEN" />
+      </div>
+      <div class="social-media_box">
+        <h3>Socialize</h3>
+        <ul>
+          <li><a href="#"><img src="images/facebook.png" alt="facebook" /></a></li>
+          <li><a href="#"><img src="images/twetter.png" alt="tewwter" /></a></li>
+          <li><a href="#"><img src="images/rss.png" alt="Rss" /></a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="bottem_border2"></div>
+    <!--Footer menu Start -->
+    <div class="footer_menu_box">
+      <div class="footer_menu_1">
+        <h2>MENU 1</h2>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Delivery info</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer_menu_1">
+        <h2>MENU 2</h2>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Delivery info</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer_menu_3">
+        <h2>FROM THE LAB</h2>
+        <ul>
+          <li><span><img src="images/icon_1.png" alt="arrow" /></span><a href="#">Title of the new video published</a></li>
+          <li><span><img src="images/icon_2.png" alt="arrow" /></span><a href="#">Title of the new blog article</a></li>
+          <li><span><img src="images/icon_1.png" alt="arrow" /></span><a href="#">Title of the new video published</a></li>
+          <li><span><img src="images/icon_2.png" alt="arrow" /></span><a href="#">Title of the new blog article</a></li>
+        </ul>
+      </div>
+      <div class="footer_menu_4">
+        <h2>MENU</h2>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Shop women</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shop men</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Twilab</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <!--Footer menu end -->
+    <!--Pay Pal Start -->
+    <div class="pay_pal_box">
+      <ul>
+        <li><a href="#"><img src="images/pay_pal_1.png" alt="Pay_pal1" /></a></li>
+        <li><a href="#"><img src="images/amercan_card.png" alt="Pay_pal1" /></a></li>
+        <li><a href="#"><img src="images/pay_pal_2.png" alt="Pay_pal1" /></a></li>
+        <li><a href="#"><img src="images/visa_card.png" alt="Pay_pal1" /></a></li>
+        <li><a href="#"><img src="images/pay_pal.png" alt="Pay_pal1" /></a></li>
+      </ul>
+    </div>
+    <div class="clear" style="height:25px;"></div>
+    <!--Pay Pal End -->
+    <div class="footer_top"></div>
+    <div class="copy_right">© 2011 twinne.com Ltd</div>
+    <div class="clear"></div>
+  </div>
+  <!--Footer End -->
+  <div class="clear"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+[23-Nov-2011 06:28:27] PHP Fatal error:  Call to a member function save() on a non-object in /home/deemtech/public_html/dev/twinne/application/controllers/admin/role_manager.php on line 99
+[23-Nov-2011 07:09:32] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[24-Nov-2011 03:57:32] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/deemtech/public_html/dev/twinne/application/views/admin/message.php on line 11
+[24-Nov-2011 23:51:26] PHP Fatal error:  Cannot redeclare class Home in /home/deemtech/public_html/dev/twinne/application/views/home.php on line 36
+[24-Nov-2011 23:54:20] PHP Fatal error:  Cannot redeclare class Show_product in /home/deemtech/public_html/dev/twinne/application/views/show_product.php on line 143
+[24-Nov-2011 23:55:00] PHP Fatal error:  Cannot redeclare class Show_product in /home/deemtech/public_html/dev/twinne/application/views/show_product.php on line 143
+[25-Nov-2011 00:00:34] PHP Fatal error:  Class 'MY_Controller' not found in /home/deemtech/public_html/dev/twinne/application/views/single_product.php on line 3
+[25-Nov-2011 04:17:18] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:84
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 84
+[25-Nov-2011 05:47:24] PHP Fatal error:  Call to a member function include_join_fields() on a non-object in /home/deemtech/public_html/dev/twinne/application/controllers/admin/sales_manager.php on line 58
+[25-Nov-2011 05:47:48] PHP Fatal error:  Call to a member function include_join_fields() on a non-object in /home/deemtech/public_html/dev/twinne/application/controllers/admin/sales_manager.php on line 58
+[25-Nov-2011 05:50:33] PHP Fatal error:  Call to a member function include_join_fields() on a non-object in /home/deemtech/public_html/dev/twinne/application/controllers/admin/sales_manager.php on line 58
+[25-Nov-2011 05:58:45] PHP Fatal error:  Call to a member function include_join_fields() on a non-object in /home/deemtech/public_html/dev/twinne/application/controllers/admin/sales_manager.php on line 58
+[25-Nov-2011 05:59:17] PHP Fatal error:  Call to a member function include_join_fields() on a non-object in /home/deemtech/public_html/dev/twinne/application/controllers/admin/sales_manager.php on line 58
+[25-Nov-2011 05:59:43] PHP Fatal error:  Call to a member function include_join_fields() on a non-object in /home/deemtech/public_html/dev/twinne/application/controllers/admin/sales_manager.php on line 58
+[25-Nov-2011 05:59:48] PHP Fatal error:  Call to a member function include_join_fields() on a non-object in /home/deemtech/public_html/dev/twinne/application/controllers/admin/sales_manager.php on line 58
+[25-Nov-2011 06:04:32] PHP Fatal error:  Class 'Order_product' not found in /home/deemtech/public_html/dev/twinne/application/controllers/admin/sales_manager.php on line 85
+[25-Nov-2011 06:09:31] PHP Fatal error:  Uncaught exception 'Exception' with message 'Unable to call the method "self" on the class User' in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php:1267
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): DataMapper->__call('self', Array)
+#1 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): User->self('tbl_user_addres...', 'billing')
+#2 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(1243): DataMapper->_join_field('self', Array)
+#3 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): DataMapper->__call('self_join_field', Array)
+#4 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): User->self_join_field(Object(Address), 'type', 'billing')
+#5 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Billing_info->saveBillingInfo()
+#6 /home/deemtech/public_html/dev/twinne/index.php(201): require_ in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1267
+[25-Nov-2011 06:09:52] PHP Fatal error:  Uncaught exception 'Exception' with message 'Unable to call the method "self" on the class User' in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php:1267
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): DataMapper->__call('self', Array)
+#1 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): User->self('tbl_user_addres...', 'billing')
+#2 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(1243): DataMapper->_join_field('self', Array)
+#3 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): DataMapper->__call('self_join_field', Array)
+#4 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): User->self_join_field(Object(Address), 'type', 'billing')
+#5 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Billing_info->saveBillingInfo()
+#6 /home/deemtech/public_html/dev/twinne/index.php(201): require_ in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1267
+[25-Nov-2011 07:10:48] PHP Fatal error:  Cannot redeclare class Show_product in /home/deemtech/public_html/dev/twinne/application/views/show_product.php on line 145
+[25-Nov-2011 07:11:40] PHP Fatal error:  Cannot redeclare class Show_product in /home/deemtech/public_html/dev/twinne/application/views/show_product.php on line 145
+[25-Nov-2011 07:12:07] PHP Fatal error:  Cannot redeclare class Show_product in /home/deemtech/public_html/dev/twinne/application/views/show_product.php on line 145
+[28-Nov-2011 04:39:29] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:84
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 84
+[28-Nov-2011 06:09:48] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:84
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 84
+[28-Nov-2011 06:20:22] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:84
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 84
+[28-Nov-2011 06:40:43] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:84
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 84
+[28-Nov-2011 06:41:01] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:84
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 84
+[28-Nov-2011 07:01:28] PHP Parse error:  syntax error, unexpected $end in /home/deemtech/public_html/dev/twinne/application/controllers/show_product.php on line 54
+[01-Dec-2011 07:41:05] PHP Parse error:  syntax error, unexpected $end in /home/deemtech/public_html/dev/twinne/application/views/admin/add_project.php on line 482
+[01-Dec-2011 07:41:32] PHP Parse error:  syntax error, unexpected $end in /home/deemtech/public_html/dev/twinne/application/views/admin/add_project.php on line 482
+[03-Dec-2011 02:53:12] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:89
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 89
+[03-Dec-2011 02:54:44] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:89
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 89
+[07-Dec-2011 06:57:40] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[07-Dec-2011 06:58:09] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[07-Dec-2011 06:58:18] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[07-Dec-2011 06:58:22] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[07-Dec-2011 07:00:11] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[07-Dec-2011 07:01:44] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[07-Dec-2011 07:34:47] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[07-Dec-2011 07:35:00] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[08-Dec-2011 06:31:12] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[08-Dec-2011 06:38:03] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:94
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 94
+[08-Dec-2011 06:38:17] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:94
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 94
+[09-Dec-2011 04:49:47] PHP Fatal error:  Call to undefined method Logout::removeWishlist() in /home/deemtech/public_html/dev/twinne/application/controllers/user/logout.php on line 28
+[09-Dec-2011 04:50:05] PHP Fatal error:  Call to undefined method Logout::removeWishlist() in /home/deemtech/public_html/dev/twinne/application/controllers/user/logout.php on line 28
+[12-Dec-2011 04:03:22] PHP Fatal error:  Uncaught exception 'Exception' with message '<p>You did not select a file to upload.</p>' in /home/deemtech/public_html/dev/twinne/application/models/file.php:95
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/controllers/admin/product_manager.php(147): File->upload()
+#1 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Product_manager->saveImage()
+#2 /home/deemtech/public_html/dev/twinne/index.php(201): require_once('/home/deemtech/...')
+#3 {main}
+  thrown in /home/deemtech/public_html/dev/twinne/application/models/file.php on line 95
+[12-Dec-2011 04:27:26] PHP Parse error:  syntax error, unexpected '=', expecting T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 56
+[13-Dec-2011 03:17:24] PHP Fatal error:  Class 'MY_Controller' not found in /home/deemtech/public_html/dev/twinne/application/controllers/home.php on line 3
+[14-Dec-2011 04:12:39] PHP Fatal error:  Class 'Attribute' not found in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 26
+[19-Dec-2011 02:44:15] PHP Fatal error:  Uncaught exception 'Exception' with message 'Unable to call the method "self" on the class User' in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php:1267
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): DataMapper->__call('self', Array)
+#1 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): User->self('tbl_user_addres...', 'billing')
+#2 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(1243): DataMapper->_join_field('self', Array)
+#3 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): DataMapper->__call('self_join_field', Array)
+#4 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): User->self_join_field(Object(Address), 'type', 'billing')
+#5 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Billing_info->saveBillingInfo()
+#6 /home/deemtech/public_html/dev/twinne/index.php(201): require_ in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1267
+[19-Dec-2011 02:44:26] PHP Fatal error:  Uncaught exception 'Exception' with message 'Unable to call the method "self" on the class User' in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php:1267
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): DataMapper->__call('self', Array)
+#1 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): User->self('tbl_user_addres...', 'billing')
+#2 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(1243): DataMapper->_join_field('self', Array)
+#3 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): DataMapper->__call('self_join_field', Array)
+#4 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): User->self_join_field(Object(Address), 'type', 'billing')
+#5 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Billing_info->saveBillingInfo()
+#6 /home/deemtech/public_html/dev/twinne/index.php(201): require_ in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1267
+[19-Dec-2011 02:44:49] PHP Fatal error:  Uncaught exception 'Exception' with message 'Unable to call the method "self" on the class User' in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php:1267
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): DataMapper->__call('self', Array)
+#1 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): User->self('tbl_user_addres...', 'billing')
+#2 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(1243): DataMapper->_join_field('self', Array)
+#3 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): DataMapper->__call('self_join_field', Array)
+#4 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): User->self_join_field(Object(Address), 'type', 'billing')
+#5 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Billing_info->saveBillingInfo()
+#6 /home/deemtech/public_html/dev/twinne/index.php(201): require_ in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1267
+[19-Dec-2011 03:15:30] PHP Fatal error:  Uncaught exception 'Exception' with message 'Unable to call the method "self" on the class User' in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php:1267
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): DataMapper->__call('self', Array)
+#1 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): User->self('tbl_user_addres...', 'billing')
+#2 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(1243): DataMapper->_join_field('self', Array)
+#3 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): DataMapper->__call('self_join_field', Array)
+#4 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): User->self_join_field(Object(Address), 'type', 'billing')
+#5 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Billing_info->saveBillingInfo()
+#6 /home/deemtech/public_html/dev/twinne/index.php(201): require_ in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1267
+[19-Dec-2011 08:21:46] PHP Parse error:  syntax error, unexpected $end, expecting T_FUNCTION in /home/deemtech/public_html/dev/twinne/application/controllers/user/register.php on line 168
+[20-Dec-2011 23:25:59] PHP Fatal error:  Uncaught exception 'Exception' with message 'Unable to call the method "self" on the class User' in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php:1267
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): DataMapper->__call('self', Array)
+#1 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): User->self('tbl_user_addres...', 'billing')
+#2 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(1243): DataMapper->_join_field('self', Array)
+#3 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): DataMapper->__call('self_join_field', Array)
+#4 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): User->self_join_field(Object(Address), 'type', 'billing')
+#5 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Billing_info->saveBillingInfo()
+#6 /home/deemtech/public_html/dev/twinne/index.php(201): require_ in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1267
+[21-Dec-2011 05:01:06] PHP Fatal error:  Class 'Attribute' not found in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 26
+[22-Dec-2011 05:04:25] PHP Fatal error:  Uncaught exception 'Exception' with message 'Unable to call the method "self" on the class User' in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php:1267
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): DataMapper->__call('self', Array)
+#1 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): User->self('tbl_user_addres...', 'billing')
+#2 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(1243): DataMapper->_join_field('self', Array)
+#3 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): DataMapper->__call('self_join_field', Array)
+#4 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(35): User->self_join_field(Object(Address), 'type', 'billing')
+#5 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Billing_info->saveBillingInfo()
+#6 /home/deemtech/public_html/dev/twinne/index.php(201): require_ in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1267
+[22-Dec-2011 05:30:04] PHP Fatal error:  Class 'Attribute' not found in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 26
+[26-Dec-2011 00:05:59] PHP Fatal error:  Class 'Attribute' not found in /home/deemtech/public_html/dev/twinne/application/controllers/admin/attribute_manager.php on line 26
+[27-Dec-2011 06:52:48] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/deemtech/public_html/dev/twinne/application/models/color.php on line 19
+[28-Dec-2011 05:52:23] PHP Fatal error:  Uncaught exception 'Exception' with message 'Unable to call the method "self" on the class User' in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php:1267
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): DataMapper->__call('self', Array)
+#1 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): User->self('tbl_user_addres...', 'billing')
+#2 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(1243): DataMapper->_join_field('self', Array)
+#3 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(46): DataMapper->__call('self_join_field', Array)
+#4 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(46): User->self_join_field(Object(Address), 'type', 'billing')
+#5 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Billing_info->saveBillingInfo()
+#6 /home/deemtech/public_html/dev/twinne/index.php(201): require_ in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1267
+[29-Dec-2011 05:39:24] PHP Fatal error:  Class 'Shipping' not found in /home/deemtech/public_html/dev/twinne/application/controllers/cart.php on line 405
+[04-Jan-2012 02:52:11] PHP Fatal error:  Uncaught exception 'Exception' with message 'Unable to call the method "self" on the class User' in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php:1267
+Stack trace:
+#0 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): DataMapper->__call('self', Array)
+#1 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(5587): User->self('tbl_user_addres...', 'billing')
+#2 /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php(1243): DataMapper->_join_field('self', Array)
+#3 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(46): DataMapper->__call('self_join_field', Array)
+#4 /home/deemtech/public_html/dev/twinne/application/controllers/user/billing_info.php(46): User->self_join_field(Object(Address), 'type', 'billing')
+#5 /home/deemtech/public_html/dev/twinne/system/core/CodeIgniter.php(339): Billing_info->saveBillingInfo()
+#6 /home/deemtech/public_html/dev/twinne/index.php(201): require_ in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1267
+[04-Jan-2012 03:23:38] PHP Parse error:  syntax error, unexpected T_SL, expecting T_FUNCTION in /home/deemtech/public_html/dev/twinne/application/controllers/cart.php on line 589
+[04-Jan-2012 03:23:45] PHP Parse error:  syntax error, unexpected T_SL, expecting T_FUNCTION in /home/deemtech/public_html/dev/twinne/application/controllers/cart.php on line 589
+[04-Jan-2012 03:24:00] PHP Parse error:  syntax error, unexpected T_SL, expecting T_FUNCTION in /home/deemtech/public_html/dev/twinne/application/controllers/cart.php on line 589
+[04-Jan-2012 03:24:20] PHP Parse error:  syntax error, unexpected T_SL, expecting T_FUNCTION in /home/deemtech/public_html/dev/twinne/application/controllers/cart.php on line 589
+[04-Jan-2012 03:24:39] PHP Parse error:  syntax error, unexpected T_SL, expecting T_FUNCTION in /home/deemtech/public_html/dev/twinne/application/controllers/cart.php on line 589
+[12-Jan-2012 10:12:22] PHP Fatal error:  Call to a member function userdata() on a non-object in /home/deemtech/public_html/dev/twinne/application/core/MY_Controller.php on line 8
+[13-Jan-2012 01:22:31] PHP Fatal error:  Call to a member function userdata() on a non-object in /home/deemtech/public_html/dev/twinne/application/core/MY_Controller.php on line 8
+[13-Jan-2012 01:22:41] PHP Fatal error:  Call to a member function userdata() on a non-object in /home/deemtech/public_html/dev/twinne/application/core/MY_Controller.php on line 8
+[13-Jan-2012 01:27:03] PHP Fatal error:  Call to a member function userdata() on a non-object in /home/deemtech/public_html/dev/twinne/application/core/MY_Controller.php on line 8
+[13-Jan-2012 01:28:00] PHP Fatal error:  Call to a member function userdata() on a non-object in /home/deemtech/public_html/dev/twinne/application/core/MY_Controller.php on line 8
+[15-Jan-2012 23:24:03] PHP Fatal error:  Call to a member function order_by() on a non-object in /home/deemtech/public_html/dev/twinne/application/controllers/admin/sales_manager.php on line 73
+[16-Jan-2012 05:06:19] PHP Fatal error:  Call to a member function userdata() on a non-object in /home/deemtech/public_html/dev/twinne/application/core/MY_Controller.php on line 8
+[16-Jan-2012 05:06:41] PHP Fatal error:  Call to a member function userdata() on a non-object in /home/deemtech/public_html/dev/twinne/application/core/MY_Controller.php on line 8
+[21-Jan-2012 00:55:29] PHP Parse error:  syntax error, unexpected T_IF, expecting T_FUNCTION in /home/deemtech/public_html/dev/twinne/application/controllers/user/register.php on line 219
+[21-Jan-2012 01:07:15] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'user/MCAPI.class.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/deemtech/public_html/dev/twinne/application/controllers/user/register.php on line 186
+[24-Jan-2012 02:51:12] PHP Parse error:  syntax error, unexpected '*' in /home/deemtech/public_html/dev/twinne/application/controllers/cart.php on line 141
+[24-Jan-2012 02:51:13] PHP Parse error:  syntax error, unexpected '*' in /home/deemtech/public_html/dev/twinne/application/controllers/cart.php on line 141
+[24-Jan-2012 08:32:39] PHP Fatal error:  Class 'Graphic' not found in /home/deemtech/public_html/dev/twinne/application/controllers/admin/contest_manager.php on line 36
+[24-Jan-2012 08:32:46] PHP Fatal error:  Class 'Graphic' not found in /home/deemtech/public_html/dev/twinne/application/controllers/admin/contest_manager.php on line 36
+[24-Jan-2012 08:34:10] PHP Fatal error:  Class 'Graphic' not found in /home/deemtech/public_html/dev/twinne/application/controllers/admin/contest_manager.php on line 36
+[24-Jan-2012 08:34:18] PHP Fatal error:  Class 'Graphic' not found in /home/deemtech/public_html/dev/twinne/application/controllers/admin/contest_manager.php on line 36
+[24-Jan-2012 08:35:18] PHP Fatal error:  Class 'Graphic' not found in /home/deemtech/public_html/dev/twinne/application/controllers/admin/contest_manager.php on line 36
+[25-Jan-2012 04:11:30] PHP Parse error:  syntax error, unexpected $end, expecting ',' or ';' in /home/deemtech/public_html/dev/twinne/application/views/single_product.php on line 650
+[25-Jan-2012 12:07:03] PHP Fatal error:  Cannot redeclare site_url() (previously declared in /home/deemtech/public_html/dev/twinne/system/helpers/url_helper.php:42) in /home/deemtech/public_html/dev/twinne/blog/wp-includes/link-template.php on line 1898
+[25-Jan-2012 06:12:29] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting T_STRING or T_VARIABLE or '$' in /home/deemtech/public_html/dev/twinne/application/views/subscription.php on line 101
+[25-Jan-2012 12:15:13] PHP Fatal error:  Cannot redeclare site_url() (previously declared in /home/deemtech/public_html/dev/twinne/system/helpers/url_helper.php:42) in /home/deemtech/public_html/dev/twinne/blog/wp-includes/link-template.php on line 1898
+[25-Jan-2012 12:15:55] PHP Fatal error:  Cannot redeclare site_url() (previously declared in /home/deemtech/public_html/dev/twinne/system/helpers/url_helper.php:42) in /home/deemtech/public_html/dev/twinne/blog/wp-includes/link-template.php on line 1898
+[25-Jan-2012 12:21:05] PHP Fatal error:  Cannot redeclare site_url() (previously declared in /home/deemtech/public_html/dev/twinne/system/helpers/url_helper.php:42) in /home/deemtech/public_html/dev/twinne/blog/wp-includes/link-template.php on line 1898
+[26-Jan-2012 05:54:21] PHP Fatal error:  Class 'file' not found in /home/deemtech/public_html/dev/twinne/application/libraries/datamapper.php on line 1154
+[26-Jan-2012 06:13:08] PHP Parse error:  syntax error, unexpected $end in /home/deemtech/public_html/dev/twinne/application/controllers/cart.php on line 1106
+[26-Jan-2012 06:21:27] PHP Parse error:  syntax error, unexpected $end in /home/deemtech/public_html/dev/twinne/application/controllers/cart.php on line 858
+[12-Apr-2012 17:59:41] PHP Fatal error:  Call to a member function get_my_wishlist_product() on a non-object in /home/twinneco/public_html/dev.twinne.com/application/core/MY_Controller.php on line 145
+[12-Apr-2012 18:19:08] PHP Parse error:  syntax error, unexpected T_IF in /home/twinneco/public_html/dev.twinne.com/application/views/user/member_wishlist.php on line 156
