@@ -20,9 +20,9 @@
       <div class="social-media_box">
         <h3>Socialize</h3>
         <ul>
-          <li><a class="footer_facebook" target="_blank" href="https://www.facebook.com/twinne.com"></a></li>
-          <li><a class="footer_twitter" target="_blank" href="https://twitter.com/twinne_com"></a></li>
-          <li><a class="footer_pinterest" target="_blank" href="https://pinterest.com/twinne/"></a></li>
+          <li><a class="footer_facebook" target="_blank" href="https://www.facebook.com/Tangail-sharee.com"></a></li>
+          <li><a class="footer_twitter" target="_blank" href="https://twitter.com/Tangail-sharee"></a></li>
+          <li><a class="footer_pinterest" target="_blank" href="https://pinterest.com/Tangailsharee/"></a></li>
         </ul>
         <div class="clear"></div>
       </div>
@@ -37,13 +37,13 @@
     <div class="footer_menu_box">
     <div class="copy_right">
     	
-    <p>&copy; 2012 twinne.com Ltd</p>
+    <p>&copy; 2013 Tangail-sharee.com</p>
     <ul class="footer_links">    	
     	<li><a href="#">Home</a></li>
     	<li>/</li>
-    	<li><a href="mailto:info@twinne.com">Contact</a></li>
+    	<li><a href="mailto:info@tangail-sharee.com.com">Contact</a></li>
     	<li>/</li>
-    	<li><a href="https://twinne.tenderapp.com">Support</a></li>
+    	<li><a href="https://tangail-sharee.tenderapp.com">Support</a></li>
     	<li>/</li>
     	<li><a href="<?php echo base_url();?>pages/terms">Terms &amp; Conditions</a></li>
     	<li>/</li>
@@ -78,7 +78,7 @@
   xmlns:vcard="http://www.w3.org/2006/vcard/ns#">
  
   <div typeof="gr:BusinessEntity" about="#company">
-    <div property="gr:legalName" content="Twinne Ltd"></div>
+    <div property="gr:legalName" content="Tangail-sharee.com"></div>
     <div property="vcard:tel" content="0044 20 3620 9250"></div>
     <div rel="vcard:adr">
       <div typeof="vcard:Address">

@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Terms and conditions</title>
-<meta name="description" content="Twinne Terms and Conditions. Privacy policy and legal details to buy our unique t-shirts">
-<meta name="keywords" content="browse, twinne, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 Twinne Ltd" />
-<meta name="author" content="Twinne Ltd" />
+<meta name="description" content="Tangail-sharee.com Terms and Conditions. Privacy policy and legal details to buy our unique t-shirts">
+<meta name="keywords" content="browse, Tangail-sharee.com, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
+<meta name="copyright" content="(c) 2013 Tangail-sharee.com" />
+<meta name="author" content="Tangail-sharee.com" />
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
 <!--Select Box Js Start-->
@@ -106,7 +106,7 @@ $(document).ready(function(){
       	<li><a href="<?php echo base_url();?>">HOME</a></li>         
         <li><a href="<?php echo base_url();?>show_product?type=woman">WOMEN</a></li>
         <li><a href="<?php echo base_url();?>show_product?type=man">MEN</a></li>
-        <li><a href="http://help.twinne.com/">SUPPORT</a></li>
+        <li><a href="http://help.tangail-sharee.com.com/">SUPPORT</a></li>
       </ul>
     </div>
     
@@ -158,20 +158,20 @@ function cart_refresh(){
 <p>Access to and use of this website and the products and services available through it are subject to the following terms and conditions. These terms of conditions may be updated at any time and without notice. Your statutory rights are not affected.
 </p>
 <p>
-This Website also contains links to other websites, which are not operated by Twinne (the "Linked Sites"). Twinne has no control over the Linked Sites and accepts no responsibility for them or for any loss or damage that may arise from your use of them. Your use of the Linked Sites will be subject to the terms of use and service contained within each such site.
+This Website also contains links to other websites, which are not operated by Tangail-sharee.com (the "Linked Sites"). Tangail-sharee.com has no control over the Linked Sites and accepts no responsibility for them or for any loss or damage that may arise from your use of them. Your use of the Linked Sites will be subject to the terms of use and service contained within each such site.
 </p>
 
 <h2>Terms of sale</h2>
 
 <p>
-The terms of sale shall apply to all contracts for the purchase of goods by you from Twinne Ltd (hereafter "Twinne"), the seller, to the exclusion of all other terms and conditions which you may purport to apply under any sales offer or purchase order. These terms of sale supersede all previous agreements and understandings between the parties. Any amendment to the terms of sale will only be effective if signed by a director of Twinne.
-Twinne is committed to providing you with terms of sale, which are easy to understand and which are fair to you.
+The terms of sale shall apply to all contracts for the purchase of goods by you from Tangail-sharee.com (hereafter "Tangail Sharee"), the seller, to the exclusion of all other terms and conditions which you may purport to apply under any sales offer or purchase order. These terms of sale supersede all previous agreements and understandings between the parties. Any amendment to the terms of sale will only be effective if signed by a director of Tangail-sharee.com.
+Tangail-sharee.com is committed to providing you with terms of sale, which are easy to understand and which are fair to you.
 </p><p>
 Dispatch times may vary according to availability and any guarantees or representations made as to delivery times are limited and subject to any delays resulting from postal delays or force majeure for which we will not be responsible.
-In order to contract with Twinne you must be over 18 years of age and possess a valid credit or debit card issued by a bank acceptable to us, or a Paypal account. 
+In order to contract with Tangail-sharee.com you must be over 18 years of age and possess a valid credit or debit card issued by a bank acceptable to us, or a Paypal account. 
 </p><p>
 When placing an order you undertake that all details you provide to us are true and accurate, that you are an authorised user of the credit or debit card used to place your order and that there are sufficient funds to cover the cost of the goods.
-Whilst we try and ensure that all details, descriptions and prices which appear on our website <a href="http://twinne.com">twinne.com</a> are accurate, errors may occur. If we discover an error in the price of any goods which you have ordered we will inform you about this as soon as possible and give you the option of reconfirming your order at the correct price or cancelling it. If we are unable to contact you we will treat the order as cancelled. If you cancel and you have already paid for the goods, you will receive a full refund. Where applicable, prices are inclusive of VAT at the rate appropriate to the country of receipt within the EU. VAT is not included in our prices for customers outside of the EU. Delivery costs will be charged in addition; such additional charges are clearly displayed where applicable and included in the 'Total Cost'.
+Whilst we try and ensure that all details, descriptions and prices which appear on our website <a href="http://tangail-sharee.com.com">Tangail-sharee.com</a> are accurate, errors may occur. If we discover an error in the price of any goods which you have ordered we will inform you about this as soon as possible and give you the option of reconfirming your order at the correct price or cancelling it. If we are unable to contact you we will treat the order as cancelled. If you cancel and you have already paid for the goods, you will receive a full refund. Where applicable, prices are inclusive of VAT at the rate appropriate to the country of receipt within the EU. VAT is not included in our prices for customers outside of the EU. Delivery costs will be charged in addition; such additional charges are clearly displayed where applicable and included in the 'Total Cost'.
 <p>
 
 <h2>Placing an order</h2>
@@ -181,7 +181,7 @@ All orders are subject to acceptance and availability. When placing an order you
 When placing your order we carry out a standard pre-authorization check on your payment card. Payment will be not be taken until your order has been accepted and the goods dispatched. We carry out security checks on all orders and may cancel your order should it fail these checks, upon which you will be notified.
 </p>
 <p>
-A contract between you and Twinne will not be formed until we send you a further email confirming that your order has been accepted and your goods have been dispatched. Only those goods listed in the dispatch confirmation e-mail will be included in the contract formed.
+A contract between you and Tangail-sharee.com will not be formed until we send you a further email confirming that your order has been accepted and your goods have been dispatched. Only those goods listed in the dispatch confirmation e-mail will be included in the contract formed.
 </p>
 <p>
 We reserve the right not to accept your order in the event that the item ordered is out of stock or does not satisfy our quality control standards and is withdrawn.
@@ -189,13 +189,13 @@ We reserve the right not to accept your order in the event that the item ordered
 
 <h2>Refunds</h2>
 <p>
-We guarantee to refund items purchased on Twinne.com that you are not completely happy with, when you perform the refund request through our website within 7 days from the receipt of the items, and return it to us in a saleable condition within 28 days from your refund request. We do not offer exchange with other Twinne products.
+We guarantee to refund items purchased on Tangail-sharee.com that you are not completely happy with, when you perform the refund request through our website within 7 days from the receipt of the items, and return it to us in a saleable condition within 28 days from your refund request. We do not offer exchange with other Tangail-sharee.com products.
 </p>
 <p>
 Please note that items must be returned with all of the tags intact. 
 </p>
 <p>
-Twinne purchases can only be returned by post, we do not refund the postage and delivery costs. We are sorry for any inconvenience this may cause you. 
+Tangail-sharee.com purchases can only be returned by post, we do not refund the postage and delivery costs. We are sorry for any inconvenience this may cause you. 
 </p>
 <p>
 The goods are your responsibility until they reach our Warehouse. Please ensure you package your return to prevent any damage to the items or boxes. We are not responsible for any items that are returned to us in error.
@@ -206,19 +206,19 @@ Our returns address is:
 
 <p>
 <br />
-<strong>Twinne Ltd</strong><br />
-91 Linden Gardens, room 20<br />
-London<br />
-W2 4EX<br />
+<strong>Tangail-sharee.com</strong><br />
+Adalat Para, Kalibari Road<br />
+Tangail<br />
+Bangladesh<br />
 </p>
 
 <p>
-Go to page <a href="https://twinne.com/pages/delivery_returns_terms_conditions">Delivery & Returns</a> for more info.
+Go to page <a href="https://tangail-sharee.com.com/pages/delivery_returns_terms_conditions">Delivery & Returns</a> for more info.
 </p>
 
 <h2>Delivery options</h2>
 <p>
-We offer different options of delivery by Royal Mail Ltd. Go to page <a href="https://twinne.com/pages/delivery_returns_terms_conditions">Delivery & Returns</a> for more info.
+We offer different options of delivery by Royal Mail Ltd. Go to page <a href="https://tangail-sharee.com/pages/delivery_returns_terms_conditions">Delivery & Returns</a> for more info.
 </p>
 <p>
 Unfortunately we are not able to delivery to Morocco at the moment. If we receive orders form Morocco by mistake we will refund it immediately and we will cancel the order.
@@ -240,19 +240,19 @@ In the unlikely event that there is a dispute in relation to the goods supplied,
 </p>
 <p>We will not be liable for any loss or damage caused by a distributed denial-of-service attack, viruses or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of this website or to your downloading of any material posted on it, or on any website linked to it.
 </p>
-<p>Twinne reserves the rights to take any customer account out of use at any time if it is believed that the website and the products and services available through it are being misused.
+<p>Tangail-sharee.com reserves the rights to take any customer account out of use at any time if it is believed that the website and the products and services available through it are being misused.
 <p>
 <h2>Intellectual property,software and Content</h2>
 <p>
-The intellectual property rights in all software and content made available to you on or through this Website remains the property of Twinne or its licensors and are protected by copyright laws and treaties around the world. All such rights are reserved by Twinne and its licensors. You may store, print and display the content supplied solely for your own personal use. You are not permitted to publish, manipulate, distribute or otherwise reproduce, in any format, any of the content or copies of the content supplied to you or which appears on this Website nor may you use any such content in connection with any business or commercial enterprise.
+The intellectual property rights in all software and content made available to you on or through this Website remains the property of Tangail-sharee.com or its licensors and are protected by copyright laws and treaties around the world. All such rights are reserved by Tangail-sharee.com and its licensors. You may store, print and display the content supplied solely for your own personal use. You are not permitted to publish, manipulate, distribute or otherwise reproduce, in any format, any of the content or copies of the content supplied to you or which appears on this Website nor may you use any such content in connection with any business or commercial enterprise.
 </p>
 
-<p>You shall not modify, translate, reverse engineer, decompile, disassemble or create derivative works based on any software or accompanying documentation supplied by Twinne or its licensors. Twinne.com is trade marks belonging to Twinne. No licence or consent is granted to you to use these marks in any way, and you agree not to use these marks or any marks which are colourably similar without the written permission of Twinne.
+<p>You shall not modify, translate, reverse engineer, decompile, disassemble or create derivative works based on any software or accompanying documentation supplied by Tangail-sharee.com or its licensors. Tangail-sharee.com is trade marks belonging to Tangail-sharee.com. No licence or consent is granted to you to use these marks in any way, and you agree not to use these marks or any marks which are colourably similar without the written permission of Tangail-sharee.com.
 <br />
 Disclaimer as to ownership of trade marks,images of personalities and third party copyright
 </p>
 <p>	
-Except where expressly stated to the contrary all persons (including their names and images), third party trade marks and images of third party products, services and/or locations featured on this Website are in no way associated, linked or affiliated with Twinne and you should not rely on the existence of such a connection or affiliation. Any trade marks/names featured on this Website are owned by the respective trade mark owners. Where a trade mark or brand name is referred to it is used solely to describe or identify the products and services and is in no way an assertion that such products or services are endorsed by or connected to Twinne.
+Except where expressly stated to the contrary all persons (including their names and images), third party trade marks and images of third party products, services and/or locations featured on this Website are in no way associated, linked or affiliated with Tangail-sharee.com and you should not rely on the existence of such a connection or affiliation. Any trade marks/names featured on this Website are owned by the respective trade mark owners. Where a trade mark or brand name is referred to it is used solely to describe or identify the products and services and is in no way an assertion that such products or services are endorsed by or connected to Tangail-sharee.com.
 </p>
 <p>
 Your use of this website and any dispute arising out of such use of the website is subject to the laws of England, Northern Ireland, Scotland and Wales.
@@ -260,7 +260,7 @@ Your use of this website and any dispute arising out of such use of the website 
 
 <h2>Privacy Policy</h2>
 <p>
-Twinne takes a great deal of care in ensuring that information which is obtained about you is treated appropriately and in accordance with the Data Protection Act 1998. We will not sell your personal information to any third parties.
+Tangail-sharee.com takes a great deal of care in ensuring that information which is obtained about you is treated appropriately and in accordance with the Data Protection Act 1998. We will not sell your personal information to any third parties.
 </p>
 <p>We use the information that we collect about you to:</p>
 <ul>
@@ -283,7 +283,7 @@ A cookie is a small file which asks permission to be placed on your computer's h
 
 <h2>Community terms & conditions</h2>
 <p>
-Twinne reserves the right to close accounts if any users is seen to be using proxy IPS in order to attempt to hide the use of multiple accounts or disrupts any of our service in any way.
+Tangail-sharee.com reserves the right to close accounts if any users is seen to be using proxy IPS in order to attempt to hide the use of multiple accounts or disrupts any of our service in any way.
 If you use multiple logins for the purpose of disrupting the community you may have action taken against all of yours accounts.
 </p>
 

@@ -21,7 +21,7 @@ class Forgot_password extends MY_Controller {
      		$config['mailtype']='html';
 	        $this->load->library('email',$config);
 	
-			$this->email->from('info@twinne.com', 'Twinne');
+			$this->email->from('info@tangail-sharee.com', 'Tangail-sharee.com');
 			$this->email->to($u->email);
 			
 			$recover_pass_url = base_url()."user/changepassword/index/".md5($u->id)."/".md5($str);

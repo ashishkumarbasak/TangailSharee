@@ -2,10 +2,10 @@
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Contact us | Twinne</title>
-<meta name="keywords" content="browse, twinne, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 Twinne Ltd" />
-<meta name="author" content="Twinne Ltd" />
+<title>Contact us | Tangail-sharee</title>
+<meta name="keywords" content="browse, Tangail-sharee.com, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
+<meta name="copyright" content="(c) 2013 Tangail-sharee.com" />
+<meta name="author" content="Tangail-sharee.com" />
 <meta name="description" content="bring real art on t-shirts. Not photographic artworks, or no-sense illustrations, but real art created by super-talented designers belonging to different fields">
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
@@ -106,7 +106,7 @@ $(document).ready(function(){
       	<li><a href="<?php echo base_url();?>">HOME</a></li>         
         <li><a href="<?php echo base_url();?>show_product?type=woman">WOMEN</a></li>
         <li><a href="<?php echo base_url();?>show_product?type=man">MEN</a></li>
-        <li><a href="http://help.twinne.com/">SUPPORT</a></li>
+        <li><a href="http://help.tangail-sharee.com/">SUPPORT</a></li>
       </ul>
     </div>
     
@@ -156,17 +156,17 @@ function cart_refresh(){
 
 <p>If you have any queries regarding your order, payment or your account you can send us an email at:<br /><br />
 
-<a href="mailto:help@twinne.com">help@twinne.com</a></p>
+<a href="mailto:help@tangail-sharee.com">help@tangail-sharee.com</a></p>
 
-<p> or contact us through the <a href="http://help.twinne.com">support center</a>.</p>
+<p> or contact us through the <a href="http://help.tangail-sharee.com">support center</a>.</p>
 
 <p>If you have any commercial or distribution proposal send us an email at:<br /><br />
 
-<a href="mailto:sales@twinne.com">sales@twinne.com</a></p>
+<a href="mailto:sales@tangail-sharee.com">sales@tangail-sharee.com</a></p>
 
-<p>If you have any general enquiries or you are a designer who wants to join Twinne send us an email at:<br /><br />
+<p>If you have any general enquiries or you are a designer who wants to join Tangail-sharee send us an email at:<br /><br />
 
-<a href="mailto:info@twinne.com">info@twinne.com</a></p>
+<a href="mailto:info@tangail-sharee.com">info@tangail-sharee.com</a></p>
 
 <p>We will respond to your email within 48 hours</p>
 

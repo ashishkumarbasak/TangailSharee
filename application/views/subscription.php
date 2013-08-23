@@ -97,12 +97,12 @@ Thank you! Your subscription to our list has been confirmed.<br>
 <br>
 You can start now <a href="<?php echo base_url(); ?>">browsing the gallery</a> and adding products to your <a href="<?php echo base_url();?>user/member_wishlist">wish-list</a><br>
 <br>
-In case you need help, feel free to contact us through our <a href="https://help.twinne.com"><u>support system</u></a> or drop us a line <a href="mailto:info@twinne.com">info@twinne.com</a>.<br>
+In case you need help, feel free to contact us by drop a line <a href="mailto:info@tangail-sharee.com">info@tangail-sharee.com</a>.<br>
 <br>
 Best,<br>
 <br>
-The Twinne Team<br>
-http://twinne.com<br>
+Tangail-sharee.com<br>
+http://tangail-sharee.com<br>
 
         
         
@@ -116,12 +116,12 @@ Thank you! You already are a member of our newsletter list.<br>
 <br>
 You can start now <a href="<?php echo base_url(); ?>">browsing the gallery</a> and adding products to your <a href="<?php echo base_url();?>user/member_wishlist">wish-list</a><br>
 <br>
-In case you need help, feel free to contact us through our <a href="https://help.twinne.com">support system</a> or drop us a line <a href="mailto:info@twinne.com">info@twinne.com</a>.<br>
+In case you need help, feel free to contact us by drop a line <a href="mailto:info@tangail-sharee.com">info@tangail-sharee.com</a>.<br>
 <br>
 Best,<br>
 <br>
-The Twinne Team<br>
-http://twinne.com<br>
+Tangail-sharee.com<br>
+http://tangail-sharee.com<br>
     
 	<?php } ?>
  <div class="clear"></div>

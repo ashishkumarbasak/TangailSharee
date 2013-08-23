@@ -16,9 +16,9 @@ class Contest_login extends MY_Controller {
         // Put user supplied data into user object
         // (no need to validate the post variables in the controller,
         // if you've set your DataMapper models up with validation rules)
-        if($this->input->cookie('twinne_username') && $this->input->cookie('twinne_password')){
-            $u->username = $this->input->cookie('twinne_username');
-            $u->password = $this->input->cookie('twinne_password');
+        if($this->input->cookie('tangailsharee_username') && $this->input->cookie('tangailsharee_password')){
+            $u->username = $this->input->cookie('tangailsharee_username');
+            $u->password = $this->input->cookie('tangailsharee_password');
         }else{
             $u->username = $this->input->post('username');
             $u->password = $this->input->post('password');
@@ -94,7 +94,7 @@ class Contest_login extends MY_Controller {
                         'name'   => 'username',
                         'value'  => $u->username,
                         'expire' => '86500',
-                        'prefix' => 'twinne_',
+                        'prefix' => 'tangailsharee_',
                         
                     );
                     
@@ -102,7 +102,7 @@ class Contest_login extends MY_Controller {
                         'name'   => 'password',
                         'value'  => $this->input->post('password'),
                         'expire' => '86500',
-                        'prefix' => 'twinne_',
+                        'prefix' => 'tangailsharee_',
                     );
                     $this->input->set_cookie($cookie1);
                     $this->input->set_cookie($cookie2);

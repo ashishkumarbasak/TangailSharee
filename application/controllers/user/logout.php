@@ -13,7 +13,7 @@ class Logout extends MY_Controller {
                 'value'  => NULL,
                 'expire' => '86500',
 				'path'  => '/',
-                'prefix' => 'twinne_',
+                'prefix' => 'tangailsharee_',
 
             );
 
@@ -22,7 +22,7 @@ class Logout extends MY_Controller {
                 'value'  => NULL,
                 'expire' => '86500',
 				'path'  => '/',
-                'prefix' => 'twinne_',
+                'prefix' => 'tangailsharee_',
             );
             $this->input->set_cookie($cookie1);
             $this->input->set_cookie($cookie2);

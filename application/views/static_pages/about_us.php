@@ -2,10 +2,10 @@
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>About us | Twinne</title>
-<meta name="keywords" content="browse, twinne, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 Twinne Ltd" />
-<meta name="author" content="Twinne Ltd" />
+<title>About us | Tangail-sharee.com</title>
+<meta name="keywords" content="browse, Tangail-sharee.com, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
+<meta name="copyright" content="(c) 2013 Tangail-sharee.com" />
+<meta name="author" content="Tangail-sharee.com" />
 <meta name="description" content="bring real art on t-shirts. Not photographic artworks, or no-sense illustrations, but real art created by super-talented designers belonging to different fields">
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
@@ -106,7 +106,7 @@ $(document).ready(function(){
       	<li><a href="<?php echo base_url();?>">HOME</a></li>         
         <li><a href="<?php echo base_url();?>show_product?type=woman">WOMEN</a></li>
         <li><a href="<?php echo base_url();?>show_product?type=man">MEN</a></li>
-        <li><a href="http://help.twinne.com/">SUPPORT</a></li>
+        <li><a href="http://help.tangail-sharee.com.com/">SUPPORT</a></li>
       </ul>
     </div>
     
@@ -152,23 +152,23 @@ function cart_refresh(){
 <div class="about_us_container">  	
 <h1>About us</h1>
 
-<img style="margin-bottom: 30px;" src="<?php echo base_url(); ?>images/about_page.jpg" alt="about Twinne" />
+<img style="margin-bottom: 30px;" src="<?php echo base_url(); ?>images/about_page.jpg" alt="about Tangail-sharee.com" />
 
 <div class="about_side_left">
-	<img src="<?php echo base_url(); ?>images/about_us_side_img.jpg" alt="about Twinne" />
+	<img src="<?php echo base_url(); ?>images/about_us_side_img.jpg" alt="about Tangail-sharee.com" />
 </div>
 
 <div class="about_us_text">
 	
-<p>Twinne began with an idea. An idea injected with a love of fashion and graphic design, fused together by three Italian friends all cut from different parts of the creative cloth. Introducing Sebastiano Guerriero, an expert in the world of graphic design; Davide Pacilio a PR specialising in electronic music events and Piervincenzo Madeo a web designer with a wealth of collaborative experience. Brought together by one simple dream: to create something different through a combination of all of their skills.</p>
+<p>Tangail-sharee.com began with an idea. An idea injected with a love of fashion and graphic design, fused together by three Italian friends all cut from different parts of the creative cloth. Introducing Sebastiano Guerriero, an expert in the world of graphic design; Davide Pacilio a PR specialising in electronic music events and Piervincenzo Madeo a web designer with a wealth of collaborative experience. Brought together by one simple dream: to create something different through a combination of all of their skills.</p>
  
-<p>Twinne rapidly turned from an ideology into a reality. Sebastiano takes ownership of the graphic design aspect, Davide creates unique cuts producing high quality fashion whilst Piervincenzo brings the brand to life through a complex website system; the way in which Twinne becomes accessible to the customer.</p>
+<p>Tangail-sharee.com rapidly turned from an ideology into a reality. Sebastiano takes ownership of the graphic design aspect, Davide creates unique cuts producing high quality fashion whilst Piervincenzo brings the brand to life through a complex website system; the way in which Tangail-sharee.com becomes accessible to the customer.</p>
 
-<p>But this is not an ordinary t-shirt brand. Deciding that there was a niche opportunity within the field, the three designers' wondered "What if talented worldwide artists could collaborate with us?" Thus Twinne was born. Through a diverse appeal, Twinne showcases underground creatives from across the world who experiment with all kinds of different art forms; fusing together an innovative design strategy to produce an edgy collection of cool tees, which instigates a subversive youth culture. The brand name Twinne, which is similar to 'twin', commemorates the collaboration between artist and designer - Twinne is linked to them and they are linked to us.</p>
+<p>But this is not an ordinary t-shirt brand. Deciding that there was a niche opportunity within the field, the three designers' wondered "What if talented worldwide artists could collaborate with us?" Thus Tangail-sharee.com was born. Through a diverse appeal, Tangail-sharee.com showcases underground creatives from across the world who experiment with all kinds of different art forms; fusing together an innovative design strategy to produce an edgy collection of cool tees, which instigates a subversive youth culture. The brand name Tangail-sharee.com, which is similar to 'twin', commemorates the collaboration between artist and designer - Tangail-sharee.com is linked to them and they are linked to us.</p>
  
-<p>Leaving behind their Italian culture, the three friends braved the bright lights of London to start their company within one of the world's fashion capitals. A new city, a new project, a brand new adventure. But Twinne has gone from strength to strength through the production of real craftsmanship on fashion forward t shirts. No photography or illustrations, but real art created by super-talented designers belonging to different creative fields from graffiti to digital art, through to traditional paintings and graphic design.</p>
+<p>Leaving behind their Italian culture, the three friends braved the bright lights of London to start their company within one of the world's fashion capitals. A new city, a new project, a brand new adventure. But Tangail-sharee.com has gone from strength to strength through the production of real craftsmanship on fashion forward t shirts. No photography or illustrations, but real art created by super-talented designers belonging to different creative fields from graffiti to digital art, through to traditional paintings and graphic design.</p>
  
-<p>Whether it is the unique ideology of submerging underground designers, or the way in which the Brand Directors' have put a slick Italian flair on something so simple, you can tell that Twinne will be gradually shaping the t-shirt design industry through the integration of tomorrow's artists today. The brand's artistic connotations may be dark, but their future in niche fashion looks very bright indeed.</p>
+<p>Whether it is the unique ideology of submerging underground designers, or the way in which the Brand Directors' have put a slick Italian flair on something so simple, you can tell that Tangail-sharee.com will be gradually shaping the t-shirt design industry through the integration of tomorrow's artists today. The brand's artistic connotations may be dark, but their future in niche fashion looks very bright indeed.</p>
 	
 </div> 
  

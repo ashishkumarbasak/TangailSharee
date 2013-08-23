@@ -28,10 +28,10 @@ class Login extends MY_Controller {
 		//print_r($this->session->all_userdata());
        	$u = new User();
 	   	$cookie_login_is_valid = false;
-        if($this->input->cookie('twinne_username') && $this->input->cookie('twinne_password'))
+        if($this->input->cookie('tangailsharee_username') && $this->input->cookie('tangailsharee_password'))
 		{
-            $u->username = $this->input->cookie('twinne_username');
-            $u->password = $this->input->cookie('twinne_password');
+            $u->username = $this->input->cookie('tangailsharee_username');
+            $u->password = $this->input->cookie('tangailsharee_password');
         }else
 		{
             $u->username = $this->input->post('username');
@@ -49,10 +49,10 @@ class Login extends MY_Controller {
 		//$ref_url = $this->input->post('ref_url');
 		$ref_url = $this->session->userdata('ref_url');
         
-        //if($this->input->cookie('twinne_username')!=NULL && $this->input->cookie('twinne_password'))
+        //if($this->input->cookie('tangailsharee_username')!=NULL && $this->input->cookie('tangailsharee_password'))
         //{
         	//$this->load->model('user');
-        	//$cookie_login_is_valid = $this->user->is_valid_login($this->input->cookie('twinne_username'),$this->input->cookie('twinne_password'));
+        	//$cookie_login_is_valid = $this->user->is_valid_login($this->input->cookie('tangailsharee_username'),$this->input->cookie('tangailsharee_password'));
         	
         //}
         
@@ -110,7 +110,7 @@ class Login extends MY_Controller {
                         'name'   => 'username',
                         'value'  => $u->username,
                         'expire' => '86500',
-                        'prefix' => 'twinne_',
+                        'prefix' => 'tangailsharee_',
                         
                     );
                     
@@ -118,7 +118,7 @@ class Login extends MY_Controller {
                         'name'   => 'password',
                         'value'  => md5($this->input->post('password')),
                         'expire' => '86500',
-                        'prefix' => 'twinne_',
+                        'prefix' => 'tangailsharee_',
                     );
                     $this->input->set_cookie($cookie1);
                     $this->input->set_cookie($cookie2);
@@ -129,7 +129,7 @@ class Login extends MY_Controller {
                         'name'   => 'currency',
                         'value'  => $u->currency->id,
                         'expire' => '86500',
-                        'prefix' => 'twinne_',
+                        'prefix' => 'tangailsharee_',
                     );
                     
 			if($this->session->userdata('ref_url'))
