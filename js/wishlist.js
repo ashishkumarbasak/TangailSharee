@@ -1,4 +1,4 @@
-var base_url = "http://dev.twinne.com/" ;
+var base_url = "http://tangail-sharee.com/" ;
 
 
 

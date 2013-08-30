@@ -84,11 +84,11 @@ $active_record = TRUE;
 
 
 
-$db['default']['hostname'] = 'mysql.ideaincube.com';
+$db['default']['hostname'] = 'localhost';
 
-$db['default']['username'] = 'ashish021';
+$db['default']['username'] = 'root';
 
-$db['default']['password'] = '@shish123';
+$db['default']['password'] = '';
 
 $db['default']['database'] = 'tangail_sharee';
 

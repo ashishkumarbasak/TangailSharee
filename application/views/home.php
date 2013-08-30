@@ -85,21 +85,17 @@ function cart_refresh(){
 </div>  
 </div>
   <!--Header End-->
-  <!--Top banner Start-->
-
-<div class="welcome_banner_pat">
-  <div class="welcome_banner">
-	<!--	
-		<ul>
-			<li><a class="woman_but" href="<?php echo base_url(); ?>show_product?type=woman"></a></li>
-			<li><a class="man_but" href="<?php echo base_url(); ?>show_product?type=man"></a></li>
-		</ul>-->
-<img src="<?php echo base_url(); ?>images/homepage_img_sale.jpg" alt="sale">
-		
-  </div>
   
-</div>
+  <!--Top banner Start-->
+	<!--
+    <div class="welcome_banner_pat">
+  		<div class="welcome_banner">
+			<img src="<?php echo base_url(); ?>images/homepage_img_sale.jpg" alt="sale">		
+  		</div>  
+	</div>
+    //-->
   <!--Top banner End-->
+  
   <!--Home Page Content Start-->
 <div class="wrapper_container">
 <?php if(isset($pagination)) { ?>
