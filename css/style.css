@@ -17,7 +17,7 @@ img{ border:none}
 #wrapper, .wrapper_container{ width:980px; margin:auto; padding:0;}
 /*Header css start*/
 .header{ width:100%; margin:0px; padding:0 0 15px 0;position: relative;}
-.logo{ width:209px; float:left; padding:57px 0 0 0;}
+.logo{ width:228px; float:left; padding:0px 0 0 0;}
 .logo h1{ margin:0px; padding:0px;}
 .logo a{ text-decoration:none; border:0px;}
 .header_cont { padding:23px 0px; overflow: hidden; width: 100%; }

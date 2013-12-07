@@ -428,8 +428,8 @@ function cart_refresh(){
   <div class="matrimonial">
     <div id='producttab'>
 		
-		<div id="womantabheader" class="women-tab"><a href="javascript:void(0);">WOMAN</a></div>
-		<div id="mantabheader" class="men-tab"><a href="javascript:void(0);">MAN</a></div>
+		<div id="womantabheader" class="men-tab"><a href="javascript:void(0);">WOMAN</a></div>
+		<!-- <div id="mantabheader" class="women-tab"><a href="javascript:void(0);">MAN</a></div> //-->
 		<div class="clear"></div>
 	  <!-- Women tabber tab -->
       <div class="tabbertab" id="woman_tab" <?php if ($type=="man") { echo 'style="display:none;"'; } ?>>
@@ -772,7 +772,7 @@ function cart_refresh(){
 		<ul class="tabbernav">
       		<li id="tab_id_1"><a href="javascript:void(0);" onclick="show_tab_pane('1');" title="SHIPPING">SHIPPING</a></li>
 			<li id="tab_id_2"><a href="javascript:void(0);" onclick="show_tab_pane('2');" title="PRODUCT INFO">PRODUCT INFO</a></li>			
-			<li id="tab_id_3" class="tabberactive"><a href="javascript:void(0);" onclick="show_tab_pane('3');" title="SIZE INFO">SIZE INFO</a></li>
+			<!-- <li id="tab_id_3" class="tabberactive"><a href="javascript:void(0);" onclick="show_tab_pane('3');" title="SIZE INFO">SIZE INFO</a></li>  //-->
       		
 			
 			<div style="clear:both"></div>

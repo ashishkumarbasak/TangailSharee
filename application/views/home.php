@@ -7,16 +7,16 @@
 <title><?php echo lang('home_page_title'); ?></title>
 <meta property="og:description" content="Where art meets fashion! Unique graphic t-shirts designed by top world wide artists" />
 <meta name="description" content="Where art meets fashion! Unique graphic t-shirts designed by top world wide artists" />
-<meta name="keywords" content="browse, twinne, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 Twinne Ltd" />
-<meta name="author" content="Twinne Ltd" />
+<meta name="keywords" content="browse, tangail-sharee.com, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
+<meta name="copyright" content="(c) 2012 tangail-sharee.com Ltd" />
+<meta name="author" content="tangail-sharee.com Ltd" />
 <meta property="fb:app_id" content="203991176319853"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="<?php echo base_url(); ?>" />
 <meta property="og:title" content="<?php echo lang('home_page_title'); ?>" />
-<meta property="og:site_name" content="Twinne T-shirts Store" />
+<meta property="og:site_name" content="tangail-sharee.com T-shirts Store" />
 <meta property="og:image" content="<?php echo base_url(); ?>images/logo_share.jpg" />
-<link rel="canonical" href="https://twinne.com" />
+<link rel="canonical" href="https://tangail-sharee.com" />
 <link href="<?php echo base_url(); ?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/colorbox.css" type="text/css" media="screen" />
 

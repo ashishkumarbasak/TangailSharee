@@ -17,7 +17,7 @@
             <div class="clear"></div>
         </div>
         <div class="mid_content_top_right" style="width:196px; margin-top:7px; position: relative; right: -8px;">
-        <p class="facebook_suggestion"><a href="https://facebook.com/twinne.com"><strong>Twinne</strong> on Facebook</a></p>
+        <p class="facebook_suggestion"><a href="https://facebook.com/Tangail-sharee.com"><strong>Tangail Sharee</strong> on Facebook</a></p>
 
           <div style="width: 230px; position: absolute; left: 103px;">
           	<div id="fb-root"></div>
@@ -209,11 +209,12 @@
 	?>
     <!--Page Navi End-->
     
-    
+    <!--
     <div class="shop_box">
       <ul>
         <li class="shop_inactive"><a href="<?php echo base_url(); ?>show_product?type=man">SHOP MEN</a></li>
         <li class="shop_inactive"><a href="<?php echo base_url(); ?>show_product?type=woman">SHOP WOMEN</a></li>
       </ul>
     </div>
+    //-->
    </div>

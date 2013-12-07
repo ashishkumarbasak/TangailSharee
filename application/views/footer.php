@@ -11,7 +11,7 @@
         echo form_open('user/register/subscribeNews',$attributes); ?>
         <input type="text" onblur="if(this.value==''){this.value='Name'}" onclick="if(this.value=='Name'){this.value=''}" value="Name" name="NAME" class="" />
         <input type="text" onblur="if(this.value==''){this.value='Email'}" onclick="if(this.value=='Email'){this.value=''}"value="Email" name="email" id="email"/>
-        <input class="discounts-button man_news" value="" type="submit" name="sub_button" />
+        <!-- <input class="discounts-button man_news" value="" type="submit" name="sub_button" /> -->
         <input class="discounts-button woman_news" value="" type="submit" name="sub_button"/>
         <?php  echo form_close(); ?>
         <div class="clear"></div>
@@ -114,14 +114,14 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>js/ui_functions.js"></script>
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-27406219-1']);
-  _gaq.push(['_trackPageview']);
+ ��var _gaq = _gaq || [];
+ ��_gaq.push(['_setAccount', 'UA-27406219-1']);
+ ��_gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+ ��(function() {
+ �� ��var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ �� ��ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ �� ��var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ ��})();
 
 </script>

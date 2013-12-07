@@ -24,6 +24,7 @@ class Single_product extends MY_Controller
 		$pro_size=new Size();
     	$pro_size->get();
     	$i=0;
+		$pid = NULL;
     	foreach ($pro_size as $ps)
 		{
     		$ps->product->where_join_field($ps,"stock >=",'0')->get();
@@ -37,7 +38,7 @@ class Single_product extends MY_Controller
 	    	}
     	}
     	
-    	$prod=array_unique($pid);
+		$prod = @array_unique($pid);
 		//print_r($prod);
 		$sub_product=new Product();
     	$sub_product->where('is_active','1');
