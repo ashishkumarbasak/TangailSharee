@@ -297,7 +297,7 @@ $(document).ready(function(){
 				?>
 				<div class="order_summary_box2">
 					<div style="float:left"><?php echo $items['name'];?><br />
-						<small><?php echo $items['qty'];?>, size <?php echo $options['size'];?></small> </div>
+						<small>Quantity - <?php echo $items['qty'];?></small> </div>
 					<div style="float:right">
 						<?php if(isset($options['redeem']) && $options['redeem']!=0)
 						{ 

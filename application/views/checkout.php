@@ -315,13 +315,13 @@ $(document).ready(function(){
 				<?php }?>
                 <!-- <div class="order_summary_box2">
                   <div style="float:left">T-shirt Title<br />
-                    <small>1x (Men’s Medium)</small> </div>
+                    <small>1x (Men���s Medium)</small> </div>
                   <div style="float:right">$21</div>
                   <div class="clear"></div>
                 </div>
                 <div class="order_summary_box2">
                   <div style="float:left">T-shirt Title<br />
-                    <small>1x (Men’s Medium)</small> </div>
+                    <small>1x (Men���s Medium)</small> </div>
                   <div style="float:right">$21</div>
                   <div class="clear"></div>
                 </div>-->
@@ -486,13 +486,13 @@ $(document).ready(function(){
 				<?php }?>
                 <!-- <div class="order_summary_box2">
                   <div style="float:left">T-shirt Title<br />
-                    <small>1x (Men’s Medium)</small> </div>
+                    <small>1x (Men���s Medium)</small> </div>
                   <div style="float:right">$21</div>
                   <div class="clear"></div>
                 </div>
                 <div class="order_summary_box2">
                   <div style="float:left">T-shirt Title<br />
-                    <small>1x (Men’s Medium)</small> </div>
+                    <small>1x (Men���s Medium)</small> </div>
                   <div style="float:right">$21</div>
                   <div class="clear"></div>
                 </div>-->
@@ -552,13 +552,13 @@ $(document).ready(function(){
 				<?php }?>
                 <!-- <div class="order_summary_box2">
                   <div style="float:left">T-shirt Title<br />
-                    <small>1x (Men’s Medium)</small> </div>
+                    <small>1x (Men���s Medium)</small> </div>
                   <div style="float:right">$21</div>
                   <div class="clear"></div>
                 </div>
                 <div class="order_summary_box2">
                   <div style="float:left">T-shirt Title<br />
-                    <small>1x (Men’s Medium)</small> </div>
+                    <small>1x (Men���s Medium)</small> </div>
                   <div style="float:right">$21</div>
                   <div class="clear"></div>
                 </div>-->

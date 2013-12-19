@@ -103,7 +103,7 @@ p.switch .selected { background: #eee; }
 .bottem_border{width:100%; border-top: 1px dotted #d2d2d2; height:7px; margin: 11px 0; }
 /*Header css End*/
 /*Home Mid css start*/
-#mid_content{width:980px; padding:27px 0 0 0;}
+#mid_content{width:980px; padding:0px 0 0 0;}
 .mid_content_top{ width:100%; padding:0px; position: relative;}
 .mid_content_top_left{ width:164px; float:left; position: relative; z-index: 1;}
 .mid_content_top_left ul{ margin:0px; padding:0px; list-style:none;}

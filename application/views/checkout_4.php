@@ -262,7 +262,7 @@ $(document).ready(function(){
 					?>
 						<div class="order_summary_box2">
 							<div style="float:left"><?php echo $items['name'];?><br />
-							<small><?php echo $items['qty'];?>, <?php echo $options['size'];?></small> 
+							<small>Quantity - <?php echo $items['qty'];?></small> 
                         </div>
 						<div style="float:right">
 						<?php 

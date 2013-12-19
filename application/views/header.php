@@ -15,13 +15,13 @@ $(document).ready(function() {
 
 </script>
 <!--Header Start-->
-  <div class="header">
+  <div class="header" style="padding-bottom: 0px;">
 
   	
   	<div id="login_part">
       <div class="login_top">
           
-<?php $this->load->view("currencyconverter.php"); ?>
+		<?php $this->load->view("currencyconverter.php"); ?>
         <?php if($this->session->userdata("login")){ ?>
         	 <div class="rigister">
                 <p><a href="<?php echo base_url(); ?>user/member_profile">My account <span class="sep_sp">&middot;</span></a></p>
@@ -29,19 +29,18 @@ $(document).ready(function() {
               <div class="login">
 				<?php
 				if(isset($_COOKIE['fbsr_'.FACEBOOK_API_KEY])){ ?>
-			  <script>
-				function fbLogout()
-				{
-				  FB.logout(function(response) {
-					window.location="<?php echo base_url();?>logout";
-				  });
-				}
-			   </script>
+				  <script>
+					function fbLogout()
+					{
+					  FB.logout(function(response) {
+						window.location="<?php echo base_url();?>logout";
+					  });
+					}
+				   </script>
 				
-			    <p><a href="javascript:fbLogout();">Logout</a></p>
+			    	<p><a href="javascript:fbLogout();">Logout</a></p>
 				<?php }else{?>
-				&nbsp;
-				<p><a href="<?php echo base_url(); ?>user/logout/">Logout</a></p>
+					<p><a href="<?php echo base_url(); ?>user/logout/">Logout</a></p>
 				<?php } ?>
              </div>
              
@@ -104,7 +103,7 @@ $(document).ready(function() {
     <div class="clear"></div>
     <div class="bottem_border"></div>
     <?php if (current_url() !== base_url() ) { ?>
-    <img src="<?php echo base_url(); ?>images/free_ship.jpg" alt="free shipping" />
+    	<!-- <img src="<?php echo base_url(); ?>images/free_ship.jpg" alt="free shipping" /> //-->
     <?php } ?>
     
   <!--Header End-->

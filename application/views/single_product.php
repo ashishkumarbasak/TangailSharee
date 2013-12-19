@@ -461,25 +461,33 @@ function cart_refresh(){
 			<div class="add_text">Out of stock</div>
         	<?php }else { ?>	
                 <div class="single_product_select_box">
-                  <label>Size</label>
-                  <select class="single_product_select" id='size_select_box1' name='size' style="width:90px;">
-                    <option value="select_size1">Select size</option>
+                  <label style="display:none;">Size</label>
+                  <select class="single_product_select" id='size_select_box1' name='size' style="width:90px; display:none;">
                     <?php 
                             ksort($item_array);
                             foreach($item_array as $key=>$value){
-                                if($value!="XL") echo "<option value='$key'>$value</option>";
+                                if($value!="XL" && $value=="L") echo "<option value='$key' selected='selected'>$value</option>";
+								else echo "<option value='$key'>$value</option>";
                             }
                     ?>
                   </select>
-                  <label style="margin:0 0 0 14px;">QTY</label>
+                  <label style="margin:0 0 0 45px;">QUANTITY - </label>
                   <select class="single_product_select2" id='qty_box1' name='qty' style="width:82px;">
-                    <option value=''>--</option>
-                    <option value=''>select size first</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                   </select>
                   <script>
                             $(document).ready(function(){
-                            	$("#size_select_box1").val("select_size");
-                                var size = 0;
+                            	//$("#size_select_box1").val("select_size");
+                                var size = $("#size_select_box1").val();
                                 var qty = 1;
                                 $.ajaxSetup ({  
                                     cache: false  
@@ -617,22 +625,24 @@ function cart_refresh(){
         	<div class="add_text out_of_stock_distance" style="padding-top: 20px; margin-bottom:-20px;">Out of stock</div>
         <?php }else{?>
         	<div class="single_product_select_box">
-          <label>Size</label>
-          <select class="single_product_select" id='size_select_box' name='size' style="width:90px;">
-            <option value="select_size">Select size</option>
-            <?php 
-					ksort($item_array2);	
-					foreach($item_array2 as $key=>$value){
-						echo "<option value='$key'>$value</option>";
-					}
-					
-			?>
-          </select>
-          	<label style="margin:0 0 0 14px;">QTY</label>
-          	<select class="single_product_select1" id='qty_box' name='qty' style="width:82px;">
-            <option value=''>--</option>
-            <option value=''>select size first</option>
-          </select>
+	          <label style="display:none;">Size</label>
+	          <select class="single_product_select" id='size_select_box' name='size' style="width:90px; display:none;">
+	            <?php 
+						ksort($item_array2);	
+						foreach($item_array2 as $key=>$value){
+							if($value=="L")
+								echo "<option value='$key' selected='selected'>$value</option>";
+							else
+								echo "<option value='$key'>$value</option>";
+						}
+						
+				?>
+	          </select>
+	          <label style="margin:0 0 0 14px;">QUANTITY - </label>
+	          	<select class="single_product_select1" id='qty_box' name='qty' style="width:82px;">
+	            	<option value=''>--</option>
+	            	<option value=''>select size first</option>
+	          	</select>
           <script>
 					$(document).ready(function(){
 						$("#size_select_box").val("select_size");
@@ -824,7 +834,7 @@ function cart_refresh(){
 </div>
 <div class="clear"></div>
 <div class="single_product_down">
-  <h4>Selected for you</h4>
+  <h4 style="font-weight: bold;">Similar Type of Sharees for You.</h4>
   <div class="clear"></div>
   <div class="single_product_downimage_box" id="selected-for-man" style="display:none;">
     <?php 

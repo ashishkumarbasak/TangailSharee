@@ -134,8 +134,7 @@ function cart_refresh(){
     <div class="item_box">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr class="font_size">
-          <td style="width:448px; padding:0 0 0 10px;">ITEMS</td>
-          <td style="width:100px;">SIZE</td>
+          <td style="width:548px; padding:0 0 0 10px;">ITEMS</td>
           <td style="width:100px;">PRICE</td>
           <td style="width:100px;">QTY</td>
           <td>TOTAL</td>
@@ -148,14 +147,14 @@ function cart_refresh(){
         			$options=$this->cart->product_options($items['rowid']); 
         ?>
         	<tr class="color">
-          	<td style="width:458px;">
+          	<td style="width:558px;">
             	<div class="item_image">
 					<?php if($options['image']!=null){?>
                     	<a href='<?php echo base_url(); ?>single_product?type=<?php echo $options['type'];?>&id=<?php echo $items['id'];?>'>
                         	<img src="<?php echo base_url(); ?>images/product_image/short_image/<?php echo $options['image']; ?>" alt="item_image" />
                         </a><?php }?>
                  </div>
-            	 <div class="item_title">
+            	 <div class="item_title" style="float: left; width: 400px; text-align: left !important; padding-top:20px !important;">
                  	<a href='<?php echo base_url(); ?>single_product?type=<?php echo $options['type'];?>&id=<?php echo $items['id'];?>'>
 						<?php echo $items['name'];?><br />
               			<span>by <?php echo $options['designer'];?></span>
@@ -163,7 +162,6 @@ function cart_refresh(){
                  </div>
             	 <div class="clear"></div>
             </td>
-          	<td style="width:100px;"><?php echo $options['size'];?></td>
           	<td style="width:100px;" class="price_image">
 	 			<?php 
 				//echo $items['price'].'&pound;'; 

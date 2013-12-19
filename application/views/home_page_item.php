@@ -13,7 +13,7 @@
       	</div>
         
         <div class="mid_content_top_mid">
-        	<p class="quick_information" style="font-size:16px;">Free worldwide delivery</p>
+        	<p class="quick_information" style="font-size:16px; display:none;">Free worldwide delivery</p>
             <div class="clear"></div>
         </div>
         <div class="mid_content_top_right" style="width:196px; margin-top:7px; position: relative; right: -8px;">
