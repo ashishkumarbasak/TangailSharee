@@ -2,7 +2,7 @@
 We use cookies on this website. By using this site, you agree that we may store and access cookies on your device. Find out more
 <a style="color: #eee; font-weight: bold; text-decoration: none; border-bottom: 1px solid #000;" target="_blank" href="http://twinne.com/cookies_policy/">here</a>
 .
-<a id="cookieCloseButton" href="#null" style="display: block; width: 30px; height: 30px; background-color: rgb(200, 200, 200); border: medium none; color: rgb(255, 255, 255); font-size: 20px; line-height: 30px; text-decoration: none; position: absolute; right: 0px; top: 0px;">��</a>
+<a id="cookieCloseButton" href="#null" style="display: block; width: 30px; height: 30px; background-color: rgb(200, 200, 200); border: medium none; color: rgb(255, 255, 255); font-size: 20px; line-height: 30px; text-decoration: none; position: absolute; right: 0px; top: 0px;">[x]</a>
 </div>
 <script>
 $(document).ready(function() { 
