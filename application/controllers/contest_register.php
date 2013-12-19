@@ -74,7 +74,7 @@ class Contest_register extends MY_Controller {
 		        	$config['mailtype']='html';
 		        	$this->load->library('email',$config);
 		
-					$this->email->from('admin@twinne.com', 'Twinne Admin');
+					$this->email->from('admin@tangail-sharee.com', 'tangail-sharee Admin');
 					$this->email->to($u->email);
 					
 					$this->email->subject('Registration');

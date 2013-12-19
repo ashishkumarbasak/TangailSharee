@@ -519,7 +519,7 @@ class Sales_manager extends MY_Controller {
 							$body .= "comment : ".$this->input->post('notify_message')."\n";
 							$body .= "\n\n\n";
 							$body .= "Thanks,\n";
-							$body .= "Team Twinne";
+							$body .= "Team tangail-sharee";
 							
 							mail($to, $subject, $body);
 							//mail sending code
@@ -574,7 +574,7 @@ class Sales_manager extends MY_Controller {
 							$body .= "comment : ".$this->input->post('notify_message')."\n";
 							$body .= "\n\n\n";
 							$body .= "Thanks,\n";
-							$body .= "Team Twinne";
+							$body .= "Team tangail-sharee";
 							
 							mail($to, $subject, $body);
 							//mail sending code
@@ -629,7 +629,7 @@ class Sales_manager extends MY_Controller {
 							$body .= "comment : ".$this->input->post('notify_message')."\n";
 							$body .= "\n\n\n";
 							$body .= "Thanks,\n";
-							$body .= "Team Twinne";
+							$body .= "Team tangail-sharee";
 							
 							mail($to, $subject, $body);
 							//mail sending code
@@ -759,7 +759,7 @@ class Sales_manager extends MY_Controller {
 				$body .= "comment : ".$page->comment."\n";
 				$body .= "\n\n\n";
     			$body .= "Thanks,\n";
-    			$body .= "Team Twinne";
+    			$body .= "Team tangail-sharee";
     			
     			mail($to, $subject, $body);
     			//mail sending code
@@ -919,10 +919,10 @@ class Sales_manager extends MY_Controller {
                             $profile_name = $order->user->first_name." ".$order->user->last_name;
                             $this->load->vars(array('profile_name'=>$profile_name));
                             
-                            $this->email->from('admin@twinne.com', 'Twinne');
+                            $this->email->from('admin@tangail-sharee.com', 'tangail-sharee');
                             $this->email->to($order->user->email);
-                            $this->email->reply_to('admin@twinne.com');
-                            $this->email->subject('Your online order with Twinne has been despatched!');
+                            $this->email->reply_to('admin@tangail-sharee.com');
+                            $this->email->subject('Your online order with tangail-sharee has been despatched!');
                             $this->email->message($this->load->view('email_template/order_has_been_despatched','',TRUE));
                             $this->email->send();
 				}
@@ -945,7 +945,7 @@ class Sales_manager extends MY_Controller {
                                 
     			$body .= "\n\n\n";
     			$body .= "Thanks,\n";
-    			$body .= "Team Twinne";
+    			$body .= "Team tangail-sharee";
     			mail($to, $subject, $body);
 				}
     		}

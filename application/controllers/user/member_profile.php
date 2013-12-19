@@ -185,10 +185,10 @@ class Member_profile extends MY_Controller {
 					$config['mailtype']='html';
 					$this->load->library('email',$config);
 					
-					$this->email->from('admin@twinne.com', 'Twinne');
+					$this->email->from('admin@tangail-sharee.com', 'tangail-sharee');
 					$this->email->to($u->email);
 								
-					$this->email->subject('Twinne discounts & news notification!');
+					$this->email->subject('tangail-sharee discounts & news notification!');
 					$this->email->message($this->load->view('email_notify','',TRUE));
 					if($user_prev_notification!=$u->notification)
 					$this->email->send();

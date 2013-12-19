@@ -229,9 +229,9 @@ class Member_order extends MY_Controller {
     				$user_id=$this->session->userdata('user_id');
 					$customer_name = $order->user->first_name.' '.$order->user->last_name;
     				$this->load->vars(array('order'=>$order,'order_sku'=>$order->SKU,'customer_name'=>$customer_name));
-    				$this->email->from('admin@twinne.com', 'Twinne');
+    				$this->email->from('admin@tangail-sharee.com', 'tangail-sharee');
     				$this->email->to($order->user->email);
-    				$this->email->reply_to('admin@twinne.com');
+    				$this->email->reply_to('admin@tangail-sharee.com');
     				$this->email->subject('Product refund request received notification!');
     				$this->email->message($this->load->view('email_template/refund_request_notification_to_customer','',TRUE));
     				$this->email->send();
@@ -292,7 +292,7 @@ class Member_order extends MY_Controller {
 					$body .= "Comment :".$ref->comment."\n";
 					$body .= "\n\n\n";
 					$body .= "Thanks,\n";
-					$body .= "Team Twinne";
+					$body .= "Team tangail-sharee";
 					mail($to, $subject, $body);
 				}
 			}
@@ -345,7 +345,7 @@ class Member_order extends MY_Controller {
 					$body .= "Comment :".$page->comment."\n";
 					$body .= "\n\n\n";
 					$body .= "Thanks,\n";
-					$body .= "Team Twinne";
+					$body .= "Team tangail-sharee";
 					mail($to, $subject, $body);
 				}
 			}

@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Terms and conditions</title>
-<meta name="description" content="Twinne Terms and Conditions. Privacy policy and legal details to buy our unique t-shirts">
-<meta name="keywords" content="browse, twinne, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 Twinne Ltd" />
-<meta name="author" content="Twinne Ltd" />
+<meta name="description" content="tangail-sharee Terms and Conditions. Privacy policy and legal details to buy our unique t-shirts">
+<meta name="keywords" content="browse, tangail-sharee, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
+<meta name="copyright" content="(c) 2012 tangail-sharee Ltd" />
+<meta name="author" content="Tangail-sharee Ltd" />
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
 <!--Select Box Js Start-->
@@ -106,7 +106,7 @@ $(document).ready(function(){
       	<li><a href="<?php echo base_url();?>">HOME</a></li>         
         <li><a href="<?php echo base_url();?>show_product?type=woman">WOMEN</a></li>
         <li><a href="<?php echo base_url();?>show_product?type=man">MEN</a></li>
-        <li><a href="http://help.twinne.com/">SUPPORT</a></li>
+        <li><a href="http://help.tangail-sharee.com/">SUPPORT</a></li>
       </ul>
     </div>
     
@@ -155,7 +155,7 @@ function cart_refresh(){
 
 <h2>General</h2>
 
-<p>This privacy statement sets out how Twinne Ltd ("we" "us" or "our"), who operate this web site located at twinne.com ("Site"), use the information you give us. We may change this privacy statement at any time by posting such changes on the Site. Your continued use of the Site after notice of changes shall mean you have agreed to the new privacy statement.</p>
+<p>This privacy statement sets out how tangail-sharee Ltd ("we" "us" or "our"), who operate this web site located at tangail-sharee.com ("Site"), use the information you give us. We may change this privacy statement at any time by posting such changes on the Site. Your continued use of the Site after notice of changes shall mean you have agreed to the new privacy statement.</p>
 <p>
 This Cookies Policy explains what cookies are, how we use cookies and similar technologies on our website, and what you can do to manage how cookies are used.
 </p>
@@ -202,7 +202,7 @@ We cannot control nor do we have access to any cookies placed on your computer b
 </p>
 <p>
 <strong>4. Other Third Party Cookies</strong><br/>
-You may notice on some pages of our websites that cookies have been set that are not related to Twinne. When you visit a page with content embedded from, for example, YouTube or Facebook, these third party service providers may set their own cookies on your device. Twinne does not control the use of these third party cookies and cannot access them due to the way that cookies work, as cookies can only be accessed by the party who originally set them. Please check the third party websites for more information about these cookies.
+You may notice on some pages of our websites that cookies have been set that are not related to tangail-sharee. When you visit a page with content embedded from, for example, YouTube or Facebook, these third party service providers may set their own cookies on your device. tangail-sharee does not control the use of these third party cookies and cannot access them due to the way that cookies work, as cookies can only be accessed by the party who originally set them. Please check the third party websites for more information about these cookies.
 </p>
 
 <h2>Controlo your cookies</h2>
@@ -234,7 +234,7 @@ Do you need more information about cookies? Email us:
 
 <p>
 <br />
-<a href="mailto:info@twinne.com">info@twinne.com</a><br />
+<a href="mailto:info@tangail-sharee.com">info@tangail-sharee.com</a><br />
 </p>
 
 

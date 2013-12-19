@@ -10,7 +10,7 @@
       		</div>
       		
       		<div class="mid_content_top_right" style="width:196px; margin-top:7px; position: relative; right: -8px;">
-        <p class="facebook_suggestion"><a href="https://facebook.com/twinne.com"><strong>Twinne</strong> on Facebook</a></p>
+        <p class="facebook_suggestion"><a href="https://facebook.com/tangail-sharee.com"><strong>tangail-sharee</strong> on Facebook</a></p>
 
           <div style="width: 230px; position: absolute; left: 103px;">
           	<div id="fb-root"></div>
@@ -21,7 +21,7 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=203991176319853";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-like" data-href="http://www.facebook.com/twinne.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="lucida grande"></div>
+<div class="fb-like" data-href="http://www.facebook.com/tangail-sharee.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="lucida grande"></div>
           </div>
             
             

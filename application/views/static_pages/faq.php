@@ -4,9 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>FAQ</title>
 <meta name="description" content="Frequently asked questions about deliveries, returns and refunds, orders, payments, security and our products">
-<meta name="keywords" content="browse, twinne, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 Twinne Ltd" />
-<meta name="author" content="Twinne Ltd" />
+<meta name="keywords" content="browse, tangail-sharee, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
+<meta name="copyright" content="(c) 2012 tangail-sharee Ltd" />
+<meta name="author" content="tangail-sharee Ltd" />
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
 <!--Select Box Js Start-->
@@ -106,7 +106,7 @@ $(document).ready(function(){
       	<li><a href="<?php echo base_url();?>">HOME</a></li>         
         <li><a href="<?php echo base_url();?>show_product?type=woman">WOMEN</a></li>
         <li><a href="<?php echo base_url();?>show_product?type=man">MEN</a></li>
-        <li><a href="http://help.twinne.com/">SUPPORT</a></li>
+        <li><a href="http://help.tangail-sharee.com/">SUPPORT</a></li>
       </ul>
     </div>
     
@@ -216,13 +216,13 @@ Recipients outside the EU sometimes have to pay import duties, clearance or brok
 
 <h3>What is your online returns policy?</h3>
 <p>
-We guarantee to refund items purchased on Twinne.com that you are not completely happy with, when you perform the refund request through our website within 7 days from the receipt of the items, and return it to us in a saleable condition within 28 days from your refund request. We do not offer exchange with other Twinne products.
+We guarantee to refund items purchased on tangail-sharee.com that you are not completely happy with, when you perform the refund request through our website within 7 days from the receipt of the items, and return it to us in a saleable condition within 28 days from your refund request. We do not offer exchange with other tangail-sharee products.
 </p>
 <p>
 Please note that items must be returned with all of the tags intact. 
 </p>
 <p>
-Twinne purchases can only be returned by post, we do not refund the postage and delivery costs. We are sorry for any inconvenience this may cause you. 
+tangail-sharee purchases can only be returned by post, we do not refund the postage and delivery costs. We are sorry for any inconvenience this may cause you. 
 </p>
 <p>
 The goods are your responsibility until they reach our Warehouse. Please ensure you package your return to prevent any damage to the items or boxes. We are not responsible for any items that are returned to us in error.
@@ -233,7 +233,7 @@ Our returns address is:<p>
 
 <p>
 	<br />
-<strong>Twinne Ltd</strong><br />
+<strong>tangail-sharee Ltd</strong><br />
 91 Linden Gardens<br />
 London<br />
 W2 4EX<br />
@@ -244,7 +244,7 @@ W2 4EX<br />
 As an online business, we aim to provide a Returns service that is totally hassle-free for you.
 </p>
 <p>
-The refund procedure is entirely performed through our website. All what you need to do is to login to http://twinne.com using your account details, go to your profile page and select "My orders". Here you can select the order you want to return and click on the link "Request a refund". You have 7 days from the receipt of the items to perform a refund request.
+The refund procedure is entirely performed through our website. All what you need to do is to login to http://tangail-sharee.com using your account details, go to your profile page and select "My orders". Here you can select the order you want to return and click on the link "Request a refund". You have 7 days from the receipt of the items to perform a refund request.
 </p>
 <p>
 At this point you need to download, print and compile the returns label. Please note it is very important that when you return an item, we know the order number it relates to and your details. Without these details we won't be able to take the action you want us to. 
@@ -254,7 +254,7 @@ You can now dispatch the items to the Following address:
 </p>
 <p>
 	<br />
-<strong>Twinne Ltd</strong><br />
+<strong>tangail-sharee Ltd</strong><br />
 91 Linden Gardens<br />
 London<br />
 W2 4EX<br />
@@ -273,7 +273,7 @@ Any refund will automatically be issued to the card used to make the original pu
 </p>
 <h3>What do I do if there is a problem with my return?</h3>
 <p>
-Please contact us through our support page or email us at <a href="mailto:info@twinne.com">info@twinne.com</a>
+Please contact us through our support page or email us at <a href="mailto:info@tangail-sharee.com">info@tangail-sharee.com</a>
 </p>
 <h3>Do I have to pay postage and delivery costs for my returns?</h3>
 <p>Yes, the clients has to pay for the returns. Unfortunately we can't cover all the costs of the return process, but if you're eligible for a refund we will pay the entire t-shirt price.</p> 
@@ -311,7 +311,7 @@ The order process is very easy: chose the product you want to buy from our galle
 
 <h3>What do I do if there is a problem with my order?</h3>
 <p>
-Please inform us about every issue had during the ordering process. You can use the support page or email us at info@twinne.com
+Please inform us about every issue had during the ordering process. You can use the support page or email us at info@tangail-sharee.com
 </p>
 <h3>Can I add an item to my order after I have placed it?</h3>
 <p>

@@ -98,11 +98,11 @@ class Register extends MY_Controller {
 				$config['mailtype']='html';
 				$this->load->library('email',$config);
 		
-				$this->email->from($from, 'Twinne');
+				$this->email->from($from, 'tangail-sharee');
 				$this->email->reply_to($email->re_email);
 				$this->email->to($to);
 				
-				$this->email->subject('Welcome to the Twinne community!');
+				$this->email->subject('Welcome to the tangail-sharee community!');
 				$this->email->message($this->load->view('email_template/registration_success_to_customer','',TRUE));
 				$this->email->send();
 				
@@ -111,10 +111,10 @@ class Register extends MY_Controller {
 					$config['mailtype']='html';
 					$this->load->library('email',$config);
 			
-					$this->email->from('admin@twinne.com', 'Twinne');
+					$this->email->from('admin@tangail-sharee.com', 'tangail-sharee');
 					$this->email->to($u->email);
 						
-					$this->email->subject('Twinne Member Notification');
+					$this->email->subject('tangail-sharee Member Notification');
 					$this->email->message($this->load->view('email','',TRUE));
 					//$this->email->send();
 					//$this->storeAddress($u->email,$u->username,$u->gender);

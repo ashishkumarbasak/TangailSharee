@@ -3,20 +3,20 @@
 ini_set('max_execution_time',0);
 
 //Sandbox account information
-//define('API_USERNAME', 'ashish_1218103483_biz_api1.noocleusmediabd.com');
-//define('API_PASSWORD', '1218103494');
-//define('API_SIGNATURE', 'AFcWxV21C7fd0v3bYYYRCpSSRl31AWiaOSKSZ1xtDemMg84xWSQW-zSq');
+define('API_USERNAME', 'ashish_1218103483_biz_api1.noocleusmediabd.com');
+define('API_PASSWORD', '1218103494');
+define('API_SIGNATURE', 'AFcWxV21C7fd0v3bYYYRCpSSRl31AWiaOSKSZ1xtDemMg84xWSQW-zSq');
 
-define('API_USERNAME', 'sebastiano_api1.twinne.com');
-define('API_PASSWORD', 'USW3EL4HA8PPL7B8');
-define('API_SIGNATURE', 'AFcWxV21C7fd0v3bYYYRCpSSRl31AIB7-IFlf4g5EH62I9W7ahDjaz.Q');
+//define('API_USERNAME', 'sebastiano_api1.tangail-sharee.com');
+//define('API_PASSWORD', 'USW3EL4HA8PPL7B8');
+//define('API_SIGNATURE', 'AFcWxV21C7fd0v3bYYYRCpSSRl31AIB7-IFlf4g5EH62I9W7ahDjaz.Q');
 
 
 define('API_ENDPOINT', 'https://api-3t.paypal.com/nvp');
 define('USE_PROXY',FALSE);
 define('PROXY_HOST', '208.113.213.78');
 define('PROXY_PORT', '808');
-define('PAYPAL_URL', 'https://www.paypal.com/webscr&cmd=_express-checkout&token=');
+define('PAYPAL_URL', 'https://sandbox.paypal.com/webscr&cmd=_express-checkout&token=');
 define('VERSION', '53.0');
 
 
@@ -660,7 +660,7 @@ class Cart extends MY_Controller {
     		$user_id=$this->session->userdata('user_id');
     		$adminemail->template =  str_replace('{user_id}',$user_id,$adminemail->template);
     		$this->load->vars(array('order'=>$order));
-    		$this->email->from('support@twinne.com', 'Twinne Admin');
+    		$this->email->from('support@tangail-sharee.com', 'tangail-sharee Admin');
     		$this->email->to($adminemail->to_email);
     		$this->email->reply_to($adminemail->re_email);
     		$this->email->subject('New order detail');
@@ -676,7 +676,7 @@ class Cart extends MY_Controller {
     		$user_id=$this->session->userdata('user_id');
     		$useremail->template =  str_replace('{user_id}',$user_id,$useremail->template);
     		$this->load->vars(array('order'=>$order));
-    		$this->email->from($useremail->from_email, 'Twinne Admin');
+    		$this->email->from($useremail->from_email, 'tangail-sharee Admin');
     		$this->email->to($this->_user->email);
     		$this->email->reply_to($useremail->re_email);
     		$this->email->subject('New order detail');
@@ -1525,7 +1525,7 @@ class Cart extends MY_Controller {
     		{
     			$this->load->library('Paypal');
     			$myPaypal = new Paypal();
-    			//$myPaypal->addField('business', 'sebastiano@twinne.com');
+    			//$myPaypal->addField('business', 'sebastiano@tangail-sharee.com');
                 $myPaypal->addField('business', 'ashish_1207733105_biz@gmail.com');
     			$myPaypal->addField('currency_code', $order->paid_currency);
     			$myPaypal->addField('return', base_url().'cart/paymentreturn/success/'.$order->SKU);
@@ -1554,7 +1554,7 @@ class Cart extends MY_Controller {
                             $paypal_shipping = $order->shipping_amount;
                         }
                                 
-    			$myPaypal->addField('item_name', "Twinne Purchase");
+    			$myPaypal->addField('item_name', "tangail-sharee Purchase");
     			$myPaypal->addField('custom', $order->id);
     			$myPaypal->addField('amount', $paypal_amount);
 				$myPaypal->addField('tax', $paypal_tax);
@@ -1906,10 +1906,10 @@ class Cart extends MY_Controller {
     	$adminemail = new Email(1);
     	$user_id=$this->session->userdata('user_id');
     	//$this->load->vars(array('order'=>$order));
-    	$this->email->from('admin@twinne.com', 'Twinne');
+    	$this->email->from('admin@tangail-sharee.com', 'tangail-sharee');
     	$this->email->to($adminemail->to_email);
     	$this->email->reply_to($adminemail->re_email);
-    	$this->email->subject('New order has been placed at Twinne!');
+    	$this->email->subject('New order has been placed at tangail-sharee!');
     	$this->email->message($this->load->view('email_template/order_notification_to_admin','',TRUE));
     	$this->email->send();
 		
@@ -1927,10 +1927,10 @@ class Cart extends MY_Controller {
 			$profile_name = $this->_user->first_name." ".$this->_user->last_name;
 			
     	$this->load->vars(array('order'=>$order,'profile_name'=>$profile_name));
-    	$this->email->from($useremail->from_email, 'Twinne');
+    	$this->email->from($useremail->from_email, 'tangail-sharee');
     	$this->email->to($this->_user->email);
     	$this->email->reply_to($useremail->re_email);
-    	$this->email->subject('Thank you for choosing to buy from Twinne!');
+    	$this->email->subject('Thank you for choosing to buy from tangail-sharee!');
     	$this->email->message($this->load->view('email_template/order_notification_to_customer','',TRUE));
     	$this->email->send();
 		// To send HTML mail, the Content-type header must be set
@@ -2029,10 +2029,10 @@ class Cart extends MY_Controller {
 				$user_id=$order->user_id;
 				//$this->load->vars(array('order'=>$order));
                                 //$adminemail->to_email = 'ashish021@gmail.com';
-				$this->email->from('admin@twinne.com', 'Twinne');
+				$this->email->from('admin@tangail-sharee.com', 'tangail-sharee');
 				$this->email->to($adminemail->to_email);
 				$this->email->reply_to($adminemail->re_email);
-				$this->email->subject('New order has been placed at Twinne!');
+				$this->email->subject('New order has been placed at tangail-sharee!');
 				$this->email->message($this->load->view('email_template/order_notification_to_admin','',TRUE));
 				$this->email->send();
 				
@@ -2045,11 +2045,11 @@ class Cart extends MY_Controller {
 				$user = new User($user_id);
 				$profile_name = $this->_user->first_name." ".$this->_user->last_name;
 				$this->load->vars(array('order'=>$order,'profile_name'=>$profile_name));
-				$this->email->from($useremail->from_email, 'Twinne');
+				$this->email->from($useremail->from_email, 'tangail-sharee');
 				//$user->email = 'ashish021@gmail.com';
                                 $this->email->to($user->email);
 				$this->email->reply_to($useremail->re_email);
-				$this->email->subject('Thank you for choosing to buy from Twinne!');
+				$this->email->subject('Thank you for choosing to buy from tangail-sharee!');
 				$this->email->message($this->load->view('email_template/order_notification_to_customer','',TRUE));
 				$this->email->send();
 				

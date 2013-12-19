@@ -36,7 +36,7 @@ date_default_timezone_set('UTC');
 
 //{
 
-	//$config['base_url'] =  "http://".$_SERVER['HTTP_HOST']."/dev.twinne.com/";
+	//$config['base_url'] =  "http://".$_SERVER['HTTP_HOST']."/dev.tangail-sharee.com/";
 
 
 

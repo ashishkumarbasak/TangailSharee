@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-	New Order Notification at Twinne!
+	New Order Notification at tangail-sharee!
 </title>
 </head>
 <body>
 Dear Administration,
 <br><br>
-A new order has been placed at Twinne!
+A new order has been placed at tangail-sharee!
 <br><br>
 Order ID is <?php echo $order->SKU; ?>
 <br><br>
@@ -167,7 +167,7 @@ Order details:
 <br>
 <br>
 Best,<br>
-The Twinne Team<br>
-http://twinne.com<br>
+The tangail-sharee Team<br>
+http://tangail-sharee.com<br>
 </body>
 </html>

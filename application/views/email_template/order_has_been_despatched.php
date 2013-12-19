@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-	New Order Notification at Twinne!
+	New Order Notification at tangail-sharee!
 </title>
 </head>
 <body>
 Dear <?php if(isset($profile_name)) echo $profile_name; ?>,
 <br><br>
-Your online order with Twinne has been despatched. The following products are on their way to you:
+Your online order with tangail-sharee has been despatched. The following products are on their way to you:
 <br><br>
 Your order ID is <?php echo $order->SKU; ?>
 <br><br>
@@ -124,17 +124,17 @@ TRACKING NUMBER: <?php echo $tracking_number; ?>
 We are working right now to ship your order the soonest possible. You will receive a confirmation by email once the order is delivered to you. 
 <br>
 <br>
-In case you need help, feel free to contact our customer service through the <a href="https://twinne.tenderapp.com">support system</a> or the <a href="<?php echo base_url();?>pages/contact_us">contact page</a>.
+In case you need help, feel free to contact our customer service through the <a href="https://tangail-sharee.tenderapp.com">support system</a> or the <a href="<?php echo base_url();?>pages/contact_us">contact page</a>.
 <br>
 <br>
-Again, thank you for choosing to buy from Twinne!
+Again, thank you for choosing to buy from tangail-sharee!
 <br>
 <br>
 Hoping to see you soon
 <br>
 <br>
 Best,<br>
-The Twinne Team<br>
-http://twinne.com<br>
+The tangail-sharee Team<br>
+http://tangail-sharee.com<br>
 </body>
 </html>

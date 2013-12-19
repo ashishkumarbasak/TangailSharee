@@ -1,6 +1,6 @@
 <div id="cookieMessage" style="z-index: 3654478; position: fixed; left: 0%; bottom: 0px; width: 100%; margin-left: 0px; height: 30px; line-height: 30px; border: medium none; background-color: rgba(0, 0, 0, 0.8); color: rgb(255, 255, 255); overflow: hidden; text-align: center; font-size: 12px; font-family: arial; padding: 0px;">
 We use cookies on this website. By using this site, you agree that we may store and access cookies on your device. Find out more
-<a style="color: #eee; font-weight: bold; text-decoration: none; border-bottom: 1px solid #000;" target="_blank" href="http://twinne.com/cookies_policy/">here</a>
+<a style="color: #eee; font-weight: bold; text-decoration: none; border-bottom: 1px solid #000;" target="_blank" href="http://tangail-sharee.com/cookies_policy/">here</a>
 .
 <a id="cookieCloseButton" href="#null" style="display: block; width: 30px; height: 30px; background-color: rgb(200, 200, 200); border: medium none; color: rgb(255, 255, 255); font-size: 20px; line-height: 30px; text-decoration: none; position: absolute; right: 0px; top: 0px;">[x]</a>
 </div>
@@ -78,8 +78,8 @@ $(document).ready(function() {
       	<li><a href="<?php echo base_url();?>">HOME</a></li>         
         <li><a href="<?php echo base_url();?>show_product?type=woman">PRODUCTS</a></li>
         <!-- <li><a href="<?php echo base_url();?>show_product?type=man">MEN</a></li> //-->
-        <li><a href="http://help.twinne.com/">ABOUT</a></li>
-        <li><a href="http://help.twinne.com/">SUPPORT</a></li>
+        <li><a href="http://help.tangail-sharee.com/">ABOUT</a></li>
+        <li><a href="http://help.tangail-sharee.com/">SUPPORT</a></li>
       </ul>
     </div>
     <!--Nav End-->
