@@ -99,7 +99,7 @@ $(document).ready(function(){
 <div class="header">
 
   	<div class="header_cont" style="padding-top: 0px;">
-    <div class="logo"><a href="<?php echo base_url();?>home"><img src="<?php echo base_url(); ?>images/logo.png" alt="logo" /></a></div>
+    <div class="logo"><a href="<?php echo base_url();?>home"><img src="<?php echo base_url(); ?>images/logo.jpg" alt="logo" /></a></div>
     
      <div class="nav_box">
       <ul>	
@@ -195,11 +195,11 @@ Please use our support service or contact our customer service through our conta
 <h3>Which are the delivery options?</h3>
 <ul>
 <li>Uk Standard delivery: FREE (2-3 working days)</li>
-<li>Uk next day delivery: 8£ ( Next day delivery, Order by 4:00pm)</li>
-<li>Europe Standard delivery: 4.99£ (5-7 working days)</li>
-<li>Europe Express delivery: 12£ (3-5 working days)</li>
-<li>Worldwide Standard delivery: 5.99£ (7-10 working days)</li>
-<li>Worldwide Express delivery: 15£ (5-7 working days)</li>
+<li>Uk next day delivery: 8�� ( Next day delivery, Order by 4:00pm)</li>
+<li>Europe Standard delivery: 4.99�� (5-7 working days)</li>
+<li>Europe Express delivery: 12�� (3-5 working days)</li>
+<li>Worldwide Standard delivery: 5.99�� (7-10 working days)</li>
+<li>Worldwide Express delivery: 15�� (5-7 working days)</li>
 </ul>
 
 <h3>Which is your delivery service company?</h3>
@@ -377,7 +377,7 @@ No, we will not pass your details on to other companies.
 
 <h3>I've forgotten my password. What do I do?</h3>
 <p>
-If you’ve forgotten your password we’ll need to reset it for you. Simply log in to your account and follow the "Forgotten Password" instructions. For security reasons, we cannot send your password to you via email.
+If you���ve forgotten your password we���ll need to reset it for you. Simply log in to your account and follow the "Forgotten Password" instructions. For security reasons, we cannot send your password to you via email.
 </p>
 <h3>What is your privacy policy?</h3>
 <p>

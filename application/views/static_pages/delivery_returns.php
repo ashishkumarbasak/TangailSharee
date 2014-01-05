@@ -99,7 +99,7 @@ $(document).ready(function(){
 <div class="header">
 
   	<div class="header_cont" style="padding-top: 0px;">
-    <div class="logo"><a href="<?php echo base_url();?>home"><img src="<?php echo base_url(); ?>images/logo.png" alt="logo" /></a></div>
+    <div class="logo"><a href="<?php echo base_url();?>home"><img src="<?php echo base_url(); ?>images/logo.jpg" alt="logo" /></a></div>
     
      <div class="nav_box">
       <ul>	
@@ -160,14 +160,14 @@ function cart_refresh(){
 <h3>Uk standard and express delivery</h3>
 <ul>
 <li>Uk standard delivery: FREE (2-3 working days)</li>
-<li>Uk Next day delivery: 7.99£ (next day)</li>
+<li>Uk Next day delivery: 7.99�� (next day)</li>
 </ul>
 <h3>International standard and express delivery</h3>
 <ul>
-<li>International Europe standard delivery: 4.99£ (5-7 working days)</li>
-<li>International Europe air sure delivery: 11.99£ (3-5 working days)</li>
-<li>International worldwide delivery: 5.99£ (7-10 working days)</li>
-<li>International worldwide air sure delivery: 14.99£ (4-6 working days)</li>
+<li>International Europe standard delivery: 4.99�� (5-7 working days)</li>
+<li>International Europe air sure delivery: 11.99�� (3-5 working days)</li>
+<li>International worldwide delivery: 5.99�� (7-10 working days)</li>
+<li>International worldwide air sure delivery: 14.99�� (4-6 working days)</li>
 </ul>
 
 <h3>Will i be charged customs and import charges ?</h3>

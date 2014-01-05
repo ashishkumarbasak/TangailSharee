@@ -2,3 +2,6 @@ eclipse.preferences.version=1
 encoding//application/views/checkout.php=UTF-8
 encoding//application/views/footer.php=UTF-8
 encoding//application/views/header.php=UTF-8
+encoding//application/views/static_pages/cookies-privacy.php=UTF-8
+encoding//application/views/static_pages/delivery_returns.php=UTF-8
+encoding//application/views/static_pages/faq.php=UTF-8

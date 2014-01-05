@@ -41,7 +41,7 @@
     <ul class="footer_links">    	
     	<li><a href="#">Home</a></li>
     	<li>/</li>
-    	<li><a href="mailto:info@tangail-sharee.com.com">Contact</a></li>
+    	<li><a href="mailto:info@tangail-sharee.com">Contact</a></li>
     	<li>/</li>
     	<li><a href="https://tangail-sharee.tenderapp.com">Support</a></li>
     	<li>/</li>

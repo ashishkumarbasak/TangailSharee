@@ -99,7 +99,7 @@ $(document).ready(function(){
 <div class="header">
 
   	<div class="header_cont" style="padding-top: 0px;">
-    <div class="logo"><a href="<?php echo base_url();?>home"><img src="<?php echo base_url(); ?>images/logo.png" alt="logo" /></a></div>
+    <div class="logo"><a href="<?php echo base_url();?>home"><img src="<?php echo base_url(); ?>images/logo.jpg" alt="logo" /></a></div>
     
      <div class="nav_box">
       <ul>	
