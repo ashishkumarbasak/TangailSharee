@@ -60,7 +60,7 @@ $(document).ready(function() {
     </div>
   	<div class="header_cont">
     	<div class="logo">
-    		<a href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>images/logo.jpg" alt="logo" /></a>
+    		<a href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>images/logo-tangail.gif" alt="logo" /></a>
     	</div>
     <!--Nav Start-->
      <?php
