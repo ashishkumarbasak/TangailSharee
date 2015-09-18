@@ -5,16 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9" />
 <meta http-equiv="X-UA-Compatible" content="IE=8" />
 <title><?php echo lang('home_page_title'); ?></title>
-<meta property="og:description" content="Where art meets fashion! Unique graphic t-shirts designed by top world wide artists" />
-<meta name="description" content="Where art meets fashion! Unique graphic t-shirts designed by top world wide artists" />
-<meta name="keywords" content="browse, tangail-sharee.com, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 tangail-sharee.com Ltd" />
-<meta name="author" content="tangail-sharee.com Ltd" />
-<meta property="fb:app_id" content="203991176319853"/>
+<meta property="og:description" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="copyright" content="(c) 2015 tangail-sharee.com" />
+<meta name="author" content="tangail-sharee.com" />
+<meta property="fb:app_id" content=""/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="<?php echo base_url(); ?>" />
 <meta property="og:title" content="<?php echo lang('home_page_title'); ?>" />
-<meta property="og:site_name" content="tangail-sharee.com T-shirts Store" />
+<meta property="og:site_name" content="tangail-sharee.com" />
 <meta property="og:image" content="<?php echo base_url(); ?>images/logo_share.jpg" />
 <link rel="canonical" href="https://tangail-sharee.com" />
 <link href="<?php echo base_url(); ?>css/style.css" rel="stylesheet" type="text/css" />
@@ -77,56 +77,49 @@ function cart_refresh(){
 }
 </script>
 </head>
-<body>    
-<div id="top"></div>
-<div class="wrapper_container">
-   <!--Header Start-->
-  <?php $this->load->view("header"); ?>
-</div>  
-</div>
+
+<body>
+  <div id="top"></div>
+  <div class="wrapper_container">
+    <!--Header Start-->
+    <?php $this->load->view("header"); ?>
+  </div>
   <!--Header End-->
   
   <!--Top banner Start-->
-	<!--
-    <div class="welcome_banner_pat">
-  		<div class="welcome_banner">
-			<img src="<?php echo base_url(); ?>images/homepage_img_sale.jpg" alt="sale">		
-  		</div>  
-	</div>
-    //-->
-  <!--Top banner End-->
-  
-  <!--Home Page Content Start-->
-<div class="wrapper_container">
-<?php if(isset($pagination)) { ?>
-<script type="text/javascript">
-	function show_page(page_number)
-	{
-		$('#loading_update').addClass('loading');
-		var page_url="<?php echo $pagination['url']; ?>a_pagination=1&page="+page_number;
-		//alert(page_url);
-		$('#mid_content').load(page_url, function() {
-  			$('#loading_update').removeClass('loading');	
-			/* Just delay few seconds */
-			
-			$("html, body").animate({ scrollTop: 350 }, "slow");
-			
-			
-			//alert('Load was performed.');
-		});			
-	}
-</script>
-<?php } ?>
-
- 
-  <div id="mid_content">
-    <?php $this->load->view("home_page_item.php"); ?>
+  <div class="welcome_banner_pat">
+    <div class="welcome_banner">
+      <img src="<?php echo base_url(); ?>images/homepage_img_sale.jpg" alt="sale">
+    </div>
   </div>
-  <!--Home Page Content End-->
+  <!--Top banner End-->
+
+  <!--Home Page Content Start-->
+  <div class="wrapper_container">
+    <?php if(isset($pagination)) { ?>
+      <script type="text/javascript">
+        function show_page(page_number) {
+          $('#loading_update').addClass('loading');
+          var page_url="<?php echo $pagination['url']; ?>a_pagination=1&page="+page_number;
+          $('#mid_content').load(page_url, function() {
+            $('#loading_update').removeClass('loading');
+            /* Just delay few seconds */
+            $("html, body").animate({ scrollTop: 350 }, "slow");
+            //alert('Load was performed.');
+          });
+        }
+      </script>
+    <?php } ?>
+
+    <div id="mid_content">
+      <?php $this->load->view("home_page_item.php"); ?>
+    </div>
+    <!--Home Page Content End-->
+  </div>
+
   <!--Footer Start -->
   <?php $this->load->view("footer.php"); ?>
   <!--Footer End -->
   <div class="clear"></div>
-</div>
 </body>
 </html>

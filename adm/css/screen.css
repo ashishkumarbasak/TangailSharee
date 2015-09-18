@@ -1836,7 +1836,7 @@ a:hover.back-login	{
     padding: 4px 15px 0 25px;} 
  .upload_input
     {
-    background: url("http://192.168.1.56/twinne/adm/images/forms/choose-file.gif") no-repeat scroll right center transparent;
+    background: url("../images/forms/choose-file.gif") no-repeat scroll right center transparent;
     display: inline;
     height: 35px;
     overflow: hidden;

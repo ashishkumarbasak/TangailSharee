@@ -199,7 +199,7 @@
 * @access	private
 * @return	array
 */
-	function &get_config($replace = array())
+	function get_config($replace = array())
 	{
 		static $_config;
 
@@ -240,7 +240,7 @@
 			}
 		}
 
-		return $_config[0] =& $config;
+		return $_config[0] = $config;
 	}
 
 // ------------------------------------------------------------------------
