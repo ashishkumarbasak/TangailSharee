@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 18, 2015 at 05:28 PM
+-- Generation Time: Sep 18, 2015 at 05:34 PM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `tangail_sharee`
@@ -2431,33 +2431,6 @@ INSERT INTO `tbl_wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `u
 (332, 'shystie', '1e7a16d255624c0301188ae4b1e03cfc', 'shystie', 'alanshuster@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'shystie'),
 (333, 'debasish132', '6e9e7caa71859b9bda383cff9994ef61', 'debasish132', 'debasishbasak132@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'debasish132');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `__tbl_size`
---
-
-CREATE TABLE `__tbl_size` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `catagory` varchar(255) NOT NULL,
-  `is_active` enum('0','1') NOT NULL DEFAULT '1'
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `__tbl_size`
---
-
-INSERT INTO `__tbl_size` (`id`, `name`, `description`, `catagory`, `is_active`) VALUES
-(1, 'M', 'Its  a medium one.', 'man', '1'),
-(2, 'S', 'Its a small one.', 'man', '1'),
-(3, 'L', 'This is large one.', 'man', '1'),
-(4, 'M', 'its a medium', 'woman', '1'),
-(5, 'S', 'Its a small', 'woman', '1'),
-(6, 'L', 'Its large', 'woman', '1'),
-(7, 'XL', 'This extra large.', 'man', '1');
-
 --
 -- Indexes for dumped tables
 --
@@ -2918,12 +2891,6 @@ ALTER TABLE `tbl_wp_users`
   ADD KEY `user_nicename` (`user_nicename`);
 
 --
--- Indexes for table `__tbl_size`
---
-ALTER TABLE `__tbl_size`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -3267,11 +3234,6 @@ ALTER TABLE `tbl_wp_usermeta`
 --
 ALTER TABLE `tbl_wp_users`
   MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=334;
---
--- AUTO_INCREMENT for table `__tbl_size`
---
-ALTER TABLE `__tbl_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
