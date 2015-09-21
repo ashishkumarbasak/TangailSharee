@@ -362,12 +362,12 @@ p.quick_information { font-family: Georgia, Constantia, "Lucida Bright", Lucidab
 .single_product-imagebox_banner{ width:306px; position:relative;float:right; }
 .welcome_banner_pat {
 	width: 100%;
-	height: 380px;
+	height: 185px;
 }
 .welcome_banner {
 	
 	width: 980px;
-	height: 380px;
+	height: 185px;
 	/*background: url(../images/homepage_img_1.jpg) no-repeat;*/
 	margin: 0 auto;
 	

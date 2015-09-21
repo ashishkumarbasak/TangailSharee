@@ -89,7 +89,7 @@ function cart_refresh(){
   <!--Top banner Start-->
   <div class="welcome_banner_pat">
     <div class="welcome_banner">
-      <img src="<?php echo base_url(); ?>images/homepage_img_sale.jpg" alt="sale">
+      <img src="<?php echo base_url(); ?>images/homepage_img_sale.jpg" alt="sale" style="width:980px; height:180px;">
     </div>
   </div>
   <!--Top banner End-->
