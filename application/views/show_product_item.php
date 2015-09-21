@@ -10,7 +10,7 @@
       		</div>
       		
       		<div class="mid_content_top_right" style="width:196px; margin-top:7px; position: relative; right: -8px;">
-        <p class="facebook_suggestion"><a href="https://facebook.com/tangail-sharee.com"><strong>tangail-sharee</strong> on Facebook</a></p>
+        <!-- <p class="facebook_suggestion"><a href="https://facebook.com/tangail-sharee.com"><strong>tangail-sharee</strong> on Facebook</a></p> //-->
 
           <div style="width: 230px; position: absolute; left: 103px;">
           	<div id="fb-root"></div>
@@ -29,7 +29,7 @@
     </div>
      	
         	<div class="filter_box">
-      			<?php $this->load->view('size_nav',$type);?>
+      			<?php //$this->load->view('size_nav',$type);?>
                 <div class="clear"></div>
             </div>
         
@@ -151,7 +151,7 @@
                 
              ?>
             <?php if($product->id=="7" || $product->id=="5" || $product->id=="8" || $product->id=="2") 
-                                        	echo " REPRINT" ?>
+                                        	//echo " REPRINT" ?>
         
         </div>
 	<?php } elseif($product->original_value == 0) { ?>
@@ -179,7 +179,7 @@
         
         
         ?><?php if($product->id=="7" || $product->id=="5" || $product->id=="8" || $product->id=="2") 
-                                        	echo " REPRINT" ?>
+                                        	//echo " REPRINT" ?>
 	</div>
 	<?php } ?>
          </div>
@@ -198,9 +198,9 @@
 	<?php if($type=='man'){ ?>
         <li class="shop_inactive"><a href="<?php echo base_url(); ?>show_product?type=woman">SHOP WOMEN</a></li>
 	<?php } elseif($type=='woman') {?>
-	<li class="shop_inactive"><a href="<?php echo base_url(); ?>show_product?type=man">SHOP MEN</a></li>
+	<!-- <li class="shop_inactive"><a href="<?php echo base_url(); ?>show_product?type=man">SHOP MEN</a></li> //-->
 	<?php }else { ?>
-	 <li class="shop_inactive"><a href="<?php echo base_url(); ?>show_product?type=man">SHOP MEN</a></li>
+	<!-- <li class="shop_inactive"><a href="<?php echo base_url(); ?>show_product?type=man">SHOP MEN</a></li> //-->
         <li class="shop_inactive"><a href="<?php echo base_url(); ?>show_product?type=woman">SHOP WOMEN</a></li>
 	<?php } ?>
       </ul>

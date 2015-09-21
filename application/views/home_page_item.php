@@ -17,7 +17,7 @@
             <div class="clear"></div>
         </div>
         <div class="mid_content_top_right" style="width:196px; margin-top:7px; position: relative; right: -8px;">
-        <p class="facebook_suggestion"><a href="https://facebook.com/Tangail-sharee.com"><strong>Tangail Sharee</strong> on Facebook</a></p>
+        <!-- <p class="facebook_suggestion"><a href="https://facebook.com/Tangail-sharee.com"><strong>Tangail Sharee</strong> on Facebook</a></p> //-->
 
           <div style="width: 230px; position: absolute; left: 103px;">
           	<div id="fb-root"></div>
@@ -132,7 +132,7 @@
         		<div class="price2_box">
 				<?php  //echo "<del>".$product->original_value.'&pound;'.'</del>'.$product->price.'&pound;'; 
 				
-						//if($is_called_already=="no")
+						if($is_called_already=="no" || true)
                                         	{
                                             	if($pref_currency_type=="USD")
                                                 	{
@@ -167,7 +167,7 @@
 				<div class="price_box">
 					<?php  //echo '&pound;'.$product->price; 
                                         
-                                        if($is_called_already=="no")
+                                        if($is_called_already=="no" || true)
                                         {
                                             if($pref_currency_type=="USD")
                                                 $product_currency = currency("GBP","USD",$product->price);
@@ -176,7 +176,7 @@
                                             else
                                                 $product_currency = $product->price;
                                             
-                                            $is_called_already = "yes";
+                                            //$is_called_already = "yes";
                                         }
                                             if($pref_currency_type=="USD")
                                                 echo '$'.$product_currency; 
@@ -186,8 +186,8 @@
                                                 echo '&pound;'.$product->price; 
                                         
                                         ?>
-                                        <?php if($product->id=="7" || $product->id=="5" || $product->id=="8" || $product->id=="2") 
-                                        	echo "REPRINT" ?>
+                                        <?php //if($product->id=="7" || $product->id=="5" || $product->id=="8" || $product->id=="2") 
+                                        	//echo "REPRINT" ?>
 				</div>
 				<?php } ?>
       		</div>

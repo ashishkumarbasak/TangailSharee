@@ -195,10 +195,10 @@ class Member_profile extends MY_Controller {
 					
 					$email=$u->email;
 					if($u->gender=='male'){
-							$list_id='2b3f512a26';
+							$list_id='3ba39f046c';
 						}
 					else{
-							$list_id='77a05496e5';
+							$list_id='3ba39f046c';
 						}
 					
 					$config = array(
@@ -223,10 +223,10 @@ class Member_profile extends MY_Controller {
 					
 					$email=$u->email;
 					if($u->gender=='male'){
-							$list_id='2b3f512a26';
+							$list_id='3ba39f046c';
 						}
 					else{
-							$list_id='77a05496e5';
+							$list_id='3ba39f046c';
 						}
 					
 					$config = array(

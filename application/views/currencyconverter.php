@@ -1,15 +1,14 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.cookie.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-    var currency_type = $("input[name$='currency_type']").val();
-    
-    $("input[name$='currency_type']").click(function() {
-        var currency_type = $(this).val();
-            //alert(currency_type);
-			$.cookie("c", currency_type, { path: '/' });
-            window.location.reload();
-        });
-		 
+	var currency_type = $("input[name$='currency_type']").val();
+
+	$("input[name$='currency_type']").click(function() {
+		var currency_type = $(this).val();
+		//alert(currency_type);
+		$.cookie("c", currency_type, { path: '/' });
+		window.location.reload();
+	});	 
 });
 <?php
 	if(isset($_COOKIE["c"]))

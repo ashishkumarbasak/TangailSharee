@@ -1554,7 +1554,7 @@ class Cart extends MY_Controller {
                             $paypal_shipping = $order->shipping_amount;
                         }
                                 
-    			$myPaypal->addField('item_name', "tangail-sharee Purchase");
+    			$myPaypal->addField('item_name', "Tangail Sharee Purchase");
     			$myPaypal->addField('custom', $order->id);
     			$myPaypal->addField('amount', $paypal_amount);
 				$myPaypal->addField('tax', $paypal_tax);

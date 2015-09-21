@@ -120,14 +120,14 @@ class Register extends MY_Controller {
 					//$this->storeAddress($u->email,$u->username,$u->gender);
 					$email=$u->email;
 					if($u->gender=='male'){
-							$list_id='2b3f512a26';
+							$list_id='3ba39f046c';
 						}
 					else{
-							$list_id='77a05496e5';
+							$list_id='3ba39f046c';
 						}
 					
 					$config = array(
-						'apikey' => '4af5bec03c18f0b8b29c46a2513d1298-us4' ,     // Insert your api key
+						'apikey' => 'da9e36a66aaf4c53ce569d5a152aba13-us4' ,     // Insert your api key
 						'secure' => FALSE   // Optional (defaults to FALSE)
 						);
 					
@@ -282,13 +282,13 @@ class Register extends MY_Controller {
 	    $name=$this->input->post('NAME');
 	    $button=$this->input->post('sub_button');
 	    if($button=='MEN'){
-		$list_id='2b3f512a26';
+		$list_id='3ba39f046c';
 	    }
 	    else{
-		$list_id='77a05496e5';
+		$list_id='3ba39f046c';
 	    }
 		
-		$config = array('apikey' => '4af5bec03c18f0b8b29c46a2513d1298-us4' ,     // Insert your api key
+		$config = array('apikey' => 'da9e36a66aaf4c53ce569d5a152aba13-us4' ,     // Insert your api key
 						'secure' => FALSE   // Optional (defaults to FALSE)
 						);
     

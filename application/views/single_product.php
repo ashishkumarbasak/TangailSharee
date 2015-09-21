@@ -13,15 +13,15 @@
 		echo str_replace("{designer}",$designer,lang('single_product'));
 	?>
 </title>
-<meta property="og:description" content="Awesome t-shirt designed by <?php 
+<meta property="og:description" content="Awesome sharees designed by <?php 
 	echo $designer;
-	?> for Twinne!" />
-<meta name="description" content="Awesome t-shirt designed by <?php 
+	?> for tangail-sharee.com!" />
+<meta name="description" content="Awesome tangail-sharee designed by <?php 
 	echo $designer;
-	?> for Twinne!">
-<meta name="keywords" content="browse, twinne, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 Twinne Ltd" />
-<meta name="author" content="Twinne Ltd" />
+	?> for tangail-sharee.com!">
+<meta name="keywords" content="browse, catalog, collection, unique, women&#039;s, salethreadless, sharee, sari, clothing, design, art" />
+<meta name="copyright" content="(c) 2015 tangail-sharee.com" />
+<meta name="author" content="Tangail-sharee.com Ltd" />
 <meta property="fb:app_id" content="203991176319853"/>
 <meta property="og:url" content="<?php echo current_url(); ?>?id=<?php echo $id; ?>&type=<?php echo $type; ?>" />
 <meta property="og:title" content="<?php 
@@ -34,7 +34,7 @@
 		echo str_replace("{designer}",$designer,lang('single_product'));
 	?>" />
 <meta property="og:type" content="product" />
-<meta property="og:site_name" content="Twinne T-shirts Store" />
+<meta property="og:site_name" content="Tangail sharee Store" />
 <meta property="og:image" content="<?php 
 
 foreach ($product->file as $file)
@@ -857,7 +857,7 @@ function cart_refresh(){
         		<div class="price2_box">
 					<?php  
 	
-			                                //if($is_called_already=="no")
+			                        if($is_called_already=="no" || true)
                                         	{
                                             	if($pref_currency_type=="USD")
                                                 	{
@@ -890,7 +890,7 @@ function cart_refresh(){
 				<div class="price_box">
 					<?php  
                                         //echo '&pound;'.$p->price; 
-                                       // if($is_called_already=="no")
+                                        if($is_called_already=="no" || true)
                                             {
                                                 if($pref_currency_type=="USD")
 												{
@@ -934,7 +934,7 @@ function cart_refresh(){
 					<?php  
                                         
                                         //echo '&pound;'.$p->price;
-                                        //if($is_called_already=="no")
+                                        if($is_called_already=="no" || true)
                                             {
                                                 if($pref_currency_type=="USD")
 												{
@@ -975,7 +975,7 @@ function cart_refresh(){
 		
 		?>
         
-    <?php $this->load->view('bottom_banner');?>
+    <?php //$this->load->view('bottom_banner');?>
     <div class="clear"></div>
   </div>
   
@@ -1000,7 +1000,7 @@ function cart_refresh(){
         		<div class="price2_box">
 					<?php  
 	
-			                                //if($is_called_already=="no")
+			                        if($is_called_already=="no" || true)
                                         	{
                                             	if($pref_currency_type=="USD")
                                                 	{
@@ -1033,7 +1033,7 @@ function cart_refresh(){
 				<div class="price_box">
 					<?php  
                                         //echo '&pound;'.$p->price;
-                                           if($is_called_already=="no")
+                                           if($is_called_already=="no" || true)
                                             {
                                                 if($pref_currency_type=="USD")
 												{
@@ -1051,7 +1051,7 @@ function cart_refresh(){
                                                     $product_currency = $p->price;
 												}
 
-                                                $is_called_already = "yes";
+                                                //$is_called_already = "yes";
                                             }
                                             if($pref_currency_type=="USD")
                                                 
@@ -1076,7 +1076,7 @@ function cart_refresh(){
 				<div class="price_box">
 					<?php  
                                             //echo '&pound;'.$p->price; 
-                                           if($is_called_already=="no")
+                                           if($is_called_already=="no" || true)
                                             {
                                                 if($pref_currency_type=="USD")
 												{
@@ -1094,7 +1094,7 @@ function cart_refresh(){
                                                     $product_currency = $p->price;
 												}
 
-                                                $is_called_already = "yes";
+                                                //$is_called_already = "yes";
                                             }
                                             if($pref_currency_type=="USD")
                                                 
@@ -1110,13 +1110,14 @@ function cart_refresh(){
     	<?php 
 			}
         
-		$i++; 
+		$i++;
+		if($i==6) break; 
 		}
 	} 
 		
 		?>
         
-    <?php $this->load->view('bottom_banner');?>
+    <?php //$this->load->view('bottom_banner');?>
     <div class="clear"></div>
   </div>
   
