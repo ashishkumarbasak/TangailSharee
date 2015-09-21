@@ -124,7 +124,7 @@ abstract class PaymentGateway
              echo "<input type=\"hidden\" name=\"$name\" value=\"$value\"/>\n";
         }
         echo "</form>\n";
-        echo "<p style='padding-top: 200px; text-align: center; font-size:16px; font-family: Arial; color: #888;'>Please wait, we are processing your details<br /><br /><img src='http://tangail-sharee.com/images/animated_gif_tangail-sharee.gif'/></p></body></html>\n";
+        echo "<p style='padding-top: 200px; text-align: center; font-size:16px; font-family: Arial; color: #888;'>Please wait, we are processing your details<br /><br /><img src='http://tangail-sharee.com/images/ajax-load.gif'/></p></body></html>\n";
     }
 
     /**
