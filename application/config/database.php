@@ -84,11 +84,11 @@ $active_record = TRUE;
 
 
 
-$db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = 'mysql.trip-bangladesh.com';
 
-$db['default']['username'] = 'root';
+$db['default']['username'] = 'ashish021';
 
-$db['default']['password'] = 'root';
+$db['default']['password'] = '@shish123';
 
 $db['default']['database'] = 'tangail_sharee';
 
