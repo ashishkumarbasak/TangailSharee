@@ -1,14 +1,14 @@
 <?php
 
-$lang['home_page_title']		= 'Tangail-sharee | Unique graphic t-shirts created by top worldwide artists';
+$lang['home_page_title']		= 'TANGAIL-SHAREE.com | Unique graphic t-shirts created by top worldwide artists';
 $lang['gallery_women']		= 'Tangail-sharee Gallery | Women graphic t-shirts created by top worldwide artists';
 $lang['gallery_man']		= 'Tangail-sharee Gallery | Man\'s graphic t-shirts created by top worldwide artists';
 $lang['gallery']		= 'Tangail-sharee Gallery | Graphic t-shirts created by top worldwide artists';
 $lang['single_product_man']		= 'Tangail-sharee | T-shirt for man designed by {designer}';
 $lang['single_product_women']		= 'Tangail-sharee | Graphic t-shirt for women designed by {designer}';
-$lang['single_product']		= 'Tangail-sharee | Graphic t-shirt designed by {designer}';
-$lang['member_profile']		= 'Tangail-sharee | Member Profile - {profile_name}';
-$lang['shipping_info']		= 'Tangail-sharee | Shipping Information - {profile_name}';
+$lang['single_product']		= 'TANGAIL-SHAREE.com | Unique design sharee by {designer}';
+$lang['member_profile']		= 'TANGAIL-SHAREE.com | Member Profile - {profile_name}';
+$lang['shipping_info']		= 'TANGAIL-SHAREE.com | Shipping Information - {profile_name}';
 $lang['billing_info']		= 'Tangail-sharee | Billing Information - {profile_name}';
 $lang['change_passowrd']		= 'Tangail-sharee | Change Password - {profile_name}';
 

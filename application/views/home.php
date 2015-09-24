@@ -8,7 +8,7 @@
 <meta property="og:description" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<meta name="copyright" content="(c) 2015 tangail-sharee.com" />
+<meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
 <meta name="author" content="tangail-sharee.com" />
 <meta property="fb:app_id" content=""/>
 <meta property="og:type" content="website"/>

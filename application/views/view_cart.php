@@ -408,7 +408,7 @@ function cart_refresh(){
            <?php if(isset($tax) && !empty($tax)){
           $aptax = $total*$tax->rate/100; //$total += $aptax; ?>
           <tr>
-            <td style="width:185px; text-align:right;">Tax</td>
+            <td style="width:185px; text-align:right;"><div style="margin-top:7px;">Tax</div></td>
             <td style="width:60px; text-align:center;"><img src="<?php echo base_url();?>images/Untitled-2.png" alt="image1" /></td>
             <td align="right"><?php 
 			//echo $aptax;
@@ -439,7 +439,8 @@ function cart_refresh(){
             <?php }else{?>
             	<td style="width:185px; text-align:right;">TOTAL (free standard shipping)</td>
             	<?php }}else{?>
-            	<td style="width:185px; text-align:right;">TOTAL (free standard shipping)</td>
+            	<td style="width:185px; text-align:right;">
+			<div style="margin-top:7px;">TOTAL</div></td>
             	<?php }?>
             <td style="width:60px; text-align:center;"><img src="<?php echo base_url();?>images/Untitled-2.png" alt="image1" /></td>
             <td align="right"><?php 

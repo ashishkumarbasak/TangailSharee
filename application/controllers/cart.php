@@ -3,16 +3,16 @@
 ini_set('max_execution_time',0);
 
 //Sandbox account information
-define('API_USERNAME', 'ashish_1218103483_biz_api1.noocleusmediabd.com');
-define('API_PASSWORD', '1218103494');
-define('API_SIGNATURE', 'AFcWxV21C7fd0v3bYYYRCpSSRl31AWiaOSKSZ1xtDemMg84xWSQW-zSq');
+define('API_USERNAME', 'ashish021-facilitator_api1.gmail.com');
+define('API_PASSWORD', '1370972122');
+define('API_SIGNATURE', 'A5c-19yTw7tnY6UOC7bs-1pi1CsYAH-7pE.hj9BQR26627AVUPdLoW0s');
 
-//define('API_USERNAME', 'sebastiano_api1.tangail-sharee.com');
-//define('API_PASSWORD', 'USW3EL4HA8PPL7B8');
-//define('API_SIGNATURE', 'AFcWxV21C7fd0v3bYYYRCpSSRl31AIB7-IFlf4g5EH62I9W7ahDjaz.Q');
+//define('API_USERNAME', 'ashish.sntc_api1.gmail.com');
+//define('API_PASSWORD', 'BZNMRHCABQFEHG5Q');
+//define('API_SIGNATURE', 'A2O5usuKHQhP.t3Ov4jYYtffvdpsA1-cYjoY7-5hs.ZQ0LBshMchJskq');
 
 
-define('API_ENDPOINT', 'https://api-3t.paypal.com/nvp');
+define('API_ENDPOINT', 'https://api-3t.sandbox.paypal.com/nvp');
 define('USE_PROXY',FALSE);
 define('PROXY_HOST', '208.113.213.78');
 define('PROXY_PORT', '808');
@@ -1526,7 +1526,7 @@ class Cart extends MY_Controller {
     			$this->load->library('Paypal');
     			$myPaypal = new Paypal();
     			//$myPaypal->addField('business', 'sebastiano@tangail-sharee.com');
-                $myPaypal->addField('business', 'ashish_1207733105_biz@gmail.com');
+			$myPaypal->addField('business', 'ashish021-facilitator_api1.gmail.com');
     			$myPaypal->addField('currency_code', $order->paid_currency);
     			$myPaypal->addField('return', base_url().'cart/paymentreturn/success/'.$order->SKU);
     			$myPaypal->addField('cancel_return', base_url().'cart/paymentreturn/failure/'.$order->SKU);

@@ -1,4 +1,3 @@
-
 <div id="cookieMessage" style="z-index: 3654478; position: fixed; left: 0%; bottom: 0px; width: 100%; margin-left: 0px; height: 30px; line-height: 30px; border: medium none; background-color: rgba(0, 0, 0, 0.8); color: rgb(255, 255, 255); overflow: hidden; text-align: center; font-size: 12px; font-family: arial; padding: 0px;">
   We use cookies on this website. By using this site, you agree that we may store and access cookies on your device. Find out more
   <a style="color: #eee; font-weight: bold; text-decoration: none; border-bottom: 1px solid #000;" target="_blank" href="http://tangail-sharee.com/cookies_policy">here</a>.
@@ -55,8 +54,13 @@
   </div>
 
   <div class="header_cont">
-    <div class="logo">
-      <!-- <a href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>images/logo-tangail.gif" alt="logo" /></a> //-->
+    <div class="logo" style="width:250px;">
+	<div class="nav_box" style="margin-top:54px;padding:0px;float:left;">
+		<ul style="madgin:0px; padding:0px; width:100%;">
+			<li style="padding-left:0px;"><a style="font-size:20px;letter-spacing: 2px; padding-left:0px;" href="<?php echo base_url();?>">TANGAIL-SHAREE.<span style="font-size:16px;">com</span></a></li>
+		</ul>
+	</div>
+	<!-- <a href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>images/logo-tangail.gif" alt="logo" /></a> //-->
     </div>
     <!--Nav Start-->
     <?php
@@ -74,8 +78,8 @@
       <ul>
         <li><a href="<?php echo base_url();?>">HOME</a></li>
         <li><a href="<?php echo base_url();?>show_product?type=woman">SHAREES</a></li>
-        <li><a href="http://help.tangail-sharee.com/">ABOUT</a></li>
-        <li><a href="http://help.tangail-sharee.com/">SUPPORT</a></li>
+        <li><a href="javascript:void(0);">ABOUT</a></li>
+        <li><a href="javascript:void(0);">SUPPORT</a></li>
       </ul>
     </div>
     <!--Nav End-->

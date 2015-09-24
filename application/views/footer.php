@@ -37,13 +37,13 @@
     <div class="footer_menu_box">
     <div class="copy_right">
     	
-    <p>&copy; 2013 Tangail-sharee.com</p>
+    <p>&copy; 2015 TANGAIL-SHAREE.com</p>
     <ul class="footer_links">    	
     	<li><a href="#">Home</a></li>
     	<li>/</li>
     	<li><a href="mailto:info@tangail-sharee.com">Contact</a></li>
     	<li>/</li>
-    	<li><a href="https://tangail-sharee.tenderapp.com">Support</a></li>
+    	<li><a href="mailto:support@tangail-sharee.com">Support</a></li>
     	<li>/</li>
     	<li><a href="<?php echo base_url();?>pages/terms">Terms &amp; Conditions</a></li>
     	<li>/</li>
@@ -78,17 +78,17 @@
   xmlns:vcard="http://www.w3.org/2006/vcard/ns#">
  
   <div typeof="gr:BusinessEntity" about="#company">
-    <div property="gr:legalName" content="Tangail-sharee.com"></div>
-    <div property="vcard:tel" content="0044 20 3620 9250"></div>
+    <div property="gr:legalName" content="TANGAIL-SHAREE.com"></div>
+    <div property="vcard:tel" content="0034 631 421 277"></div>
     <div rel="vcard:adr">
       <div typeof="vcard:Address">
-        <div property="vcard:country-name" content="GB"></div>
-        <div property="vcard:street-address" content="1-9 Downham Road"></div>
-        <div property="vcard:locality" content="London"></div>
-        <div property="vcard:postal-code" content="N1 5AA "></div>
+        <div property="vcard:country-name" content="ES"></div>
+        <div property="vcard:street-address" content="Sant Gervasi De Cassoles 41"></div>
+        <div property="vcard:locality" content="Barcelona"></div>
+        <div property="vcard:postal-code" content="08022"></div>
       </div>
     </div>
-    <div rel="foaf:depiction" resource="<?php echo base_url(); ?>images/logo.png"></div>
+    <!-- <div rel="foaf:depiction" resource="<?php echo base_url(); ?>images/logo.png"></div> /-->
   </div>
 </div>
   
@@ -112,16 +112,3 @@
 });
 </script>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/ui_functions.js"></script>
-<script type="text/javascript">
-
- ��var _gaq = _gaq || [];
- ��_gaq.push(['_setAccount', 'UA-27406219-1']);
- ��_gaq.push(['_trackPageview']);
-
- ��(function() {
- �� ��var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
- �� ��ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
- �� ��var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
- ��})();
-
-</script>

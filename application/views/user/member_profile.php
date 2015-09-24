@@ -329,7 +329,7 @@ function cart_refresh(){
                 
                 <div class="gap"></div>	
             	<input type="checkbox" value="1" name="notification" id="notification" class="tab_check_box" <?php if($user->notification==1) { echo "checked='checked'"; } ?> tabindex="10" />
-            	<label>Notify me by e-mail about Twinne’s discounts and news</label>
+            	<label>Notify me by e-mail about tangail-sharee.com's discounts and news</label>
             	<div class="clear"></div>
             
             	<input type="submit" value="&nbsp;" class="save_button" />
