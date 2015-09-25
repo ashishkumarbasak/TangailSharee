@@ -1,33 +1,33 @@
 <?php
 
-$lang['home_page_title']		= 'TANGAIL-SHAREE.com | Unique graphic t-shirts created by top worldwide artists';
-$lang['gallery_women']		= 'Tangail-sharee Gallery | Women graphic t-shirts created by top worldwide artists';
-$lang['gallery_man']		= 'Tangail-sharee Gallery | Man\'s graphic t-shirts created by top worldwide artists';
-$lang['gallery']		= 'Tangail-sharee Gallery | Graphic t-shirts created by top worldwide artists';
-$lang['single_product_man']		= 'Tangail-sharee | T-shirt for man designed by {designer}';
-$lang['single_product_women']		= 'Tangail-sharee | Graphic t-shirt for women designed by {designer}';
-$lang['single_product']		= 'TANGAIL-SHAREE.com | Unique design sharee by {designer}';
+$lang['home_page_title']		= 'TANGAIL-SHAREE.com | A online store of outstanding and gorgeous tangail sarees';
+$lang['gallery_women']		= 'TANGAIL-SHAREE.com Gallery | Unique, outstanding and gorgeous sharee collections for women';
+$lang['gallery_man']		= 'TANGAIL-SHAREE.com Gallery | Man\'s panjabi created by top worldwide artists';
+$lang['gallery']		= 'TANGAIL-SHAREE.com Gallery | Graphic t-shirts created by top worldwide artists';
+$lang['single_product_man']		= 'TANGAIL-SHAREE.com | Panjabi for man designed by {designer}';
+$lang['single_product_women']		= 'TANGAIL-SHAREE.com | Unique Sharee for women designed by {designer}';
+$lang['single_product']		= 'TANGAIL-SHAREE.com | Unique Sharee for women designed by {designer}';
 $lang['member_profile']		= 'TANGAIL-SHAREE.com | Member Profile - {profile_name}';
 $lang['shipping_info']		= 'TANGAIL-SHAREE.com | Shipping Information - {profile_name}';
-$lang['billing_info']		= 'Tangail-sharee | Billing Information - {profile_name}';
-$lang['change_passowrd']		= 'Tangail-sharee | Change Password - {profile_name}';
+$lang['billing_info']		= 'TANGAIL-SHAREE.com | Billing Information - {profile_name}';
+$lang['change_passowrd']		= 'TANGAIL-SHAREE.com | Change Password - {profile_name}';
 
-$lang['member_earnings']		= 'Tangail-sharee | My Earnings';
-$lang['member_products']		= 'Tangail-sharee | My Products';
-$lang['member_designs']		= 'Tangail-sharee | My Designs';
-$lang['add_design']		= 'Tangail-sharee | Add new design';
-$lang['member_orders']		= 'Tangail-sharee | My Orders - {profile_name}';
-$lang['member_wishlist']		= 'Tangail-sharee | My Wishlist - {profile_name}';
+$lang['member_earnings']		= 'TANGAIL-SHAREE.com | My Earnings';
+$lang['member_products']		= 'TANGAIL-SHAREE.com | My Products';
+$lang['member_designs']		= 'TANGAIL-SHAREE.com | My Designs';
+$lang['add_design']		= 'TANGAIL-SHAREE.com | Add new design';
+$lang['member_orders']		= 'TANGAIL-SHAREE.com | My Orders - {profile_name}';
+$lang['member_wishlist']		= 'TANGAIL-SHAREE.com | My Wishlist - {profile_name}';
 
-$lang['checkout_step1']		= 'Tangail-sharee | Checkout - Shipping Information';
-$lang['checkout_step2']		= 'Tangail-sharee | Checkout - Choose a shipping method';
-$lang['checkout_step3']		= 'Tangail-sharee | Checkout - Choose a payment method';
-$lang['checkout_step4']		= 'Tangail-sharee | Checkout - Review your order';
+$lang['checkout_step1']		= 'TANGAIL-SHAREE.com | Checkout - Shipping Information';
+$lang['checkout_step2']		= 'TANGAIL-SHAREE.com | Checkout - Choose a shipping method';
+$lang['checkout_step3']		= 'TANGAIL-SHAREE.com | Checkout - Choose a payment method';
+$lang['checkout_step4']		= 'TANGAIL-SHAREE.com | Checkout - Review your order';
 
-$lang['my_cart']		= 'Tangail-sharee | My Cart';
+$lang['my_cart']		= 'TANGAIL-SHAREE.com | My Cart';
 
-$lang['create_new_account']		= 'Tangail-sharee | Cretae New Account';
-$lang['login_to_your_account']		= 'Tangail-sharee | Login to your account';
+$lang['create_new_account']		= 'TANGAIL-SHAREE.com | Cretae New Account';
+$lang['login_to_your_account']		= 'TANGAIL-SHAREE.com | Login to your account';
 
 $lang['not_valid_link_for_cp']		= 'The change password link is not valid.';
 $lang['password_changed_successfully']		= 'Your password changed successfully.';

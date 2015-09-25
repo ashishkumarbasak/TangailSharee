@@ -89,19 +89,19 @@ $(document).ready(function(){
   <div id="mid_content">
     <div class="mid_content_top" style="font-size:12px;">
     	<br><br> 
- 		Thank you for choosing to buy from Twinne!
+ 		Thank you for choosing to buy from TANGAIL-SHAREE.com!
 		<br><br> 
 		Your order ID is <strong><?php echo $order_sku; ?></strong>, Please use this for future Reference.
 		<br><br>
 		We are working right now to ship your order the soonest possible. You will receive a confirmation by email once the order is delivered to you. 
 		<br><br> 
-		In case you need help, feel free to contact our customer service through the <a href="https://twinne.tenderapp.com/"><u>support system</u></a> or the <a href="<?php echo base_url();?>contact"><u>contact page</u></a>.
+		In case you need help, feel free to contact our customer service through the <a href="mailto:support@tangail-sharee.com"><u>support system</u></a> or the <a href="mailto:info@tangail-sharee.com"><u>contact page</u></a>.
 		<br><br> 
 		Hoping to see you soon
 		<br><br> 
 		Best,
 		<br><br> 
-		The Twinne Team<br>
+		The TANGAIL-SHAREE.com Team<br>
 		<br><br> 
       
       <div class="clear"></div>

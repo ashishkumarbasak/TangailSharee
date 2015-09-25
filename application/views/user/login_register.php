@@ -215,6 +215,10 @@ $(document).ready(function(){
                         </div>
                         
                         <div class="clear"></div>
+			<div style="border-top: 1px dotted #666666; margin-top:30px; margin-bottom:15px;">
+                                <div class="or" style="padding: 20px 0pt 0pt;">Not still a member?</div>
+                                <div class="or"><span><a class="example7" href="javascript:void(0);">Create your account now</a></span></div>
+                                </div>
                       </div>
                       <div class="clear"></div>
                       <?php echo form_close(); ?>
@@ -237,11 +241,10 @@ $(document).ready(function(){
                   <?php
 				  if(!isset($_COOKIE['fbsr_'.FACEBOOK_API_KEY])){
 				  ?> 
-                  
+                  <!--
 					<div class="register_content_right">
                     <div class="or"> or</div>
                     
-                    <!-- Or you can use XFBML -->
   					<div class="fb-login-button" data-show-faces="false" data-width="100" data-max-rows="1" data-scope="email,user_birthday,publish_stream"></div>
   					
                     
@@ -250,6 +253,7 @@ $(document).ready(function(){
                     <div class="or"><span><a href="<?php echo base_url(); ?>user/register">Create your account now</a></span></div>
                     <div class="clear"></div>
                   </div>
+		//-->
 		<?php } ?>
               
               <div class="clear"></div>

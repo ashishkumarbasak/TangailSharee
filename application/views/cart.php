@@ -18,7 +18,7 @@ if($this->cart->total_items() > 0){ ?>
 			  
                             <?php $options=$this->cart->product_options($items['rowid']); ?>
                             <div class="Product_detail_box">
-                            <div class="Product_detail_image"><?php if($options['image']!=null){?><a href='<?php echo base_url(); ?>single_product?type=<?php echo $options['type'];?>&id=<?php echo $items['id'];?>'><img src="<?php echo base_url(); ?>images/product_image/short_image/<?php echo $options['image']; ?>" alt="shirt" /></a> <?php } ?></div>
+                            <div class="Product_detail_image"><?php if($options['image']!=null){?><a href='<?php echo base_url(); ?>single_product?type=<?php echo $options['type'];?>&id=<?php echo $items['id'];?>'><img src="<?php echo base_url(); ?>images/product_image/short_image/<?php echo $options['image']; ?>" alt="sharee" /></a> <?php } ?></div>
                             <div class="Product_detail_box_right">
                             <h2><a href='<?php echo base_url(); ?>single_product?type=<?php echo $options['type'];?>&id=<?php echo $items['id'];?>'><?php echo $items['name'];?></a><span><span style="display:none;"><br />Size: <?php echo $options['size']; ?></span><br />Qty: <?php echo $items['qty'];?><br />
                             <?php 

@@ -88,18 +88,17 @@ $(document).ready(function(){
           	<div class="clear"></div>
          </div>
 		</div>
-        <div class="login_content_right">
-        <p>or</p>
-		 
-		<input type="button" class="facebook_btn" value=""  onclick="window.location='<?php echo base_url();?>user/login/facebooklogin';" />
-	
 
-	  
-	  
-        <p style="padding:30px 0 0 0;">Not still a member?</p>
-        <p><span><a class='example7' href="javascript:void(0);">Create your account now</a></span></p>
-        <div class="clear"></div>
+	<div class="login_content_right">
+		<p>Or</p>
+		<!--
+		<input type="button" class="facebook_btn" value=""  onclick="window.location='<?php echo base_url();?>user/login/facebooklogin';" />
+		//-->
+		<p style="padding:15px 0 0 0;">Not still a member?</p>
+		<p><span><a class='example7' href="javascript:void(0);">Create your account now</a></span></p>
+		<div class="clear"></div>
         </div>
+
       <div class="clear"></div>
       </div>
       <?php echo form_close(); ?>

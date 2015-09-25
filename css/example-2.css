@@ -91,7 +91,7 @@ ul.tabbernav li a:hover{font:12px Verdana,sans-serif; color: #CDCDCD; text-decor
 .single_product_down_tab{}
 .single_product_down_tab p{ border-bottom: 2px dotted #BFBFBF;color: #808080;font-family: Oswald; font-size: 16px;font-weight: normal; margin: 0 0 0 15px;padding: 8px 15px;width: 243px;}
 .register_content{ width:906px;}
-.register_content_left{ width:526px; float:left; clear:both;}
+.register_content_left{ width:726px; float:left; clear:both;}
 .register_content_right{   border-left: 1px dotted #666666;
     float: right;
     padding: 0 0 0 39px;
@@ -136,7 +136,7 @@ ul.tabbernav li a:hover{font:12px Verdana,sans-serif; color: #CDCDCD; text-decor
 .register_check_box{ margin:0 0 0 162px;}
 .register_check_box input[type="checkbox"]{ width:15px; float:left; margin:0 10px 0 0;}  
 .register_check_text{color: #666666;
-    font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans serif; width:262px;
+    font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, sans serif; width:420px;
     font-size: 14px; margin:0px; padding:0px; }
 .register_check_box input[type="button"]{ width:76px; height:26px; background:url(../images/login_btn.png) no-repeat; cursor:pointer; border:0px; float:left; margin:30px 10px 0 0;} 
 .register_check_text1{  color: #666666;

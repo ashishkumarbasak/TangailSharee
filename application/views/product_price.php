@@ -29,19 +29,19 @@
                                                 if($orginal_price_value==0){
                                                 echo '$'.$product_currency.''; 
 												} else {
-													echo "<del>$".$orginal_price_value.'</del> $'.$product_currency.''; 
+													echo "<del>$".$orginal_price_value.'</del> &nbsp;$'.$product_currency.''; 
 												}
                                             } else if($pref_currency_type=="EUR") {
                                             	if($orginal_price_value==0){
                                                  echo '&euro;'.$product_currency.''; 
 												} else {
-													echo "<del>&euro;".$orginal_price_value.'</del> &euro;'.$product_currency.''; 
+													echo "<del>&euro;".$orginal_price_value.'</del> &nbsp;&euro;'.$product_currency.''; 
 												}
                                             } else {
                                             	if($orginal_price_value==0){
                                                echo '&pound;'.$product_currency.'';
 												} else {
-													echo "<del>&pound;".$orginal_price_value.'</del> &pound;'.$product_currency.'';
+													echo "<del>&pound;".$orginal_price_value.'</del> &nbsp;&pound;'.$product_currency.'';
 												}
 											}
 ?>

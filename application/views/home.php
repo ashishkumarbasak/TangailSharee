@@ -5,19 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9" />
 <meta http-equiv="X-UA-Compatible" content="IE=8" />
 <title><?php echo lang('home_page_title'); ?></title>
-<meta property="og:description" content="" />
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+<meta property="og:description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud." />
+<meta name="description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud." />
+<meta name="keywords" content="tangail saree,tangail,saree, jamdani, cotton, silk, half silk, handloom, jamdani saree, silk saree, cotton saree, half silk, half silk saree, handloom saree, bridal, bridal saree, katan, katan saree, dhaka, bangladeshi saree, dhakai saree, dhaka sahree, butique, muslin, muslin saree" />
 <meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
-<meta name="author" content="tangail-sharee.com" />
-<meta property="fb:app_id" content=""/>
+<meta name="author" content="TANGAIL-SHAREE.com" />
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="<?php echo base_url(); ?>" />
 <meta property="og:title" content="<?php echo lang('home_page_title'); ?>" />
-<meta property="og:site_name" content="tangail-sharee.com" />
+<meta property="og:site_name" content="TANGAIL-SHAREE.com" />
 <meta property="og:image" content="<?php echo base_url(); ?>images/logo_share.jpg" />
 <link rel="canonical" href="https://tangail-sharee.com" />
 <link href="<?php echo base_url(); ?>css/style.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo base_url(); ?>css/example-2.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/colorbox.css" type="text/css" media="screen" />
 
 <!--Select Box Js Start-->

@@ -242,14 +242,8 @@ function isAlphanumeric(inputValue)
             <div id="email_error_popup" class="error"><p style="position:absolute; top:293px; left:250px; display:none;"></p></div>
             
             <div class="gap"></div>
-            <label>I am</label>
-            <div class="i-am-btn-box">
-                <div id ='genderman' class="manbtn genderselectedm"><a href="javascript:void(0);">MAN</a></div>
-                <div id='genderwoman' class="womanbtn"><a href="javascript:void(0);">WOMAN</a></div>
-                <div class="clear"></div>
-            </div>
 
-	  		<input type='hidden' name='gender' id='gender' value="male" />
+	  		<input type='hidden' name='gender' id='gender' value="female" />
 	  
 
             <div class="check_box2">
@@ -298,13 +292,17 @@ function isAlphanumeric(inputValue)
           
           
           
-          
-        <div class="login_content_right2"> <p>Have a Facebook account?</p>
+         
+        <div class="login_content_right2"> 
+	<!-- <p>Have a Facebook account?</p>
         <input type="button" class="facebook_btn" value="&nbsp;" id="facebook_btn"  onclick="window.location='<?php echo base_url();?>user/login/facebooklogin';" />
-        <p style="padding:30px 0 0 0;">Already a member?</p>
+        //-->
+	<p>Or</p>
+	<p style="padding:15px 0 0 0;">Already a member?</p>
         <p><span><a class="example8" href="javascript:void(0);">Sign in here</a></span></p>
         <div class="clear"></div>
         </div>
+	
       </div>
     </div>
   </div>

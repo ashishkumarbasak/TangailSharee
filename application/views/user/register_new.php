@@ -270,7 +270,7 @@ $(document).ready(function(){
 		else
 		{
 			privacyerror.css('display','block');
-			privacyerror.text("Please check Twinne's Terms & Conditions");
+			privacyerror.text("Please check TANGAIL-SHAREE.com's Terms & Conditions");
 			return false;
 		}
 	}
@@ -375,35 +375,25 @@ $(document).ready(function(){
                         <?php } ?>
                         </div>
 		      
-		       			<label>I am</label>
-						<div class="i-am-btn-box1" style="margin-top:12px; margin-bottom:12px;">
-                            <div id ='gman' class="manbtn genderselectedm">
-                                <a href="javascript:void(0);">MAN</a>
-                            </div>
-                            <div id='gwoman' class="womanbtn">
-                                <a href="javascript:void(0);">WOMAN</a>
-                            </div>
-                            <div class="clear"></div>
-						</div>
-                		<div class="clear"></div>
-						<input type='hidden' name='gender' id='gndr' value="male" />
+                		<div class="clear" style="height:20px;"></div>
+						<input type='hidden' name='gender' id='gndr' value="female" />
 							
 		      			 <div class="register_check_box">
                          <div style="display:none">
                             <input type="checkbox"  name="privacy_policy" value="1" id="privacy_policy" checked="checked" />
-                            <div class="register_check_text">I accept Twinne's Privacy Policy</div>
+                            <div class="register_check_text" style="font-size:12px;">I accept TANGAIL-SHAREE.com's Privacy Policy</div>
                             <div class="clear" style="height:10px;"></div>
                          </div>   
                             <input type="checkbox" name="terms_conditions" value="1" id="terms_conditions" />
-                            <div class="register_check_text">I accept Twinne's Terms & Conditions</div>
+                            <div class="register_check_text" style="font-size:12px;">I accept TANGAIL-SHAREE.com's Terms & Conditions</div>
                             <div class="clear" style="height:10px;"></div>
                             
-                            <input type="checkbox"  name="notification" value="1" />
-                            <div class="register_check_text">Notify me by e-mail about Twinne's discounts and news</div>
+                            <input type="checkbox"  name="notification" value="1" checked />
+                            <div class="register_check_text" style="font-size:12px;">Notify me by e-mail about TANGAIL-SHAREE.com's discounts and news</div>
                             <div class="clear"></div>
                          </div>
                          	<?php if(isset($_POST['user_register']) && !isset($_POST['privacy_policy']) && !isset($_POST['terms_conditions'])){?>
-                				<div id="privacy_error" class="clear error">Please check Twinne's Privacy Policy and Terms & Conditions</div>
+                				<div id="privacy_error" class="clear error" style="font-size:12px;">Please check TANGAIL-SHAREE.com's Privacy Policy and Terms & Conditions</div>
                 			<?php }else{?>
                         		<div id="privacy_error" class="error"><p style="display:none;"></p></div>   
                         	<?php } ?>
@@ -414,6 +404,10 @@ $(document).ready(function(){
                           	<input type="hidden" name="comes_from" id="comes_form" value="<?php if($this->input->post('comes_from')){echo $this->input->post('comes_from');}elseif(isset($ref_url)) echo $ref_url; ?>"> 
                             <input class="join_commiti" value="&nbsp;" type="submit" name="user_register" />
                          	<div class="clear"></div>
+				<div style="border-top: 1px dotted #666666; margin-top:30px; margin-bottom:15px;">
+				<div class="or" style="padding: 20px 0pt 0pt;">Already a member?</div>
+                        	<div class="or"><span><a class="example8" href="javascript:void(0);">Sign in here</a></span></div>
+				</div>
                          </div>
                           
                           	<script>
@@ -440,13 +434,18 @@ $(document).ready(function(){
 				  <?php
 				  if(!isset($_COOKIE['fbsr_'.FACEBOOK_API_KEY])){
 				  ?>
-                  <div class="register_content_right">
-                    <div class="or">Have a Facebook account?</div>
-                    <input type="button" value="" class="facebook_btn" onclick="window.location='<?php echo base_url();?>user/login/facebooklogin';">
-                    <div class="or" style="padding: 30px 0pt 0pt;">Already a member?</div>
-                    <div class="or"><span><a class="example8" href="javascript:void(0);">Sign in here</a></span></div>
-                    <div class="clear"></div>
-                  </div>
+                  <!-- 
+			<div class="register_content_right">
+			<div style="height:70px;"></div>
+                    	<div class="or">Have a Facebook account?</div>
+                    	<input type="button" value="" class="facebook_btn" onclick="window.location='<?php echo base_url();?>user/login/facebooklogin';">
+                    	<div class="or" style="padding: 30px 0pt 0pt;">Already a member?</div>
+                    	<div class="or"><span><a class="example8" href="javascript:void(0);">Sign in here</a></span></div>
+			<div style="height:100px;"></div>
+			
+                   	<div class="clear"></div>
+                  	</div>
+		//-->
 		<?php } ?>
             <div class="clear"></div>
           </div>

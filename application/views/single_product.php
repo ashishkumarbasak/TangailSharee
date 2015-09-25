@@ -13,16 +13,15 @@
 		echo str_replace("{designer}",$designer,lang('single_product'));
 	?>
 </title>
-<meta property="og:description" content="Awesome sharees designed by <?php 
+<meta property="og:description" content="Gorgeous and awesome saree designed by <?php 
 	echo $designer;
-	?> for tangail-sharee.com!" />
-<meta name="description" content="Awesome tangail-sharee designed by <?php 
+	?> for women!" />
+<meta name="description" content="Gorgeous and awesome saree designed by <?php 
 	echo $designer;
-	?> for tangail-sharee.com!">
-<meta name="keywords" content="browse, catalog, collection, unique, women&#039;s, salethreadless, sharee, sari, clothing, design, art" />
-<meta name="copyright" content="(c) 2015 tangail-sharee.com" />
-<meta name="author" content="Tangail-sharee.com Ltd" />
-<meta property="fb:app_id" content="203991176319853"/>
+	?> for women!">
+<meta name="keywords" content="tangail saree,tangail,saree, jamdani, cotton, silk, half silk, handloom, jamdani saree, silk saree, cotton saree, half silk, half silk saree, handloom saree, bridal, bridal saree, katan, katan saree, dhaka, bangladeshi saree, dhakai saree, dhaka sahree, butique, muslin, muslin saree" />
+<meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
+<meta name="author" content="TANGAIL-SHAREE.com" />
 <meta property="og:url" content="<?php echo current_url(); ?>?id=<?php echo $id; ?>&type=<?php echo $type; ?>" />
 <meta property="og:title" content="<?php 
 	$designer = $product->user->first_name.' '.$product->user->last_name;
@@ -34,7 +33,7 @@
 		echo str_replace("{designer}",$designer,lang('single_product'));
 	?>" />
 <meta property="og:type" content="product" />
-<meta property="og:site_name" content="Tangail sharee Store" />
+<meta property="og:site_name" content="TANGAIL-SHAREE.com" />
 <meta property="og:image" content="<?php 
 
 foreach ($product->file as $file)
@@ -439,7 +438,7 @@ function cart_refresh(){
                                         	{ ?><?php echo $product->name.'<span id="price"> ';
 		//echo '&pound;'.$product->price; 
                 include('product_price.php');
-		?><?php } else { ?><?php echo $product->name.'<span id="price"><small style="color: #F3B700; font-size: 11px; position: relative; top: -2px; left: -4px;">Sale price 40% off</small> ';
+		?><?php } else { ?><?php echo $product->name.'<span id="price"><small style="color: #F3B700; font-size: 11px; position: relative; top: -2px; left: -4px;">Sale price 25% off</small> ';
 		//echo '&pound;'.$product->price; 
                 include('product_price.php');
 		?><?php } ?> </span></h1>
@@ -567,9 +566,9 @@ function cart_refresh(){
 	else
 		echo str_replace("{designer}",$designer,lang('single_product'));
 	?>"
-        addthis:description="Awesome t-shirt designed by <?php 
+        addthis:description="Gorgeous and awesome sharee designed by <?php 
 	echo $designer;
-	?> for Twinne!">
+	?> for women!">
 
 <div id="tweet_but"><a class="addthis_button_tweet"></a></div>
 <div id="fblike"><a class="addthis_button_facebook_like"fb:like:layout="button_count"></a></div>
@@ -602,7 +601,7 @@ function cart_refresh(){
                                         	{ ?><?php echo $product->name.'<span id="price"> ';
 						//echo '&pound;'.$product->price; 
                         include('product_price.php');
-		?><?php } else { ?><?php echo $product->name.'<span id="price"><small style="color: #F3B700; font-size: 11px; position: relative; top: -2px; left: -4px;">Sale price 40% off</small> ';
+		?><?php } else { ?><?php echo $product->name.'<span id="price"><small style="color: #F3B700; font-size: 11px; position: relative; top: -2px; left: -4px;">Sale price 25% off</small> ';
 						//echo '&pound;'.$product->price; 
                         include('product_price.php');
 		?><?php } ?> </span></h1>
@@ -731,9 +730,9 @@ function cart_refresh(){
 	else
 		echo str_replace("{designer}",$designer,lang('single_product'));
 	?>"
-        addthis:description="Awesome t-shirt designed by <?php 
+        addthis:description="Gorgeous and awesome sharee designed by <?php 
 	echo $designer;
-	?> for Twinne!">
+	?> for women!">
 	
 <div id="tweet_but"><a class="addthis_button_tweet"></a></div>
 <div id="fblike"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a></div>
