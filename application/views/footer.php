@@ -47,9 +47,12 @@
     	<li>/</li>
     	<li><a href="<?php echo base_url();?>pages/terms">Terms &amp; Conditions</a></li>
     	<li>/</li>
-    	<li><a href="<?php echo base_url();?>pages/delivery_returns_terms_conditions">Deliveries &amp; Returns</a></li>
-    	<li>/</li>
-    	<li><a href="<?php echo base_url();?>pages/faq">FAQ</a></li>    	
+    	<!-- <li><a href="<?php echo base_url();?>pages/delivery_returns_terms_conditions">Deliveries &amp; Returns</a></li>
+    	<li>/</li> //-->
+    	<!-- <li><a href="<?php echo base_url();?>pages/faq">FAQ</a></li> //-->
+      <li><a href="mailto:support@tangail-sharee.com">Deliveries &amp; Returns</a></li>
+      <li>/</li>
+      <li><a href="mailto:support@tangail-sharee.com">FAQ</a></li>    	
     </ul> 
     </div> 
     </div> 
