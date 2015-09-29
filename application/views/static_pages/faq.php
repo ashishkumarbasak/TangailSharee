@@ -2,11 +2,17 @@
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>FAQ</title>
-<meta name="description" content="Frequently asked questions about deliveries, returns and refunds, orders, payments, security and our products">
-<meta name="keywords" content="browse, tangail-sharee, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 tangail-sharee Ltd" />
-<meta name="author" content="tangail-sharee Ltd" />
+<title>TANGAIL-SHAREE.com | FAQ</title>
+<meta property="og:description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud." />
+<meta name="description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud." />
+<meta name="keywords" content="tangail saree,tangail,saree, jamdani, cotton, silk, half silk, handloom, jamdani saree, silk saree, cotton saree, half silk, half silk saree, handloom saree, bridal, bridal saree, katan, katan saree, dhaka, bangladeshi saree, dhakai saree, dhaka sahree, butique, muslin, muslin saree" />
+<meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
+<meta name="author" content="TANGAIL-SHAREE.com" />
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="<?php echo base_url(); ?>" />
+<meta property="og:title" content="<?php echo lang('home_page_title'); ?>" />
+<meta property="og:site_name" content="TANGAIL-SHAREE.com" />
+<meta property="og:image" content="<?php echo base_url(); ?>images/logo_share.jpg" />
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
 <!--Select Box Js Start-->
@@ -93,20 +99,30 @@ $(document).ready(function(){
 </head>
 <body>
 <div id="top"></div>
-<div id="wrapper">
+	<div id="wrapper">
 
 
 <div class="header">
 
   	<div class="header_cont" style="padding-top: 0px;">
-    <div class="logo"><a href="<?php echo base_url();?>home"><img src="<?php echo base_url(); ?>images/logo.jpg" alt="logo" /></a></div>
+
+	<div class="logo" style="width:250px;">
+	<div class="nav_box" style="margin-top:54px;padding:0px;float:left;">
+		<ul style="madgin:0px; padding:0px; width:100%;">
+			<li style="padding-left:0px;"><a style="font-size:20px;letter-spacing: 2px; padding-left:0px;" href="<?php echo base_url();?>">TANGAIL-SHAREE.<span style="font-size:16px;">com</span></a></li>
+		</ul>
+	</div>
+	<!-- <a href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>images/logo-tangail.gif" alt="logo" /></a> //-->
+    </div>
+
     
      <div class="nav_box">
       <ul>	
-      	<li><a href="<?php echo base_url();?>">HOME</a></li>         
-        <li><a href="<?php echo base_url();?>show_product?type=woman">WOMEN</a></li>
-        <li><a href="<?php echo base_url();?>show_product?type=man">MEN</a></li>
-        <li><a href="http://help.tangail-sharee.com/">SUPPORT</a></li>
+      	<li><a href="<?php echo base_url();?>">HOME</a></li>     
+	<li><a href="<?php echo base_url();?>show_product?type=woman">SHAREES</a></li>
+        <li><a href="javascript:void(0);">ABOUT</a></li>
+        <li><a href="javascript:void(0);">SUPPORT</a></li>
+    
       </ul>
     </div>
     
@@ -162,16 +178,15 @@ As soon as your order has been shipped we will automatically send you confirmati
 
 <h3>How can I track my order?</h3>
 <p>
-You can track your order using your tracking number, please note that this can sometimes be referred to as consignment number, displayed in your confirmation email.
-Go to http://www.royalmail.com/, select the option "tracking" and enter the tracking number to locate your items.</p>
+You can track your order using your tracking number, please note that this can sometimes be referred to as consignment number, displayed in your confirmation email. We will send you the detail instrucaiton in your email as soon as the product will be shiped to deliver.</p>
 <p>
-Please ensure that you allow 24 hours for this number to become active.
+Please ensure that you allow 48 hours for this number to become active.
 </p><p>
 Not all of our delivery options include a tracking number. The option is displayed in the checkout process when available.
 </p>
 <h3>Can I change the delivery address for my order?</h3>
 <p>
-Once your order has been despatched we are unable to change your delivery address. But you can contact us to get the item reference, that can be used to contact the Royal Mail customer service, locate the item and arrange a re-delivery.
+Once your order has been despatched we are unable to change your delivery address. But you can contact us to get the item reference, that can be used to contact the shipping companies customer service, locate the item and arrange a re-delivery.
 </p>
 <h3>Do I need to sign for my UK delivery?</h3>
 <p>

@@ -3,10 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Deliveries and returns</title>
-<meta name="keywords" content="browse, tangail-sharee, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 tangail-sharee Ltd" />
-<meta name="author" content="tangail-sharee Ltd" />
-<meta name="description" content="tangail-sharee policy for deliveries and returns. Customer service section to review shipping, tracking orders, and return policies.">
+<meta property="og:description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud." />
+<meta name="description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud." />
+<meta name="keywords" content="tangail saree,tangail,saree, jamdani, cotton, silk, half silk, handloom, jamdani saree, silk saree, cotton saree, half silk, half silk saree, handloom saree, bridal, bridal saree, katan, katan saree, dhaka, bangladeshi saree, dhakai saree, dhaka sahree, butique, muslin, muslin saree" />
+<meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
+<meta name="author" content="TANGAIL-SHAREE.com" />
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="<?php echo base_url(); ?>" />
+<meta property="og:title" content="<?php echo lang('home_page_title'); ?>" />
+<meta property="og:site_name" content="TANGAIL-SHAREE.com" />
+<meta property="og:image" content="<?php echo base_url(); ?>images/logo_share.jpg" />
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
 <!--Select Box Js Start-->
@@ -99,16 +105,27 @@ $(document).ready(function(){
 <div class="header">
 
   	<div class="header_cont" style="padding-top: 0px;">
-    <div class="logo"><a href="<?php echo base_url();?>home"><img src="<?php echo base_url(); ?>images/logo.jpg" alt="logo" /></a></div>
-    
+   
+	<div class="logo" style="width:250px;">
+        <div class="nav_box" style="margin-top:54px;padding:0px;float:left;">
+                <ul style="madgin:0px; padding:0px; width:100%;">
+                        <li style="padding-left:0px;"><a style="font-size:20px;letter-spacing: 2px; padding-left:0px;" href="<?php echo base_url();?>">TANGAIL-SHAREE.<span style="font-size:16px;">com</span></a></li>
+                </ul>
+        </div>
+        <!-- <a href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>images/logo-tangail.gif" alt="logo" /></a> //-->
+    </div>
+
+
      <div class="nav_box">
-      <ul>	
-      	<li><a href="<?php echo base_url();?>">HOME</a></li>         
-        <li><a href="<?php echo base_url();?>show_product?type=woman">WOMEN</a></li>
-        <li><a href="<?php echo base_url();?>show_product?type=man">MEN</a></li>
-        <li><a href="http://help.tangail-sharee.com/">SUPPORT</a></li>
+      <ul>
+        <li><a href="<?php echo base_url();?>">HOME</a></li>
+        <li><a href="<?php echo base_url();?>show_product?type=woman">SHAREES</a></li>
+        <li><a href="javascript:void(0);">ABOUT</a></li>
+        <li><a href="javascript:void(0);">SUPPORT</a></li>
+
       </ul>
     </div>
+ 
     
     </div>
     <div class="clear"></div>
@@ -155,20 +172,7 @@ function cart_refresh(){
 <h3>Has my order been shipped out?</h3>
 
 <p>As soon as your order is dispatched from our Warehouse, you will be sent an email to confirm that it's on its way. Our Warehouse team works around the clock so you could receive the email in the day or the night. From there it should be delivered within the timescale we advertise. If your order is trackable you can check its progress by logging into your account</p> 
-<p>We offer different options of delivery by Royal Mail Ltd:</p>
-
-<h3>Uk standard and express delivery</h3>
-<ul>
-<li>Uk standard delivery: FREE (2-3 working days)</li>
-<li>Uk Next day delivery: 7.99�� (next day)</li>
-</ul>
-<h3>International standard and express delivery</h3>
-<ul>
-<li>International Europe standard delivery: 4.99�� (5-7 working days)</li>
-<li>International Europe air sure delivery: 11.99�� (3-5 working days)</li>
-<li>International worldwide delivery: 5.99�� (7-10 working days)</li>
-<li>International worldwide air sure delivery: 14.99�� (4-6 working days)</li>
-</ul>
+<p>We offer different type of international delivery options.</p>
 
 <h3>Will i be charged customs and import charges ?</h3>
 
@@ -176,11 +180,11 @@ function cart_refresh(){
 It might be a good idea to contact your local customs office for current charges before you order, so you are not surprised by charges you were not expecting.</p>
 
 <h3>Our returns policy</h3>
-<p>We guarantee to refund items purchased on tangail-sharee.com that you are not completely happy with, when you perform the refund request through our website within 7 days from the receipt of the items, and return it to us in a saleable condition within 28 days from your refund request. We do not offer exchange with other tangail-sharee products.</p>
+<p>We guarantee to refund items purchased on TANGAIL-SHAREE.com that you are not completely happy with, when you perform the refund request through our website within 7 days from the receipt of the items, and return it to us in a saleable condition within 15 days from your refund request. We do not offer exchange with other TANGAIL-SHAREE.com products.</p>
 
 <p>Please note that items must be returned with all of the tags intact.<br /> 
 
-tangail-sharee purchases can only be returned by post, we do not refund the postage and delivery costs. We are sorry for any inconvenience this may cause you. 
+TANGAIL-SHAREE.com purchases can only be returned by post, we do not refund the postage and delivery costs. We are sorry for any inconvenience this may cause you.
 </p>
 <p>The goods are your responsibility until they reach our Warehouse. Please ensure you package your return to prevent any damage to the items or boxes. We are not responsible for any items that are returned to us in error.
 Refunds will be credited to your original method of payment.
@@ -188,10 +192,10 @@ Our returns address is:</p>
 
 <p>
 	<br />
-<strong>tangail-sharee Ltd</strong><br />
-91 Linden Gardens, Room 20<br />
-London<br />
-W2 4EX<br />
+<strong>TANGAIL-SHAREE.com</strong><br />
+Sant Gervasi De Cassoles 41<br />
+Barcelona<br />
+Spain<br />
 </p>
 
 <h3>How do i return an item</h3>
@@ -199,7 +203,7 @@ W2 4EX<br />
 As an online business, we aim to provide a Returns service that is totally hassle-free for you.
 The refund procedure is entirely performed through our website. All what you need to do is to login to http://tangail-sharee.com using your account details, go to your customer panel and select "My orders". Here you can select the order you want to return and click on the link "Request a refund". You have 7 days from the receipt of the items to perform a refund request.
 At this point you need to download, print and compile the returns label. Please note it is very important that when you return an item, we know the order number it relates to and your details. Without these details we won't be able to take the action you want us to. 
-You can now dispatch the items to the address written in the paragraph above. You have 28 days from the refund request to return the items to us.
+You can now dispatch the items to the address written in the paragraph above. You have 15 days from the refund request to return the items to us.
 Once we receive your items, we will inspect and process the goods within 24 hours to ensure you receive what you want as quickly as possible.
 So you are kept informed, we will send you an email confirming the action we have taken, as soon as we are confident the goods are in their original condition.
 </p>
