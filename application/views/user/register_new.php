@@ -399,10 +399,10 @@ $(document).ready(function(){
                         	<?php } ?>
                             
                             
-                          <div class="register_check_box">
+                          <div style="margin:0 0 0 162px;">
                           	<input type="hidden" name="fb_uid" id="fb_uid" value="<?php if(isset($fb_uid)) echo $fb_uid;?>">
-                          	<input type="hidden" name="comes_from" id="comes_form" value="<?php if($this->input->post('comes_from')){echo $this->input->post('comes_from');}elseif(isset($ref_url)) echo $ref_url; ?>"> 
-                            <input class="join_commiti" value="&nbsp;" type="submit" name="user_register" />
+                          	<input type="hidden" name="comes_from" id="comes_form" value="<?php if($this->input->post('comes_from')){echo $this->input->post('comes_from');}elseif(isset($ref_url)) echo $ref_url; ?>">
+				<input type="submit" class="account" value=" " name="user_register"/>
                          	<div class="clear"></div>
 				<div style="border-top: 1px dotted #666666; margin-top:30px; margin-bottom:15px;">
 				<div class="or" style="padding: 20px 0pt 0pt;">Already a member?</div>

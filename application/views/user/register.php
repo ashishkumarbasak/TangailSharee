@@ -189,7 +189,7 @@ $(document).ready(function(){
 		else
 		{
 			privacyerror.css('display','block');
-			privacyerror.text("Please check Twinne's Terms & Conditions");
+			privacyerror.text("Please check TANGAIL-SHAREE.com's Terms & Conditions");
 			return false;
 		}
 	}
@@ -250,15 +250,15 @@ function isAlphanumeric(inputValue)
             
             <div style="display:none">
           		<input type="checkbox" value="1" name="privacy_policy" id="privacy_policy_popup" checked="checked"/>
-               	<label>I accept Twinne’s Privacy Policy</label>
+               	<label>I accept TANGAIL-SHAREE.com's Privacy Policy</label>
                	<div class="clear" style="height:10px;"></div>
             </div>   
                	<input type="checkbox" value="1" name="terms_conditions" id="terms_conditions_popup" />
-               	<label> I accept Twinne’s <a class="example19" href="<?php echo base_url();?>pages/terms">Terms & Conditions</a></label>
+               	<label> I accept TANGAIL-SHAREE.com's <a class="example19" href="<?php echo base_url();?>pages/terms">Terms & Conditions</a></label>
                	<div class="clear" style="height:10px;"></div>
                
                	<input type="checkbox" value="1" checked="checked" name="notification" id="notification_popup" />
-               	<label>Notify me by e-mail about Twinne’s discounts and news</label>
+               	<label>Notify me by e-mail about TANGAIL-SHAREE.com's discounts and news</label>
                	<div class="clear"></div>                
       		</div>
             <div class="check_box2" style="width:100%; padding:0px;">
