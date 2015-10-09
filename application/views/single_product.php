@@ -438,7 +438,7 @@ function cart_refresh(){
                                         	{ ?><?php echo $product->name.'<span id="price"> ';
 		//echo '&pound;'.$product->price; 
                 include('product_price.php');
-		?><?php } else { ?><?php echo $product->name.'<span id="price"><small style="color: #F3B700; font-size: 11px; position: relative; top: -2px; left: -4px;">Sale price 25% off</small> ';
+		?><?php } else { ?><?php echo $product->name.'<span id="price"><small style="color: #F3B700; font-size: 11px; position: relative; top: -2px; left: -4px; display:none;">Sale price 25% off</small> ';
 		//echo '&pound;'.$product->price; 
                 include('product_price.php');
 		?><?php } ?> </span></h1>
@@ -601,7 +601,7 @@ function cart_refresh(){
                                         	{ ?><?php echo $product->name.'<span id="price"> ';
 						//echo '&pound;'.$product->price; 
                         include('product_price.php');
-		?><?php } else { ?><?php echo $product->name.'<span id="price"><small style="color: #F3B700; font-size: 11px; position: relative; top: -2px; left: -4px;">Sale price 25% off</small> ';
+		?><?php } else { ?><?php echo $product->name.'<span id="price"><small style="color: #F3B700; font-size: 11px; position: relative; top: -2px; left: -4px; display:none;">Sale price 25% off</small> ';
 						//echo '&pound;'.$product->price; 
                         include('product_price.php');
 		?><?php } ?> </span></h1>
@@ -780,7 +780,7 @@ function cart_refresh(){
 
 		<ul class="tabbernav">
       		<li id="tab_id_1"><a href="javascript:void(0);" onclick="show_tab_pane('1');" title="SHIPPING">SHIPPING</a></li>
-			<li id="tab_id_2"><a href="javascript:void(0);" onclick="show_tab_pane('2');" title="PRODUCT INFO">PRODUCT INFO</a></li>			
+			<li id="tab_id_2" class="tabberactive"><a href="javascript:void(0);" onclick="show_tab_pane('2');" title="PRODUCT INFO">PRODUCT INFO</a></li>			
 			<!-- <li id="tab_id_3" class="tabberactive"><a href="javascript:void(0);" onclick="show_tab_pane('3');" title="SIZE INFO">SIZE INFO</a></li>  //-->
       		
 			
@@ -789,7 +789,7 @@ function cart_refresh(){
 
 		<div class="tabbertab" style="min-height:216px;">
       		
-              				<div class="register_content_left" id="tab_3" style="display:block;">
+              				<div class="register_content_left" id="tab_3" style="display:none;">
 								
 								<div class="bottom"><?php echo $product->size_info; ?></div>
 								<div class="single_product_select_box">
@@ -798,7 +798,7 @@ function cart_refresh(){
 								<div class="clear"></div>
 							</div>
 							
-							<div class="register_content_left" id="tab_2" style="display:none;">
+							<div class="register_content_left" id="tab_2" style="display:block;">
 								
 								<div class="bottom"><?php echo $product->product_info; ?></div>
 								<div class="single_product_select_box">

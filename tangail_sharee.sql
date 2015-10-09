@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.10
+-- version 3.3.10.4
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Sep 18, 2015 at 05:34 PM
--- Server version: 5.5.42
+-- Host: mysql.trip-bangladesh.com
+-- Generation Time: Oct 09, 2015 at 12:11 PM
+-- Server version: 5.1.56
 -- PHP Version: 5.6.10
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -26,12 +25,14 @@ SET time_zone = "+00:00";
 -- Table structure for table `ci_sessions`
 --
 
-CREATE TABLE `ci_sessions` (
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
   `session_id` varchar(40) NOT NULL DEFAULT '0',
   `ip_address` varchar(16) NOT NULL DEFAULT '0',
   `user_agent` varchar(120) NOT NULL,
   `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
-  `user_data` text NOT NULL
+  `user_data` text NOT NULL,
+  PRIMARY KEY (`session_id`),
+  KEY `last_activity_idx` (`last_activity`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -39,8 +40,8 @@ CREATE TABLE `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('cdf369aa69b1110b12ff81d48adc2116', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) Ap', 1442587826, 'a:2:{s:5:"login";b:1;s:7:"user_id";i:60;}'),
-('324e8a41cfb89f1a9e3b30236d0bac5f', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) Ap', 1442586633, 'a:3:{s:5:"login";b:1;s:7:"user_id";i:60;s:7:"ref_url";s:0:"";}');
+('ef000d399e23d0c4d585df4e80d01567', '90.166.217.84', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) Ap', 1444410164, 'a:2:{s:7:"user_id";N;s:7:"ref_url";s:0:"";}'),
+('dacfd1933c5c2962f19254380f77ba26', '90.166.217.84', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) Ap', 1444417579, 'a:2:{s:7:"user_id";N;s:7:"ref_url";s:0:"";}');
 
 -- --------------------------------------------------------
 
@@ -48,16 +49,22 @@ INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activ
 -- Table structure for table `tbl_address`
 --
 
-CREATE TABLE `tbl_address` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_address` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `address_line1` varchar(225) NOT NULL,
   `address_line2` varchar(225) DEFAULT NULL,
   `address_line3` varchar(225) DEFAULT NULL,
   `city` varchar(225) NOT NULL,
   `state` varchar(225) DEFAULT NULL,
   `country` varchar(225) NOT NULL,
-  `postcode` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `postcode` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_address`
+--
+
 
 -- --------------------------------------------------------
 
@@ -65,12 +72,13 @@ CREATE TABLE `tbl_address` (
 -- Table structure for table `tbl_admin_designer`
 --
 
-CREATE TABLE `tbl_admin_designer` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_admin_designer` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `admin_id` int(11) NOT NULL,
   `designer_id` int(11) NOT NULL,
-  `is_active` enum('0','1') NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `is_active` enum('0','1') NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `tbl_admin_designer`
@@ -85,12 +93,13 @@ INSERT INTO `tbl_admin_designer` (`id`, `admin_id`, `designer_id`, `is_active`) 
 -- Table structure for table `tbl_banner`
 --
 
-CREATE TABLE `tbl_banner` (
-  `id` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_banner` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL,
   `is_active` enum('0','1') NOT NULL DEFAULT '1',
-  `rotate` enum('0','1') NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `rotate` enum('0','1') NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `tbl_banner`
@@ -107,11 +116,17 @@ INSERT INTO `tbl_banner` (`id`, `title`, `is_active`, `rotate`) VALUES
 -- Table structure for table `tbl_banner_file`
 --
 
-CREATE TABLE `tbl_banner_file` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_banner_file` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `banner_id` int(11) NOT NULL,
-  `file_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `file_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_banner_file`
+--
+
 
 -- --------------------------------------------------------
 
@@ -119,14 +134,20 @@ CREATE TABLE `tbl_banner_file` (
 -- Table structure for table `tbl_catagory`
 --
 
-CREATE TABLE `tbl_catagory` (
-  `id` int(3) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_catagory` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
   `name` varchar(225) NOT NULL,
   `description` text NOT NULL,
   `no_of_products` int(5) NOT NULL,
   `is_active` enum('0','1') NOT NULL,
-  `parent` int(3) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `parent` int(3) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_catagory`
+--
+
 
 -- --------------------------------------------------------
 
@@ -134,12 +155,13 @@ CREATE TABLE `tbl_catagory` (
 -- Table structure for table `tbl_cms`
 --
 
-CREATE TABLE `tbl_cms` (
-  `id` int(3) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_cms` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
   `title` varchar(225) NOT NULL,
   `content` text NOT NULL,
-  `is_active` enum('0','1') NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+  `is_active` enum('0','1') NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `tbl_cms`
@@ -163,12 +185,18 @@ INSERT INTO `tbl_cms` (`id`, `title`, `content`, `is_active`) VALUES
 -- Table structure for table `tbl_color`
 --
 
-CREATE TABLE `tbl_color` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_color` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `code` varchar(100) NOT NULL,
-  `product_count` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `product_count` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_color`
+--
+
 
 -- --------------------------------------------------------
 
@@ -176,12 +204,18 @@ CREATE TABLE `tbl_color` (
 -- Table structure for table `tbl_comment`
 --
 
-CREATE TABLE `tbl_comment` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_comment` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `content` text NOT NULL,
-  `date` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `date` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_comment`
+--
+
 
 -- --------------------------------------------------------
 
@@ -189,15 +223,16 @@ CREATE TABLE `tbl_comment` (
 -- Table structure for table `tbl_contest`
 --
 
-CREATE TABLE `tbl_contest` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_contest` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(225) NOT NULL,
   `description` text NOT NULL,
   `start_date` int(10) NOT NULL,
   `end_date` int(10) NOT NULL,
   `winner` varchar(225) NOT NULL,
-  `is_active` enum('0','1') NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+  `is_active` enum('0','1') NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `tbl_contest`
@@ -212,12 +247,13 @@ INSERT INTO `tbl_contest` (`id`, `name`, `description`, `start_date`, `end_date`
 -- Table structure for table `tbl_country`
 --
 
-CREATE TABLE `tbl_country` (
-  `country_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_country` (
+  `country_id` int(11) NOT NULL AUTO_INCREMENT,
   `country_name` varchar(255) DEFAULT NULL,
   `country_short_code` varchar(20) DEFAULT NULL,
-  `country_states` set('0','1') NOT NULL DEFAULT ''
-) ENGINE=MyISAM AUTO_INCREMENT=279 DEFAULT CHARSET=utf8;
+  `country_states` set('0','1') NOT NULL DEFAULT '',
+  PRIMARY KEY (`country_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=279 ;
 
 --
 -- Dumping data for table `tbl_country`
@@ -508,11 +544,296 @@ INSERT INTO `tbl_country` (`country_id`, `country_name`, `country_short_code`, `
 -- Table structure for table `tbl_country_shipping`
 --
 
-CREATE TABLE `tbl_country_shipping` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_country_shipping` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `country_id` int(11) NOT NULL,
-  `shipping_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `shipping_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=279 ;
+
+--
+-- Dumping data for table `tbl_country_shipping`
+--
+
+INSERT INTO `tbl_country_shipping` (`id`, `country_id`, `shipping_id`) VALUES
+(1, 1, 11),
+(2, 2, 11),
+(3, 3, 11),
+(4, 4, 11),
+(5, 5, 11),
+(6, 6, 11),
+(7, 7, 11),
+(8, 8, 11),
+(9, 9, 11),
+(10, 10, 11),
+(11, 11, 11),
+(12, 12, 11),
+(13, 13, 11),
+(14, 14, 11),
+(15, 15, 11),
+(16, 16, 11),
+(17, 17, 11),
+(18, 18, 11),
+(19, 19, 11),
+(20, 20, 11),
+(21, 21, 11),
+(22, 22, 11),
+(23, 23, 11),
+(24, 24, 11),
+(25, 25, 11),
+(26, 26, 11),
+(27, 27, 11),
+(28, 28, 11),
+(29, 29, 11),
+(30, 30, 11),
+(31, 31, 11),
+(32, 32, 11),
+(33, 33, 11),
+(34, 34, 11),
+(35, 35, 11),
+(36, 36, 11),
+(37, 37, 11),
+(38, 38, 11),
+(39, 39, 11),
+(40, 40, 11),
+(41, 41, 11),
+(42, 42, 11),
+(43, 43, 11),
+(44, 44, 11),
+(45, 45, 11),
+(46, 46, 11),
+(47, 47, 11),
+(48, 48, 11),
+(49, 49, 11),
+(50, 50, 11),
+(51, 51, 11),
+(52, 52, 11),
+(53, 53, 11),
+(54, 54, 11),
+(55, 55, 11),
+(56, 56, 11),
+(57, 57, 11),
+(58, 58, 11),
+(59, 59, 11),
+(60, 60, 11),
+(61, 61, 11),
+(62, 62, 11),
+(63, 63, 11),
+(64, 64, 11),
+(65, 65, 11),
+(66, 66, 11),
+(67, 67, 11),
+(68, 68, 11),
+(69, 69, 11),
+(70, 70, 11),
+(71, 71, 11),
+(72, 72, 11),
+(73, 73, 11),
+(74, 74, 11),
+(75, 75, 11),
+(76, 76, 11),
+(77, 77, 11),
+(78, 78, 11),
+(79, 79, 11),
+(80, 80, 11),
+(81, 81, 11),
+(82, 82, 11),
+(83, 83, 11),
+(84, 84, 11),
+(85, 85, 11),
+(86, 86, 11),
+(87, 87, 11),
+(88, 88, 11),
+(89, 89, 11),
+(90, 90, 11),
+(91, 91, 11),
+(92, 92, 11),
+(93, 93, 11),
+(94, 94, 11),
+(95, 95, 11),
+(96, 96, 11),
+(97, 97, 11),
+(98, 98, 11),
+(99, 99, 11),
+(100, 100, 11),
+(101, 101, 11),
+(102, 102, 11),
+(103, 103, 11),
+(104, 104, 11),
+(105, 105, 11),
+(106, 106, 11),
+(107, 107, 11),
+(108, 108, 11),
+(109, 109, 11),
+(110, 110, 11),
+(111, 111, 11),
+(112, 112, 11),
+(113, 113, 11),
+(114, 114, 11),
+(115, 115, 11),
+(116, 116, 11),
+(117, 117, 11),
+(118, 118, 11),
+(119, 119, 11),
+(120, 129, 11),
+(121, 121, 11),
+(122, 122, 11),
+(123, 123, 11),
+(124, 124, 11),
+(125, 125, 11),
+(126, 126, 11),
+(127, 127, 11),
+(128, 128, 11),
+(129, 129, 11),
+(130, 130, 11),
+(131, 131, 11),
+(132, 132, 11),
+(133, 133, 11),
+(134, 134, 11),
+(135, 135, 11),
+(136, 136, 11),
+(137, 137, 11),
+(138, 138, 11),
+(139, 139, 11),
+(140, 140, 11),
+(141, 141, 11),
+(142, 142, 11),
+(143, 143, 11),
+(144, 144, 11),
+(145, 145, 11),
+(146, 146, 11),
+(147, 147, 11),
+(148, 148, 11),
+(149, 149, 11),
+(150, 150, 11),
+(151, 151, 11),
+(152, 152, 11),
+(153, 153, 11),
+(154, 154, 11),
+(155, 155, 11),
+(156, 156, 11),
+(157, 157, 11),
+(158, 158, 11),
+(159, 159, 11),
+(160, 160, 11),
+(161, 161, 11),
+(162, 162, 11),
+(163, 163, 11),
+(164, 164, 11),
+(165, 165, 11),
+(166, 166, 11),
+(167, 167, 11),
+(168, 168, 11),
+(169, 169, 11),
+(170, 170, 11),
+(171, 171, 11),
+(172, 172, 11),
+(173, 173, 11),
+(174, 174, 11),
+(175, 175, 11),
+(176, 176, 11),
+(177, 177, 11),
+(178, 178, 11),
+(179, 179, 11),
+(180, 180, 11),
+(181, 181, 11),
+(182, 182, 11),
+(183, 183, 11),
+(184, 184, 11),
+(185, 185, 11),
+(186, 186, 11),
+(187, 187, 11),
+(188, 188, 11),
+(189, 189, 11),
+(190, 190, 11),
+(191, 191, 11),
+(192, 192, 11),
+(193, 193, 11),
+(194, 194, 11),
+(195, 195, 11),
+(196, 196, 11),
+(197, 197, 11),
+(198, 198, 11),
+(199, 199, 11),
+(200, 200, 11),
+(201, 201, 11),
+(202, 202, 11),
+(203, 203, 11),
+(204, 204, 11),
+(205, 205, 11),
+(206, 206, 11),
+(207, 207, 11),
+(208, 208, 11),
+(209, 209, 11),
+(210, 210, 11),
+(211, 211, 11),
+(212, 212, 11),
+(213, 213, 11),
+(214, 214, 11),
+(215, 215, 11),
+(216, 216, 11),
+(217, 217, 11),
+(218, 218, 11),
+(219, 219, 11),
+(220, 220, 11),
+(221, 221, 11),
+(222, 222, 11),
+(223, 223, 11),
+(224, 224, 11),
+(225, 225, 11),
+(226, 226, 11),
+(227, 227, 11),
+(228, 228, 11),
+(229, 229, 11),
+(230, 230, 11),
+(231, 231, 11),
+(232, 232, 11),
+(233, 233, 11),
+(234, 234, 11),
+(235, 235, 11),
+(236, 236, 11),
+(237, 237, 11),
+(238, 238, 11),
+(239, 239, 11),
+(240, 240, 11),
+(241, 241, 11),
+(242, 242, 11),
+(243, 243, 11),
+(244, 244, 11),
+(245, 245, 11),
+(246, 246, 11),
+(247, 247, 11),
+(248, 248, 11),
+(249, 249, 11),
+(250, 250, 11),
+(251, 251, 11),
+(252, 252, 11),
+(253, 253, 11),
+(254, 254, 11),
+(255, 255, 11),
+(256, 256, 11),
+(257, 257, 11),
+(258, 258, 11),
+(259, 259, 11),
+(260, 260, 11),
+(261, 261, 11),
+(262, 262, 11),
+(263, 263, 11),
+(264, 264, 11),
+(265, 265, 11),
+(266, 266, 11),
+(267, 267, 11),
+(268, 268, 11),
+(269, 269, 11),
+(270, 270, 11),
+(271, 271, 11),
+(272, 272, 11),
+(273, 273, 11),
+(274, 274, 11),
+(275, 275, 11),
+(276, 276, 11),
+(277, 277, 11),
+(278, 278, 11);
 
 -- --------------------------------------------------------
 
@@ -520,8 +841,8 @@ CREATE TABLE `tbl_country_shipping` (
 -- Table structure for table `tbl_coupon`
 --
 
-CREATE TABLE `tbl_coupon` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_coupon` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `code` varchar(100) NOT NULL,
   `type` varchar(100) NOT NULL,
@@ -532,8 +853,15 @@ CREATE TABLE `tbl_coupon` (
   `uses_coupon` int(11) NOT NULL,
   `uses_customer` int(11) NOT NULL,
   `status` enum('0','1') NOT NULL DEFAULT '1',
-  `is_active` enum('0','1') NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `is_active` enum('0','1') NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `code` (`code`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_coupon`
+--
+
 
 -- --------------------------------------------------------
 
@@ -541,11 +869,17 @@ CREATE TABLE `tbl_coupon` (
 -- Table structure for table `tbl_coupon_catagory`
 --
 
-CREATE TABLE `tbl_coupon_catagory` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_coupon_catagory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `catagory_id` int(11) NOT NULL,
-  `coupon_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `coupon_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_coupon_catagory`
+--
+
 
 -- --------------------------------------------------------
 
@@ -553,14 +887,15 @@ CREATE TABLE `tbl_coupon_catagory` (
 -- Table structure for table `tbl_currency`
 --
 
-CREATE TABLE `tbl_currency` (
-  `id` int(3) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_currency` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
   `short_name` varchar(225) NOT NULL,
   `name` varchar(255) NOT NULL,
   `description` varchar(500) DEFAULT NULL,
   `default` enum('0','1') NOT NULL,
-  `is_active` enum('0','1') NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `is_active` enum('0','1') NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `tbl_currency`
@@ -577,14 +912,20 @@ INSERT INTO `tbl_currency` (`id`, `short_name`, `name`, `description`, `default`
 -- Table structure for table `tbl_designer_payment`
 --
 
-CREATE TABLE `tbl_designer_payment` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_designer_payment` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `month` int(2) NOT NULL,
   `year` int(4) NOT NULL,
   `payment_status` varchar(200) NOT NULL,
-  `date` varchar(200) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `date` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_designer_payment`
+--
+
 
 -- --------------------------------------------------------
 
@@ -592,16 +933,22 @@ CREATE TABLE `tbl_designer_payment` (
 -- Table structure for table `tbl_discount`
 --
 
-CREATE TABLE `tbl_discount` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_discount` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
   `quantity` mediumint(10) NOT NULL,
   `price` mediumint(10) NOT NULL,
   `start_date` varchar(100) NOT NULL,
   `end_date` varchar(100) NOT NULL,
   `pcount` int(11) NOT NULL DEFAULT '0',
-  `is_active` enum('0','1') NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `is_active` enum('0','1') NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_discount`
+--
+
 
 -- --------------------------------------------------------
 
@@ -609,26 +956,27 @@ CREATE TABLE `tbl_discount` (
 -- Table structure for table `tbl_email`
 --
 
-CREATE TABLE `tbl_email` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_email` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `to_email` varchar(200) DEFAULT NULL,
   `from_email` varchar(200) DEFAULT NULL,
   `re_email` varchar(200) NOT NULL,
   `template` text NOT NULL,
-  `status` varchar(225) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  `status` varchar(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `tbl_email`
 --
 
 INSERT INTO `tbl_email` (`id`, `to_email`, `from_email`, `re_email`, `template`, `status`) VALUES
-(1, 'info@tangail-sharee.com', NULL, 'info@tangail-sharee.com', '0', 'order admin'),
-(2, NULL, 'admin@tangail-sharee.com', 'admin@tangail-sharee.com', '0', 'user order placed'),
-(3, NULL, 'admin@tangail-sharee.com', 'admin1@tangail-sharee.com', '0', 'user order shipped'),
-(4, NULL, 'admin@tangail-sharee.com', 'admin1@tangail-sharee.com', '0', 'user contacted'),
-(5, NULL, 'admin@tangail-sharee.com', 'admin@tangail-sharee.com', '0', 'user account'),
-(6, NULL, 'super_admin@tangail-sharee.com', 'super_admin@tangail-sharee.com', '0', 'design approved');
+(1, 'info@tangail-sharee.com', 'info@tangail-sharee.com', 'info@tangail-sharee.com', '0', 'order admin'),
+(2, 'sales@tangail-sharee.com', 'sales@tangail-sharee.com', 'sales@tangail-sharee.com', '0', 'user order placed'),
+(3, 'sales@tangail-sharee.com', 'sales@tangail-sharee.com', 'sales@tangail-sharee.com', '0', 'user order shipped'),
+(4, 'info@tangail-sharee.com', 'info@tangail-sharee.com', 'info@tangail-sharee.com', '0', 'user contacted'),
+(5, 'info@tangail-sharee.com', 'info@tangail-sharee.com', 'info@tangail-sharee.com', '0', 'user account'),
+(6, 'super_admin@tangail-sharee.com', 'super_admin@tangail-sharee.com', 'super_admin@tangail-sharee.com', '0', 'design approved');
 
 -- --------------------------------------------------------
 
@@ -636,52 +984,111 @@ INSERT INTO `tbl_email` (`id`, `to_email`, `from_email`, `re_email`, `template`,
 -- Table structure for table `tbl_files`
 --
 
-CREATE TABLE `tbl_files` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_files` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `filename` varchar(255) NOT NULL DEFAULT '',
   `filepath` varchar(255) NOT NULL DEFAULT '',
   `filetype` varchar(255) NOT NULL,
   `filesize` int(10) unsigned NOT NULL DEFAULT '0',
   `status` int(11) NOT NULL DEFAULT '0',
-  `timestamp` int(10) unsigned NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+  `timestamp` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `status` (`status`),
+  KEY `timestamp` (`timestamp`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=88 ;
 
 --
 -- Dumping data for table `tbl_files`
 --
 
 INSERT INTO `tbl_files` (`id`, `filename`, `filepath`, `filetype`, `filesize`, `status`, `timestamp`) VALUES
-(1, '141_666x10002.jpg', 'images/product_image/original_image/141_666x10002.jpg', 'image/jpeg', 161, 1, 1442573502),
-(2, '141_666x1000.jpg', 'images/product_image/original_image/141_666x1000.jpg', 'image/jpeg', 161, 1, 1442573653),
-(3, '141_666x10001.jpg', 'images/product_image/original_image/141_666x10001.jpg', 'image/jpeg', 161, 1, 1442573753),
-(4, '141_666x10002.jpg', 'images/product_image/original_image/141_666x10002.jpg', 'image/jpeg', 161, 1, 1442573770),
-(5, '141_666x1000.jpg', 'images/product_image/original_image/141_666x1000.jpg', 'image/jpeg', 161, 1, 1442580077),
-(6, '141_666x10001.jpg', 'images/product_image/original_image/141_666x10001.jpg', 'image/jpeg', 161, 1, 1442580097),
-(7, '171.png', 'images/product_image/original_image/171.png', 'image/png', 414, 1, 1442583950),
-(8, '1711.png', 'images/product_image/original_image/1711.png', 'image/png', 414, 1, 1442584015),
-(9, '1712.png', 'images/product_image/original_image/1712.png', 'image/png', 414, 1, 1442584169),
-(10, '1713.png', 'images/product_image/original_image/1713.png', 'image/png', 414, 1, 1442584211),
-(11, '141_666x1000.jpg', 'images/product_image/original_image/141_666x1000.jpg', 'image/jpeg', 161, 1, 1442584819),
-(12, '1.jpg', 'images/product_image/original_image/1.jpg', 'image/jpeg', 145, 1, 1442585415),
-(13, '171.png', 'images/product_image/original_image/171.png', 'image/png', 414, 1, 1442586668),
-(14, '356.jpg', 'images/product_image/original_image/356.jpg', 'image/jpeg', 258, 1, 1442586726),
-(15, '361-1_900x1353.jpg', 'images/product_image/original_image/361-1_900x1353.jpg', 'image/jpeg', 155, 1, 1442586761),
-(16, '373_900x1353.jpg', 'images/product_image/original_image/373_900x1353.jpg', 'image/jpeg', 123, 1, 1442586793),
-(17, '382-1_900x1353.jpg', 'images/product_image/original_image/382-1_900x1353.jpg', 'image/jpeg', 104, 1, 1442586823),
-(18, '382-1_900x13531.jpg', 'images/product_image/original_image/382-1_900x13531.jpg', 'image/jpeg', 104, 1, 1442587086),
-(19, '361-1_900x13531.jpg', 'images/product_image/original_image/361-1_900x13531.jpg', 'image/jpeg', 155, 1, 1442587233),
-(20, '382-1_900x1353.jpg', 'images/product_image/original_image/382-1_900x1353.jpg', 'image/jpeg', 104, 1, 1442587359),
-(21, '382-1_900x13531.jpg', 'images/product_image/original_image/382-1_900x13531.jpg', 'image/jpeg', 104, 1, 1442587382),
-(22, '373_900x1353.jpg', 'images/product_image/original_image/373_900x1353.jpg', 'image/jpeg', 123, 1, 1442587409),
-(23, '373_900x13531.jpg', 'images/product_image/original_image/373_900x13531.jpg', 'image/jpeg', 123, 1, 1442587426),
-(24, '361-1_900x1353.jpg', 'images/product_image/original_image/361-1_900x1353.jpg', 'image/jpeg', 155, 1, 1442587444),
-(25, '361-1_900x13531.jpg', 'images/product_image/original_image/361-1_900x13531.jpg', 'image/jpeg', 155, 1, 1442587461),
-(26, '358-1_900x1353.jpg', 'images/product_image/original_image/358-1_900x1353.jpg', 'image/jpeg', 139, 1, 1442587477),
-(27, '358-1_900x13531.jpg', 'images/product_image/original_image/358-1_900x13531.jpg', 'image/jpeg', 139, 1, 1442587502),
-(28, '356.jpg', 'images/product_image/original_image/356.jpg', 'image/jpeg', 258, 1, 1442587516),
-(29, '3561.jpg', 'images/product_image/original_image/3561.jpg', 'image/jpeg', 258, 1, 1442587531),
-(30, '171.png', 'images/product_image/original_image/171.png', 'image/png', 414, 1, 1442587547),
-(31, '1711.png', 'images/product_image/original_image/1711.png', 'image/png', 414, 1, 1442587569);
+(1, 'useravatar.png', 'images/profile_image/original_image/useravatar.png', 'image/png', 7, 1, 1443995093),
+(2, 'tangail-sharee-ps319.jpg', 'images/product_image/original_image/tangail-sharee-ps319.jpg', 'image/jpeg', 89, 1, 1444332107),
+(3, 'tangail-sharee-ps3191.jpg', 'images/product_image/original_image/tangail-sharee-ps3191.jpg', 'image/jpeg', 89, 1, 1444332160),
+(4, 'tangail-sharee-ps31911.jpg', 'images/product_image/original_image/tangail-sharee-ps31911.jpg', 'image/jpeg', 50, 1, 1444332447),
+(5, 'tangail-sharee-ps3191.jpg', 'images/product_image/original_image/tangail-sharee-ps3191.jpg', 'image/jpeg', 50, 1, 1444332467),
+(6, 'tangail-sharee-ps3191.jpg', 'images/product_image/original_image/tangail-sharee-ps3191.jpg', 'image/jpeg', 50, 1, 1444332963),
+(7, 'tangail-sharee-ps31911.jpg', 'images/product_image/original_image/tangail-sharee-ps31911.jpg', 'image/jpeg', 50, 1, 1444332986),
+(8, 'tangail-sharee-ps136.jpg', 'images/product_image/original_image/tangail-sharee-ps136.jpg', 'image/jpeg', 75, 1, 1444334966),
+(9, 'tangail-sharee-ps1361.jpg', 'images/product_image/original_image/tangail-sharee-ps1361.jpg', 'image/jpeg', 75, 1, 1444334993),
+(10, 'tangail-sharee-212.jpg', 'images/product_image/original_image/tangail-sharee-212.jpg', 'image/jpeg', 98, 1, 1444337881),
+(11, 'tangail-sharee-2121.jpg', 'images/product_image/original_image/tangail-sharee-2121.jpg', 'image/jpeg', 98, 1, 1444337923),
+(12, 'tangail-sharee-206.jpg', 'images/product_image/original_image/tangail-sharee-206.jpg', 'image/jpeg', 53, 1, 1444338015),
+(13, 'tangail-sharee-2061.jpg', 'images/product_image/original_image/tangail-sharee-2061.jpg', 'image/jpeg', 53, 1, 1444338041),
+(14, 'tangail-sharee-205.jpg', 'images/product_image/original_image/tangail-sharee-205.jpg', 'image/jpeg', 86, 1, 1444338121),
+(15, 'tangail-sharee-2051.jpg', 'images/product_image/original_image/tangail-sharee-2051.jpg', 'image/jpeg', 86, 1, 1444338146),
+(16, 'tangail-sharee-203.jpg', 'images/product_image/original_image/tangail-sharee-203.jpg', 'image/jpeg', 53, 1, 1444338220),
+(17, 'tangail-sharee-2031.jpg', 'images/product_image/original_image/tangail-sharee-2031.jpg', 'image/jpeg', 53, 1, 1444338251),
+(18, 'tangail-sharee-199.jpg', 'images/product_image/original_image/tangail-sharee-199.jpg', 'image/jpeg', 46, 1, 1444338309),
+(19, 'tangail-sharee-1991.jpg', 'images/product_image/original_image/tangail-sharee-1991.jpg', 'image/jpeg', 46, 1, 1444338335),
+(20, 'tangail-sharee-194.jpg', 'images/product_image/original_image/tangail-sharee-194.jpg', 'image/jpeg', 47, 1, 1444338425),
+(21, 'tangail-sharee-1941.jpg', 'images/product_image/original_image/tangail-sharee-1941.jpg', 'image/jpeg', 47, 1, 1444338450),
+(22, 'tangail-sharee-sr451.jpg', 'images/product_image/original_image/tangail-sharee-sr451.jpg', 'image/jpeg', 72, 1, 1444338562),
+(23, 'tangail-sharee-sr4511.jpg', 'images/product_image/original_image/tangail-sharee-sr4511.jpg', 'image/jpeg', 72, 1, 1444338593),
+(24, 'tangail-share-sr449.jpg', 'images/product_image/original_image/tangail-share-sr449.jpg', 'image/jpeg', 69, 1, 1444338670),
+(25, 'tangail-share-sr4491.jpg', 'images/product_image/original_image/tangail-share-sr4491.jpg', 'image/jpeg', 69, 1, 1444338699),
+(26, 'tangail-sharee-ncb139.jpg', 'images/product_image/original_image/tangail-sharee-ncb139.jpg', 'image/jpeg', 73, 1, 1444338785),
+(27, 'tangail-sharee-ncb1391.jpg', 'images/product_image/original_image/tangail-sharee-ncb1391.jpg', 'image/jpeg', 73, 1, 1444338811),
+(28, 'tangail-sharee-ncb138.jpg', 'images/product_image/original_image/tangail-sharee-ncb138.jpg', 'image/jpeg', 76, 1, 1444338889),
+(29, 'tangail-sharee-ncb1381.jpg', 'images/product_image/original_image/tangail-sharee-ncb1381.jpg', 'image/jpeg', 76, 1, 1444338921),
+(30, 'tangail-sharee-ncb134.jpg', 'images/product_image/original_image/tangail-sharee-ncb134.jpg', 'image/jpeg', 70, 1, 1444339026),
+(31, 'tangail-sharee-ncb1341.jpg', 'images/product_image/original_image/tangail-sharee-ncb1341.jpg', 'image/jpeg', 70, 1, 1444339054),
+(32, 'tangail-sharee-ncb133.jpg', 'images/product_image/original_image/tangail-sharee-ncb133.jpg', 'image/jpeg', 66, 1, 1444339153),
+(33, 'tangail-sharee-ncb1331.jpg', 'images/product_image/original_image/tangail-sharee-ncb1331.jpg', 'image/jpeg', 66, 1, 1444339182),
+(34, 'tangail-sharee-ncb124.jpg', 'images/product_image/original_image/tangail-sharee-ncb124.jpg', 'image/jpeg', 74, 1, 1444339303),
+(35, 'tangail-sharee-ncb1241.jpg', 'images/product_image/original_image/tangail-sharee-ncb1241.jpg', 'image/jpeg', 74, 1, 1444339326),
+(36, 'tangail-sharee-sr462.jpg', 'images/product_image/original_image/tangail-sharee-sr462.jpg', 'image/jpeg', 64, 1, 1444339426),
+(37, 'tangail-sharee-sr4621.jpg', 'images/product_image/original_image/tangail-sharee-sr4621.jpg', 'image/jpeg', 64, 1, 1444339452),
+(38, 'tangail-sharee-sr463.jpg', 'images/product_image/original_image/tangail-sharee-sr463.jpg', 'image/jpeg', 67, 1, 1444339534),
+(39, 'tangail-sharee-sr4631.jpg', 'images/product_image/original_image/tangail-sharee-sr4631.jpg', 'image/jpeg', 67, 1, 1444339564),
+(40, 'tangail-sharee-sr464.jpg', 'images/product_image/original_image/tangail-sharee-sr464.jpg', 'image/jpeg', 84, 1, 1444339687),
+(41, 'tangail-sharee-sr4641.jpg', 'images/product_image/original_image/tangail-sharee-sr4641.jpg', 'image/jpeg', 84, 1, 1444339713),
+(42, 'tangail-sharee-sr465.jpg', 'images/product_image/original_image/tangail-sharee-sr465.jpg', 'image/jpeg', 82, 1, 1444339786),
+(43, 'tangail-sharee-sr4651.jpg', 'images/product_image/original_image/tangail-sharee-sr4651.jpg', 'image/jpeg', 82, 1, 1444339813),
+(44, 'tangail-sharee-162.jpg', 'images/product_image/original_image/tangail-sharee-162.jpg', 'image/jpeg', 59, 1, 1444339889),
+(45, 'tangail-sharee-1621.jpg', 'images/product_image/original_image/tangail-sharee-1621.jpg', 'image/jpeg', 59, 1, 1444339911),
+(46, 'tangail-sharee-ncb189.jpg', 'images/product_image/original_image/tangail-sharee-ncb189.jpg', 'image/jpeg', 49, 1, 1444340382),
+(47, 'tangail-sharee-ncb1891.jpg', 'images/product_image/original_image/tangail-sharee-ncb1891.jpg', 'image/jpeg', 49, 1, 1444340412),
+(48, 'tangail-sharee-ncb172.jpg', 'images/product_image/original_image/tangail-sharee-ncb172.jpg', 'image/jpeg', 44, 1, 1444340623),
+(49, 'tangail-sharee-ncb1721.jpg', 'images/product_image/original_image/tangail-sharee-ncb1721.jpg', 'image/jpeg', 44, 1, 1444340668),
+(50, 'tangail-sharee-ncb134.jpg', 'images/product_image/original_image/tangail-sharee-ncb134.jpg', 'image/jpeg', 163, 1, 1444397526),
+(51, 'tangail-sharee-ncb1341.jpg', 'images/product_image/original_image/tangail-sharee-ncb1341.jpg', 'image/jpeg', 163, 1, 1444397556),
+(52, 'tangail-sharee-ncb-123.jpg', 'images/product_image/original_image/tangail-sharee-ncb-123.jpg', 'image/jpeg', 88, 1, 1444398785),
+(53, 'tangail-sharee-ncb-1231.jpg', 'images/product_image/original_image/tangail-sharee-ncb-1231.jpg', 'image/jpeg', 88, 1, 1444398818),
+(54, 'tangail-sharee-sr-459.jpg', 'images/product_image/original_image/tangail-sharee-sr-459.jpg', 'image/jpeg', 87, 1, 1444398901),
+(55, 'tangail-sharee-sr-4591.jpg', 'images/product_image/original_image/tangail-sharee-sr-4591.jpg', 'image/jpeg', 87, 1, 1444398935),
+(56, 'tangail-sharee-sr-458.jpg', 'images/product_image/original_image/tangail-sharee-sr-458.jpg', 'image/jpeg', 86, 1, 1444399023),
+(57, 'tangail-sharee-sr-4581.jpg', 'images/product_image/original_image/tangail-sharee-sr-4581.jpg', 'image/jpeg', 86, 1, 1444399058),
+(58, 'tangail-sharee-sr-457.jpg', 'images/product_image/original_image/tangail-sharee-sr-457.jpg', 'image/jpeg', 99, 1, 1444399133),
+(59, 'tangail-sharee-sr-4571.jpg', 'images/product_image/original_image/tangail-sharee-sr-4571.jpg', 'image/jpeg', 99, 1, 1444399162),
+(60, 'tangail-sharee-sr-452.jpg', 'images/product_image/original_image/tangail-sharee-sr-452.jpg', 'image/jpeg', 78, 1, 1444399218),
+(61, 'tangail-sharee-sr-4521.jpg', 'images/product_image/original_image/tangail-sharee-sr-4521.jpg', 'image/jpeg', 78, 1, 1444399245),
+(62, 'tangail-sharee-sr-451.jpg', 'images/product_image/original_image/tangail-sharee-sr-451.jpg', 'image/jpeg', 78, 1, 1444399303),
+(63, 'tangail-sharee-sr-4511.jpg', 'images/product_image/original_image/tangail-sharee-sr-4511.jpg', 'image/jpeg', 78, 1, 1444399326),
+(64, 'tangail-sharee-ps-136.jpg', 'images/product_image/original_image/tangail-sharee-ps-136.jpg', 'image/jpeg', 46, 1, 1444399470),
+(65, 'tangail-sharee-ps-1361.jpg', 'images/product_image/original_image/tangail-sharee-ps-1361.jpg', 'image/jpeg', 46, 1, 1444399492),
+(66, 'tangail-sharee-212.jpg', 'images/product_image/original_image/tangail-sharee-212.jpg', 'image/jpeg', 60, 1, 1444399622),
+(67, 'tangail-sharee-2121.jpg', 'images/product_image/original_image/tangail-sharee-2121.jpg', 'image/jpeg', 60, 1, 1444399665),
+(68, 'tangail-sharee-ncb-124.jpg', 'images/product_image/original_image/tangail-sharee-ncb-124.jpg', 'image/jpeg', 76, 1, 1444401153),
+(69, 'tangail-sharee-ncb-1241.jpg', 'images/product_image/original_image/tangail-sharee-ncb-1241.jpg', 'image/jpeg', 76, 1, 1444401185),
+(70, 'tangail-sharee-ncb-133.jpg', 'images/product_image/original_image/tangail-sharee-ncb-133.jpg', 'image/jpeg', 69, 1, 1444401273),
+(71, 'tangail-sharee-ncb-1331.jpg', 'images/product_image/original_image/tangail-sharee-ncb-1331.jpg', 'image/jpeg', 69, 1, 1444401303),
+(72, 'tangail-sharee-ncb-134.jpg', 'images/product_image/original_image/tangail-sharee-ncb-134.jpg', 'image/jpeg', 73, 1, 1444401352),
+(73, 'tangail-sharee-ncb-1341.jpg', 'images/product_image/original_image/tangail-sharee-ncb-1341.jpg', 'image/jpeg', 73, 1, 1444401382),
+(74, 'tangail-sharee-ncb-138.jpg', 'images/product_image/original_image/tangail-sharee-ncb-138.jpg', 'image/jpeg', 79, 1, 1444401464),
+(75, 'tangail-sharee-ncb-1381.jpg', 'images/product_image/original_image/tangail-sharee-ncb-1381.jpg', 'image/jpeg', 79, 1, 1444401529),
+(76, 'tangail-sharee-ncb-158.jpg', 'images/product_image/original_image/tangail-sharee-ncb-158.jpg', 'image/jpeg', 62, 1, 1444401635),
+(77, 'tangail-sharee-ncb-1581.jpg', 'images/product_image/original_image/tangail-sharee-ncb-1581.jpg', 'image/jpeg', 62, 1, 1444401666),
+(78, 'tangail-sharee-ncb-170.jpg', 'images/product_image/original_image/tangail-sharee-ncb-170.jpg', 'image/jpeg', 77, 1, 1444401936),
+(79, 'tangail-sharee-ncb-1701.jpg', 'images/product_image/original_image/tangail-sharee-ncb-1701.jpg', 'image/jpeg', 77, 1, 1444401978),
+(80, 'tangail-sharee-ncb-209.jpg', 'images/product_image/original_image/tangail-sharee-ncb-209.jpg', 'image/jpeg', 66, 1, 1444403004),
+(81, 'tangail-sharee-ncb-2091.jpg', 'images/product_image/original_image/tangail-sharee-ncb-2091.jpg', 'image/jpeg', 66, 1, 1444403036),
+(82, 'tangail-sharee-sr-455.jpg', 'images/product_image/original_image/tangail-sharee-sr-455.jpg', 'image/jpeg', 90, 1, 1444403184),
+(83, 'tangail-sharee-sr-4551.jpg', 'images/product_image/original_image/tangail-sharee-sr-4551.jpg', 'image/jpeg', 90, 1, 1444403217),
+(84, 'tangail-sharee-165.jpg', 'images/product_image/original_image/tangail-sharee-165.jpg', 'image/jpeg', 85, 1, 1444403818),
+(85, 'tangail-sharee-1651.jpg', 'images/product_image/original_image/tangail-sharee-1651.jpg', 'image/jpeg', 85, 1, 1444403859),
+(86, 'tangail-sharee-1651.jpg', 'images/product_image/original_image/tangail-sharee-1651.jpg', 'image/jpeg', 85, 1, 1444403906),
+(87, 'tangail-sharee-1652.jpg', 'images/product_image/original_image/tangail-sharee-1652.jpg', 'image/jpeg', 85, 1, 1444403949);
 
 -- --------------------------------------------------------
 
@@ -689,16 +1096,22 @@ INSERT INTO `tbl_files` (`id`, `filename`, `filepath`, `filetype`, `filesize`, `
 -- Table structure for table `tbl_graphic`
 --
 
-CREATE TABLE `tbl_graphic` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_graphic` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL,
   `description` text NOT NULL,
   `contest_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `file_id` int(15) NOT NULL,
   `date_added` int(10) NOT NULL,
-  `ip_address` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `ip_address` varchar(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_graphic`
+--
+
 
 -- --------------------------------------------------------
 
@@ -706,8 +1119,8 @@ CREATE TABLE `tbl_graphic` (
 -- Table structure for table `tbl_ordaddress`
 --
 
-CREATE TABLE `tbl_ordaddress` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_ordaddress` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `address_line1` varchar(255) NOT NULL,
@@ -717,8 +1130,14 @@ CREATE TABLE `tbl_ordaddress` (
   `state` varchar(255) NOT NULL,
   `country` varchar(255) NOT NULL,
   `postcode` varchar(100) NOT NULL,
-  `type` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `type` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_ordaddress`
+--
+
 
 -- --------------------------------------------------------
 
@@ -726,8 +1145,8 @@ CREATE TABLE `tbl_ordaddress` (
 -- Table structure for table `tbl_order`
 --
 
-CREATE TABLE `tbl_order` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `SKU` varchar(255) NOT NULL,
   `user_id` int(11) NOT NULL,
   `hash_code` varchar(225) NOT NULL,
@@ -748,8 +1167,14 @@ CREATE TABLE `tbl_order` (
   `ip_address` varchar(100) NOT NULL,
   `shipping_id` int(11) NOT NULL,
   `pmtmethod` varchar(100) NOT NULL,
-  `coupon_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `coupon_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_order`
+--
+
 
 -- --------------------------------------------------------
 
@@ -757,14 +1182,20 @@ CREATE TABLE `tbl_order` (
 -- Table structure for table `tbl_order_history`
 --
 
-CREATE TABLE `tbl_order_history` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_order_history` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `created` date NOT NULL,
   `comment` text NOT NULL,
   `status` varchar(20) NOT NULL,
-  `notified` tinyint(2) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `notified` tinyint(2) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_order_history`
+--
+
 
 -- --------------------------------------------------------
 
@@ -772,11 +1203,17 @@ CREATE TABLE `tbl_order_history` (
 -- Table structure for table `tbl_order_ordaddress`
 --
 
-CREATE TABLE `tbl_order_ordaddress` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_order_ordaddress` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
-  `ordaddress_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `ordaddress_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_order_ordaddress`
+--
+
 
 -- --------------------------------------------------------
 
@@ -784,8 +1221,8 @@ CREATE TABLE `tbl_order_ordaddress` (
 -- Table structure for table `tbl_order_product`
 --
 
-CREATE TABLE `tbl_order_product` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_order_product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `quantity` int(4) NOT NULL,
@@ -799,8 +1236,14 @@ CREATE TABLE `tbl_order_product` (
   `revenue` float NOT NULL,
   `rdm_quantity` int(11) NOT NULL,
   `points_used` int(11) NOT NULL,
-  `request_refund` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `request_refund` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_order_product`
+--
+
 
 -- --------------------------------------------------------
 
@@ -808,18 +1251,19 @@ CREATE TABLE `tbl_order_product` (
 -- Table structure for table `tbl_paymentmethod`
 --
 
-CREATE TABLE `tbl_paymentmethod` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_paymentmethod` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
-  `status` tinyint(2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `status` tinyint(2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `tbl_paymentmethod`
 --
 
 INSERT INTO `tbl_paymentmethod` (`id`, `name`, `status`) VALUES
-(1, 'Credit Card (Visa, Maestro, MasterCard)', 1),
+(1, 'Credit Card (Visa, Maestro, MasterCard)', 0),
 (2, 'Paypal', 1);
 
 -- --------------------------------------------------------
@@ -828,11 +1272,17 @@ INSERT INTO `tbl_paymentmethod` (`id`, `name`, `status`) VALUES
 -- Table structure for table `tbl_payment_credit`
 --
 
-CREATE TABLE `tbl_payment_credit` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_payment_credit` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
-  `amount` int(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `amount` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_payment_credit`
+--
+
 
 -- --------------------------------------------------------
 
@@ -840,12 +1290,18 @@ CREATE TABLE `tbl_payment_credit` (
 -- Table structure for table `tbl_pcategory`
 --
 
-CREATE TABLE `tbl_pcategory` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_pcategory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `description` varchar(225) NOT NULL,
-  `post_count` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `post_count` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_pcategory`
+--
+
 
 -- --------------------------------------------------------
 
@@ -853,14 +1309,20 @@ CREATE TABLE `tbl_pcategory` (
 -- Table structure for table `tbl_post`
 --
 
-CREATE TABLE `tbl_post` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_post` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `title` varchar(225) NOT NULL,
   `description` text NOT NULL,
   `user_id` int(11) NOT NULL,
   `pcategory_id` int(11) NOT NULL,
-  `status` varchar(200) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `status` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_post`
+--
+
 
 -- --------------------------------------------------------
 
@@ -868,11 +1330,11 @@ CREATE TABLE `tbl_post` (
 -- Table structure for table `tbl_product`
 --
 
-CREATE TABLE `tbl_product` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `SKU` varchar(255) NOT NULL,
   `name` varchar(225) NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` float NOT NULL,
   `original_value` int(11) NOT NULL,
   `catagory_id` int(3) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -893,8 +1355,33 @@ CREATE TABLE `tbl_product` (
   `tag` text NOT NULL,
   `size_info` text NOT NULL,
   `delivery_info` text NOT NULL,
-  `meta_tags` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `meta_tags` text NOT NULL,
+  `order_by` int(11) NOT NULL DEFAULT '1000',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+
+--
+-- Dumping data for table `tbl_product`
+--
+
+INSERT INTO `tbl_product` (`id`, `SKU`, `name`, `price`, `original_value`, `catagory_id`, `user_id`, `status`, `available`, `sold`, `is_active`, `for_man`, `for_woman`, `man_image`, `woman_image`, `date_added`, `points_to_buy`, `points_you_get`, `product_info`, `color_id`, `feature_image`, `tag`, `size_info`, `delivery_info`, `meta_tags`, `order_by`) VALUES
+(1, '10097UQBFJ001', 'Tangail Half Silk Saree', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444398785', 0, 0, '', 0, 52, '', '', '', '', 1),
+(2, '1009BBEFDW002', 'Tangail Cotton Saree', 49, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444398901', 0, 0, '', 0, 54, '', '', '', '', 4),
+(3, '1009Y5KPQB003', 'Tangail Cotton Saree', 49, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399023', 0, 0, '', 0, 56, '', '', '', '', 6),
+(4, '1009SDUOXI004', 'Tangail Cotton Saree', 51, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399133', 0, 0, '', 0, 58, '', '', '', '', 1001),
+(5, '10095INKUD005', 'Tangail Cotton Saree', 51, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399218', 0, 0, '', 0, 60, '', '', '', '', 9),
+(6, '1009NH8WAE006', 'Tangail Cotton Saree', 51, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399303', 0, 0, '', 0, 62, '', '', '', '', 7),
+(7, '1009VU1YZ4007', 'Tangail Cotton Saree', 49, 0, 0, 2, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399470', 0, 0, '', 0, 64, '', '', '', '', 10),
+(8, '1009HPOFFH008', 'Tangail Half Silk Saree', 69, 0, 0, 2, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399622', 0, 0, '', 0, 66, '', '', '', '', 1002),
+(9, '1009HW9ZF4009', 'Tangail Silk Saree', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401153', 0, 0, '', 0, 68, '', '', '', '', 3),
+(10, '1009JYHLEP010', 'Tangail Silk Jamdani Saree', 79, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401273', 0, 0, '', 0, 70, '', '', '', '', 8),
+(11, '1009KAHDB8011', 'Tangail Silk Jamdani Saree', 79, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401352', 0, 0, '', 0, 72, '', '', '', '', 2),
+(12, '1009E6H99Y012', 'Tangail Silk Jamdani Saree', 79, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401464', 0, 0, '', 0, 74, '', '', '', '', 5),
+(13, '10091SPXLQ013', 'Tangail Pure Silk Saree', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401635', 0, 0, '', 0, 76, '', '', '', '', 1003),
+(14, '1009TXVC1U014', 'Tangail Gass Moslin Saree', 59, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401936', 0, 0, '', 0, 78, '', '', '', '', 1004),
+(15, '1009KO204J015', 'Tangail Pure Silk Saree', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444403004', 0, 0, '', 0, 80, '', '', '', '', 11),
+(16, '10097YLTOW016', 'Tangail Cotton Saree', 49, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444403184', 0, 0, '', 0, 82, '', '', '', '', 12),
+(17, '1009D0VGBF017', 'Soft Cotton Sari', 49, 0, 0, 2, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444403818', 0, 0, '', 0, 87, '', '', '', '', 1000);
 
 -- --------------------------------------------------------
 
@@ -902,12 +1389,18 @@ CREATE TABLE `tbl_product` (
 -- Table structure for table `tbl_product_catagory`
 --
 
-CREATE TABLE `tbl_product_catagory` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_product_catagory` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `catagory_id` int(5) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `quantity` varchar(225) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `quantity` varchar(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_product_catagory`
+--
+
 
 -- --------------------------------------------------------
 
@@ -915,11 +1408,17 @@ CREATE TABLE `tbl_product_catagory` (
 -- Table structure for table `tbl_product_comment`
 --
 
-CREATE TABLE `tbl_product_comment` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_product_comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
-  `comment_id` int(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `comment_id` int(15) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_product_comment`
+--
+
 
 -- --------------------------------------------------------
 
@@ -927,12 +1426,18 @@ CREATE TABLE `tbl_product_comment` (
 -- Table structure for table `tbl_product_coupon`
 --
 
-CREATE TABLE `tbl_product_coupon` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_product_coupon` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `product_id` int(15) NOT NULL,
   `coupon_id` int(15) NOT NULL,
-  `type` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `type` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_product_coupon`
+--
+
 
 -- --------------------------------------------------------
 
@@ -940,13 +1445,54 @@ CREATE TABLE `tbl_product_coupon` (
 -- Table structure for table `tbl_product_file`
 --
 
-CREATE TABLE `tbl_product_file` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_product_file` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `product_id` bigint(15) NOT NULL,
   `file_id` bigint(15) NOT NULL,
   `type` varchar(225) NOT NULL,
-  `default` enum('0','1') NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `default` enum('0','1') NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+
+--
+-- Dumping data for table `tbl_product_file`
+--
+
+INSERT INTO `tbl_product_file` (`id`, `product_id`, `file_id`, `type`, `default`) VALUES
+(1, 1, 52, 'featured', '0'),
+(2, 1, 53, 'woman', '1'),
+(3, 2, 54, 'featured', '0'),
+(4, 2, 55, 'woman', '1'),
+(5, 3, 56, 'featured', '0'),
+(6, 3, 57, 'woman', '1'),
+(7, 4, 58, 'featured', '0'),
+(8, 4, 59, 'woman', '1'),
+(9, 5, 60, 'featured', '0'),
+(10, 5, 61, 'woman', '1'),
+(11, 6, 62, 'featured', '0'),
+(12, 6, 63, 'woman', '1'),
+(13, 7, 64, 'featured', '0'),
+(14, 7, 65, 'woman', '1'),
+(15, 8, 66, 'featured', '0'),
+(16, 8, 67, 'woman', '1'),
+(17, 9, 68, 'featured', '0'),
+(18, 9, 69, 'woman', '1'),
+(19, 10, 70, 'featured', '0'),
+(20, 10, 71, 'woman', '1'),
+(21, 11, 72, 'featured', '0'),
+(22, 11, 73, 'woman', '1'),
+(23, 12, 74, 'featured', '0'),
+(24, 12, 75, 'woman', '1'),
+(25, 13, 76, 'featured', '0'),
+(26, 13, 77, 'woman', '1'),
+(27, 14, 78, 'featured', '0'),
+(28, 14, 79, 'woman', '1'),
+(29, 15, 80, 'featured', '0'),
+(30, 15, 81, 'woman', '1'),
+(31, 16, 82, 'featured', '0'),
+(32, 16, 83, 'woman', '1'),
+(36, 17, 87, 'featured', '0'),
+(35, 17, 86, 'woman', '1');
 
 -- --------------------------------------------------------
 
@@ -954,14 +1500,89 @@ CREATE TABLE `tbl_product_file` (
 -- Table structure for table `tbl_product_size`
 --
 
-CREATE TABLE `tbl_product_size` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_product_size` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
   `size_id` int(11) NOT NULL,
   `catagory` varchar(255) NOT NULL,
   `stock` int(10) unsigned NOT NULL,
-  `sold` int(10) unsigned NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `sold` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=69 ;
+
+--
+-- Dumping data for table `tbl_product_size`
+--
+
+INSERT INTO `tbl_product_size` (`id`, `product_id`, `size_id`, `catagory`, `stock`, `sold`) VALUES
+(1, 1, 5, 'woman', 5, 0),
+(2, 1, 6, 'woman', 5, 0),
+(3, 1, 7, 'woman', 5, 0),
+(4, 1, 8, 'woman', 5, 0),
+(5, 2, 5, 'woman', 5, 0),
+(6, 2, 6, 'woman', 5, 0),
+(7, 2, 7, 'woman', 5, 0),
+(8, 2, 8, 'woman', 5, 0),
+(9, 3, 5, 'woman', 5, 0),
+(10, 3, 6, 'woman', 5, 0),
+(11, 3, 7, 'woman', 5, 0),
+(12, 3, 8, 'woman', 5, 0),
+(13, 4, 5, 'woman', 5, 0),
+(14, 4, 6, 'woman', 5, 0),
+(15, 4, 7, 'woman', 5, 0),
+(16, 4, 8, 'woman', 5, 0),
+(17, 5, 5, 'woman', 5, 0),
+(18, 5, 6, 'woman', 5, 0),
+(19, 5, 7, 'woman', 5, 0),
+(20, 5, 8, 'woman', 5, 0),
+(21, 6, 5, 'woman', 5, 0),
+(22, 6, 6, 'woman', 5, 0),
+(23, 6, 7, 'woman', 5, 0),
+(24, 6, 8, 'woman', 5, 0),
+(25, 7, 5, 'woman', 5, 0),
+(26, 7, 6, 'woman', 5, 0),
+(27, 7, 7, 'woman', 5, 0),
+(28, 7, 8, 'woman', 5, 0),
+(29, 8, 5, 'woman', 5, 0),
+(30, 8, 6, 'woman', 5, 0),
+(31, 8, 7, 'woman', 5, 0),
+(32, 8, 8, 'woman', 5, 0),
+(33, 9, 5, 'woman', 5, 0),
+(34, 9, 6, 'woman', 5, 0),
+(35, 9, 7, 'woman', 5, 0),
+(36, 9, 8, 'woman', 5, 0),
+(37, 10, 5, 'woman', 5, 0),
+(38, 10, 6, 'woman', 5, 0),
+(39, 10, 7, 'woman', 5, 0),
+(40, 10, 8, 'woman', 5, 0),
+(41, 11, 5, 'woman', 5, 0),
+(42, 11, 6, 'woman', 5, 0),
+(43, 11, 7, 'woman', 5, 0),
+(44, 11, 8, 'woman', 5, 0),
+(45, 12, 5, 'woman', 5, 0),
+(46, 12, 6, 'woman', 5, 0),
+(47, 12, 7, 'woman', 5, 0),
+(48, 12, 8, 'woman', 5, 0),
+(49, 13, 5, 'woman', 5, 0),
+(50, 13, 6, 'woman', 5, 0),
+(51, 13, 7, 'woman', 5, 0),
+(52, 13, 8, 'woman', 5, 0),
+(53, 14, 5, 'woman', 5, 0),
+(54, 14, 6, 'woman', 5, 0),
+(55, 14, 7, 'woman', 5, 0),
+(56, 14, 8, 'woman', 5, 0),
+(57, 15, 5, 'woman', 5, 0),
+(58, 15, 6, 'woman', 5, 0),
+(59, 15, 7, 'woman', 5, 0),
+(60, 15, 8, 'woman', 5, 0),
+(61, 16, 5, 'woman', 5, 0),
+(62, 16, 6, 'woman', 5, 0),
+(63, 16, 7, 'woman', 5, 0),
+(64, 16, 8, 'woman', 5, 0),
+(65, 17, 5, 'woman', 5, 0),
+(66, 17, 6, 'woman', 5, 0),
+(67, 17, 7, 'woman', 5, 0),
+(68, 17, 8, 'woman', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -969,12 +1590,18 @@ CREATE TABLE `tbl_product_size` (
 -- Table structure for table `tbl_product_wishlist`
 --
 
-CREATE TABLE `tbl_product_wishlist` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_product_wishlist` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `product_id` int(11) NOT NULL,
   `type` varchar(200) DEFAULT NULL,
-  `wishlist_id` bigint(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=116 DEFAULT CHARSET=latin1;
+  `wishlist_id` bigint(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_product_wishlist`
+--
+
 
 -- --------------------------------------------------------
 
@@ -982,16 +1609,22 @@ CREATE TABLE `tbl_product_wishlist` (
 -- Table structure for table `tbl_project`
 --
 
-CREATE TABLE `tbl_project` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_project` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `title` varchar(225) NOT NULL,
   `description` text NOT NULL,
   `user_id` int(11) NOT NULL,
   `status` varchar(225) NOT NULL,
   `date_added` varchar(225) NOT NULL,
   `date_accept` varchar(225) NOT NULL,
-  `is_active` enum('0','1') NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `is_active` enum('0','1') NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_project`
+--
+
 
 -- --------------------------------------------------------
 
@@ -999,11 +1632,17 @@ CREATE TABLE `tbl_project` (
 -- Table structure for table `tbl_project_comment`
 --
 
-CREATE TABLE `tbl_project_comment` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_project_comment` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `project_id` int(11) NOT NULL,
-  `comment_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `comment_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_project_comment`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1011,12 +1650,18 @@ CREATE TABLE `tbl_project_comment` (
 -- Table structure for table `tbl_project_file`
 --
 
-CREATE TABLE `tbl_project_file` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_project_file` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `project_id` int(11) NOT NULL,
   `file_id` int(15) NOT NULL,
-  `default` enum('0','1') NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `default` enum('0','1') NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_project_file`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1024,14 +1669,20 @@ CREATE TABLE `tbl_project_file` (
 -- Table structure for table `tbl_refund`
 --
 
-CREATE TABLE `tbl_refund` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_refund` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `product_sku` varchar(255) DEFAULT NULL,
   `status` varchar(50) NOT NULL,
   `reason` text NOT NULL,
-  `created` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `created` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_refund`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1039,15 +1690,21 @@ CREATE TABLE `tbl_refund` (
 -- Table structure for table `tbl_refund_history`
 --
 
-CREATE TABLE `tbl_refund_history` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_refund_history` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `product_sku` varchar(255) DEFAULT NULL,
   `date_added` date NOT NULL,
   `comment` text NOT NULL,
   `status` varchar(50) NOT NULL,
-  `notified` tinyint(2) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `notified` tinyint(2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_refund_history`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1055,11 +1712,12 @@ CREATE TABLE `tbl_refund_history` (
 -- Table structure for table `tbl_role`
 --
 
-CREATE TABLE `tbl_role` (
-  `id` int(3) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_role` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
   `name` varchar(225) NOT NULL,
-  `is_active` enum('0','1') NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+  `is_active` enum('0','1') NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `tbl_role`
@@ -1077,11 +1735,12 @@ INSERT INTO `tbl_role` (`id`, `name`, `is_active`) VALUES
 -- Table structure for table `tbl_shipping`
 --
 
-CREATE TABLE `tbl_shipping` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_shipping` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) NOT NULL,
-  `price` float(10,2) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+  `price` float(10,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `tbl_shipping`
@@ -1093,7 +1752,8 @@ INSERT INTO `tbl_shipping` (`id`, `type`, `price`) VALUES
 (5, 'Worldwide Standard (7-10 working days)', 4.00),
 (7, 'UK special next day delivery', 7.99),
 (9, 'Europe Express with tracking number (3-5 working days)', 11.99),
-(10, 'Worldwide Express with tracking number (5-7 working days)', 14.99);
+(10, 'Worldwide Express with tracking number (5-7 working days)', 14.99),
+(11, 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', 0.00);
 
 -- --------------------------------------------------------
 
@@ -1101,13 +1761,14 @@ INSERT INTO `tbl_shipping` (`id`, `type`, `price`) VALUES
 -- Table structure for table `tbl_size`
 --
 
-CREATE TABLE `tbl_size` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_size` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `catagory` varchar(255) NOT NULL,
-  `is_active` enum('0','1') NOT NULL DEFAULT '1'
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+  `is_active` enum('0','1') NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `tbl_size`
@@ -1129,8 +1790,8 @@ INSERT INTO `tbl_size` (`id`, `name`, `description`, `catagory`, `is_active`) VA
 -- Table structure for table `tbl_system`
 --
 
-CREATE TABLE `tbl_system` (
-  `id` int(3) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_system` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
   `website_name` varchar(250) NOT NULL,
   `site_email` varchar(200) NOT NULL,
   `meta_desc` text NOT NULL,
@@ -1138,15 +1799,16 @@ CREATE TABLE `tbl_system` (
   `address` text NOT NULL,
   `telephone` varchar(100) NOT NULL,
   `is_active` enum('0','1') NOT NULL DEFAULT '1',
-  `revenue` int(3) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `revenue` int(3) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `tbl_system`
 --
 
 INSERT INTO `tbl_system` (`id`, `website_name`, `site_email`, `meta_desc`, `keywords`, `address`, `telephone`, `is_active`, `revenue`) VALUES
-(1, 'tangail-sharee', 'admin@tangail-sharee.com', '', '', '', '+34631421277', '1', 30);
+(1, 'tangail-sharee', 'admin@tangail-sharee.com', 'TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sharees from Bangladesh. We are providing the best collection of sharees for you and also making our bengali culture more proud.', 'tangail saree,tangail,saree, jamdani, cotton, silk, half silk, handloom, jamdani saree, silk saree, cotton saree, half silk, half silk saree, handloom saree, bridal, bridal saree, katan, katan saree, dhaka, bangladeshi saree, dhakai saree, dhaka sahree, butique, muslin, muslin saree', 'Sant Gervasi De Cassoles 41\nBarcelona\nSpain', '+34631421277', '1', 0);
 
 -- --------------------------------------------------------
 
@@ -1154,13 +1816,14 @@ INSERT INTO `tbl_system` (`id`, `website_name`, `site_email`, `meta_desc`, `keyw
 -- Table structure for table `tbl_taxes`
 --
 
-CREATE TABLE `tbl_taxes` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_taxes` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `apply_to` varchar(100) NOT NULL,
   `rate` int(5) NOT NULL,
-  `default` enum('0','1') NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  `default` enum('0','1') NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `tbl_taxes`
@@ -1175,10 +1838,11 @@ INSERT INTO `tbl_taxes` (`id`, `name`, `apply_to`, `rate`, `default`) VALUES
 -- Table structure for table `tbl_terms`
 --
 
-CREATE TABLE `tbl_terms` (
-  `id` int(11) NOT NULL,
-  `terms` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `tbl_terms` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `terms` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `tbl_terms`
@@ -1193,15 +1857,21 @@ INSERT INTO `tbl_terms` (`id`, `terms`) VALUES
 -- Table structure for table `tbl_transection`
 --
 
-CREATE TABLE `tbl_transection` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_transection` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `date` int(10) NOT NULL,
   `amount` int(10) NOT NULL,
   `method` varchar(225) NOT NULL,
   `status` int(3) NOT NULL,
-  `type` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `type` varchar(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_transection`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1209,15 +1879,21 @@ CREATE TABLE `tbl_transection` (
 -- Table structure for table `tbl_upcoming_design`
 --
 
-CREATE TABLE `tbl_upcoming_design` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_upcoming_design` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `title` varchar(225) NOT NULL,
   `user_id` int(11) NOT NULL,
   `date_added` varchar(225) NOT NULL,
   `date_removed` varchar(225) NOT NULL,
   `status` enum('0','1') NOT NULL,
-  `subscribors` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `subscribors` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_upcoming_design`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1225,11 +1901,17 @@ CREATE TABLE `tbl_upcoming_design` (
 -- Table structure for table `tbl_upcoming_design_comment`
 --
 
-CREATE TABLE `tbl_upcoming_design_comment` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_upcoming_design_comment` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `upcoming_design_id` int(15) NOT NULL,
-  `comment_id` int(15) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `comment_id` int(15) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_upcoming_design_comment`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1237,11 +1919,17 @@ CREATE TABLE `tbl_upcoming_design_comment` (
 -- Table structure for table `tbl_upcoming_design_file`
 --
 
-CREATE TABLE `tbl_upcoming_design_file` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_upcoming_design_file` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `upcoming_design_id` int(11) NOT NULL,
-  `file_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `file_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_upcoming_design_file`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1249,8 +1937,8 @@ CREATE TABLE `tbl_upcoming_design_file` (
 -- Table structure for table `tbl_user`
 --
 
-CREATE TABLE `tbl_user` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(225) NOT NULL,
   `email` varchar(225) NOT NULL,
   `password` varchar(225) NOT NULL,
@@ -1278,15 +1966,20 @@ CREATE TABLE `tbl_user` (
   `pmt_method` varchar(255) DEFAULT NULL,
   `paypal_address` varchar(255) DEFAULT NULL,
   `swift_code` varchar(255) DEFAULT NULL,
-  `bank_account_no` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=391 DEFAULT CHARSET=latin1;
+  `bank_account_no` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_name` (`username`,`email`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`id`, `username`, `email`, `password`, `password_request_code`, `first_name`, `last_name`, `gender`, `website`, `profile`, `reward_points`, `supervisor`, `display_type`, `currency_id`, `is_active`, `role_id`, `notification`, `salt`, `last_login`, `created`, `display_name`, `remember_me`, `status`, `fb_uid`, `revenue`, `pmt_method`, `paypal_address`, `swift_code`, `bank_account_no`) VALUES
-(60, 'admin', 'info@tangail-sharee.com', 'dc9e2ca30cfadc8c2098dda23d3c6fc100215000', NULL, 'Tangail-Sharee', 'Ltd', 'male', '', 'I am super Admin :D', 0, '', 1, 3, '1', 1, '', '46e7d91b60b30cd607c4090f16224e73', '2012-12-07', '2012-01-16', 'SEBASTIANO GUERRIERO', '0', '0', 0, 0, '', NULL, NULL, NULL);
+(1, 'admin', 'info@tangail-sharee.com', 'dc9e2ca30cfadc8c2098dda23d3c6fc100215000', NULL, 'Tangail', 'Sharee', 'male', '', 'I am super Admin :D', 0, '', 1, 3, '1', 1, '', '46e7d91b60b30cd607c4090f16224e73', '2012-12-07', '2012-01-16', 'Ashish Kumar Basak', '0', '0', 0, 0, '', NULL, NULL, NULL),
+(2, 'tangailsharee', 'sales@tangail-sharee.com', '655955a343e3bb079488b57b90b345ba070e0e18', NULL, 'Tangail', 'Sharee', NULL, 'http://tangail-sharee.com', '', 0, '', NULL, NULL, '1', 3, '1', 'd52300de03c660f807a50300a81fc1e6', '0000-00-00', '2015-09-21', NULL, '0', '0', 0, 0, NULL, NULL, NULL, NULL),
+(3, 'nilkomol', 'nilkomol@tangail-sharee.com', '7c7920d6446c0cce9ca99d429cfbdd86e75243f8', NULL, 'Nilkomol', 'Basak', NULL, '', '', 0, '', NULL, NULL, '1', 3, '1', '70fdfe210115c764d7f799f819689c09', '0000-00-00', '2015-10-08', NULL, '0', '0', 0, 0, NULL, NULL, NULL, NULL),
+(4, 'shantiranjan', 'shantiranjan@tangail-sharee.com', '4515155dadafd899c09ce3ee425a1fd2e20cec87', NULL, 'Shantiranjan', 'Basak', NULL, '', '', 0, '', NULL, NULL, '1', 3, '1', 'a0ed61a5d51c204ec3febd9403d7e342', '0000-00-00', '2015-10-08', NULL, '0', '0', 0, 0, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1294,13 +1987,19 @@ INSERT INTO `tbl_user` (`id`, `username`, `email`, `password`, `password_request
 -- Table structure for table `tbl_user_address`
 --
 
-CREATE TABLE `tbl_user_address` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_user_address` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `address_id` int(11) NOT NULL,
   `default` enum('0','1') NOT NULL,
-  `type` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `type` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_user_address`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1308,12 +2007,18 @@ CREATE TABLE `tbl_user_address` (
 -- Table structure for table `tbl_user_cms`
 --
 
-CREATE TABLE `tbl_user_cms` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_user_cms` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `cms_id` int(11) NOT NULL,
-  `default` enum('0','1') NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `default` enum('0','1') NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_user_cms`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1321,12 +2026,18 @@ CREATE TABLE `tbl_user_cms` (
 -- Table structure for table `tbl_user_coupon`
 --
 
-CREATE TABLE `tbl_user_coupon` (
+CREATE TABLE IF NOT EXISTS `tbl_user_coupon` (
   `id` bigint(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `coupon_id` int(11) NOT NULL,
-  `coupon_count` int(15) NOT NULL DEFAULT '0'
+  `coupon_count` int(15) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_user_coupon`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1334,13 +2045,22 @@ CREATE TABLE `tbl_user_coupon` (
 -- Table structure for table `tbl_user_file`
 --
 
-CREATE TABLE `tbl_user_file` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_user_file` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `profile_id` int(11) NOT NULL,
   `image_id` bigint(15) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `file_id` bigint(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `file_id` bigint(15) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `tbl_user_file`
+--
+
+INSERT INTO `tbl_user_file` (`id`, `profile_id`, `image_id`, `user_id`, `file_id`) VALUES
+(1, 1, 1, 0, 0),
+(2, 0, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1348,12 +2068,18 @@ CREATE TABLE `tbl_user_file` (
 -- Table structure for table `tbl_user_post`
 --
 
-CREATE TABLE `tbl_user_post` (
-  `id` int(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_user_post` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `post_id` int(15) NOT NULL,
-  `pcategory_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `pcategory_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_user_post`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1361,15 +2087,21 @@ CREATE TABLE `tbl_user_post` (
 -- Table structure for table `tbl_video`
 --
 
-CREATE TABLE `tbl_video` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_video` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `title` varchar(225) NOT NULL,
   `description` text NOT NULL,
   `link` varchar(225) NOT NULL,
   `date` int(10) NOT NULL,
-  `is_active` enum('0','1') NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `is_active` enum('0','1') NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_video`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1377,11 +2109,17 @@ CREATE TABLE `tbl_video` (
 -- Table structure for table `tbl_video_comment`
 --
 
-CREATE TABLE `tbl_video_comment` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_video_comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `video_id` int(11) NOT NULL,
-  `comment_id` int(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `comment_id` int(15) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_video_comment`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1389,18 +2127,27 @@ CREATE TABLE `tbl_video_comment` (
 -- Table structure for table `tbl_wishlist`
 --
 
-CREATE TABLE `tbl_wishlist` (
-  `id` bigint(15) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wishlist` (
+  `id` bigint(15) NOT NULL AUTO_INCREMENT,
   `name` varchar(225) DEFAULT NULL,
-  `user_id` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `tbl_wishlist`
 --
 
 INSERT INTO `tbl_wishlist` (`id`, `name`, `user_id`) VALUES
-(1, NULL, 60);
+(1, NULL, 60),
+(2, NULL, 392),
+(3, NULL, 393),
+(7, NULL, 396),
+(6, NULL, 393),
+(8, NULL, 397),
+(9, NULL, 398),
+(10, NULL, 399),
+(11, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -1408,12 +2155,20 @@ INSERT INTO `tbl_wishlist` (`id`, `name`, `user_id`) VALUES
 -- Table structure for table `tbl_wp_commentmeta`
 --
 
-CREATE TABLE `tbl_wp_commentmeta` (
-  `meta_id` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wp_commentmeta` (
+  `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `comment_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
-  `meta_value` longtext
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `meta_value` longtext,
+  PRIMARY KEY (`meta_id`),
+  KEY `comment_id` (`comment_id`),
+  KEY `meta_key` (`meta_key`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tbl_wp_commentmeta`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1421,8 +2176,8 @@ CREATE TABLE `tbl_wp_commentmeta` (
 -- Table structure for table `tbl_wp_comments`
 --
 
-CREATE TABLE `tbl_wp_comments` (
-  `comment_ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wp_comments` (
+  `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `comment_post_ID` bigint(20) unsigned NOT NULL DEFAULT '0',
   `comment_author` tinytext NOT NULL,
   `comment_author_email` varchar(100) NOT NULL DEFAULT '',
@@ -1436,8 +2191,14 @@ CREATE TABLE `tbl_wp_comments` (
   `comment_agent` varchar(255) NOT NULL DEFAULT '',
   `comment_type` varchar(20) NOT NULL DEFAULT '',
   `comment_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `user_id` bigint(20) unsigned NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+  `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`comment_ID`),
+  KEY `comment_approved` (`comment_approved`),
+  KEY `comment_post_ID` (`comment_post_ID`),
+  KEY `comment_approved_date_gmt` (`comment_approved`,`comment_date_gmt`),
+  KEY `comment_date_gmt` (`comment_date_gmt`),
+  KEY `comment_parent` (`comment_parent`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `tbl_wp_comments`
@@ -1464,8 +2225,8 @@ INSERT INTO `tbl_wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`
 -- Table structure for table `tbl_wp_links`
 --
 
-CREATE TABLE `tbl_wp_links` (
-  `link_id` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wp_links` (
+  `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `link_url` varchar(255) NOT NULL DEFAULT '',
   `link_name` varchar(255) NOT NULL DEFAULT '',
   `link_image` varchar(255) NOT NULL DEFAULT '',
@@ -1477,8 +2238,10 @@ CREATE TABLE `tbl_wp_links` (
   `link_updated` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `link_rel` varchar(255) NOT NULL DEFAULT '',
   `link_notes` mediumtext NOT NULL,
-  `link_rss` varchar(255) NOT NULL DEFAULT ''
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+  `link_rss` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`link_id`),
+  KEY `link_visible` (`link_visible`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `tbl_wp_links`
@@ -1499,13 +2262,15 @@ INSERT INTO `tbl_wp_links` (`link_id`, `link_url`, `link_name`, `link_image`, `l
 -- Table structure for table `tbl_wp_options`
 --
 
-CREATE TABLE `tbl_wp_options` (
-  `option_id` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wp_options` (
+  `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `blog_id` int(11) NOT NULL DEFAULT '0',
   `option_name` varchar(64) NOT NULL DEFAULT '',
   `option_value` longtext NOT NULL,
-  `autoload` varchar(20) NOT NULL DEFAULT 'yes'
-) ENGINE=MyISAM AUTO_INCREMENT=1190 DEFAULT CHARSET=utf8;
+  `autoload` varchar(20) NOT NULL DEFAULT 'yes',
+  PRIMARY KEY (`option_id`),
+  UNIQUE KEY `option_name` (`option_name`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1190 ;
 
 --
 -- Dumping data for table `tbl_wp_options`
@@ -1710,12 +2475,15 @@ INSERT INTO `tbl_wp_options` (`option_id`, `blog_id`, `option_name`, `option_val
 -- Table structure for table `tbl_wp_postmeta`
 --
 
-CREATE TABLE `tbl_wp_postmeta` (
-  `meta_id` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wp_postmeta` (
+  `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
-  `meta_value` longtext
-) ENGINE=MyISAM AUTO_INCREMENT=169 DEFAULT CHARSET=utf8;
+  `meta_value` longtext,
+  PRIMARY KEY (`meta_id`),
+  KEY `post_id` (`post_id`),
+  KEY `meta_key` (`meta_key`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=169 ;
 
 --
 -- Dumping data for table `tbl_wp_postmeta`
@@ -1836,8 +2604,8 @@ INSERT INTO `tbl_wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) V
 -- Table structure for table `tbl_wp_posts`
 --
 
-CREATE TABLE `tbl_wp_posts` (
-  `ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wp_posts` (
+  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
   `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -1859,8 +2627,13 @@ CREATE TABLE `tbl_wp_posts` (
   `menu_order` int(11) NOT NULL DEFAULT '0',
   `post_type` varchar(20) NOT NULL DEFAULT 'post',
   `post_mime_type` varchar(100) NOT NULL DEFAULT '',
-  `comment_count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
+  `comment_count` bigint(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`ID`),
+  KEY `post_name` (`post_name`),
+  KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
+  KEY `post_parent` (`post_parent`),
+  KEY `post_author` (`post_author`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=65 ;
 
 --
 -- Dumping data for table `tbl_wp_posts`
@@ -1925,12 +2698,15 @@ INSERT INTO `tbl_wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `
 -- Table structure for table `tbl_wp_terms`
 --
 
-CREATE TABLE `tbl_wp_terms` (
-  `term_id` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wp_terms` (
+  `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL DEFAULT '',
   `slug` varchar(200) NOT NULL DEFAULT '',
-  `term_group` bigint(10) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+  `term_group` bigint(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`term_id`),
+  UNIQUE KEY `slug` (`slug`),
+  KEY `name` (`name`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `tbl_wp_terms`
@@ -1952,10 +2728,12 @@ INSERT INTO `tbl_wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- Table structure for table `tbl_wp_term_relationships`
 --
 
-CREATE TABLE `tbl_wp_term_relationships` (
+CREATE TABLE IF NOT EXISTS `tbl_wp_term_relationships` (
   `object_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `term_taxonomy_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `term_order` int(11) NOT NULL DEFAULT '0'
+  `term_order` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`object_id`,`term_taxonomy_id`),
+  KEY `term_taxonomy_id` (`term_taxonomy_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -1995,14 +2773,17 @@ INSERT INTO `tbl_wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_
 -- Table structure for table `tbl_wp_term_taxonomy`
 --
 
-CREATE TABLE `tbl_wp_term_taxonomy` (
-  `term_taxonomy_id` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wp_term_taxonomy` (
+  `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `taxonomy` varchar(32) NOT NULL DEFAULT '',
   `description` longtext NOT NULL,
   `parent` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+  `count` bigint(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`term_taxonomy_id`),
+  UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
+  KEY `taxonomy` (`taxonomy`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `tbl_wp_term_taxonomy`
@@ -2024,12 +2805,15 @@ INSERT INTO `tbl_wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `
 -- Table structure for table `tbl_wp_usermeta`
 --
 
-CREATE TABLE `tbl_wp_usermeta` (
-  `umeta_id` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wp_usermeta` (
+  `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) DEFAULT NULL,
-  `meta_value` longtext
-) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
+  `meta_value` longtext,
+  PRIMARY KEY (`umeta_id`),
+  KEY `user_id` (`user_id`),
+  KEY `meta_key` (`meta_key`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
 
 --
 -- Dumping data for table `tbl_wp_usermeta`
@@ -2082,8 +2866,8 @@ INSERT INTO `tbl_wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) 
 -- Table structure for table `tbl_wp_users`
 --
 
-CREATE TABLE `tbl_wp_users` (
-  `ID` bigint(20) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_wp_users` (
+  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_login` varchar(60) NOT NULL DEFAULT '',
   `user_pass` varchar(64) NOT NULL DEFAULT '',
   `user_nicename` varchar(50) NOT NULL DEFAULT '',
@@ -2092,8 +2876,11 @@ CREATE TABLE `tbl_wp_users` (
   `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `user_activation_key` varchar(60) NOT NULL DEFAULT '',
   `user_status` int(11) NOT NULL DEFAULT '0',
-  `display_name` varchar(250) NOT NULL DEFAULT ''
-) ENGINE=MyISAM AUTO_INCREMENT=334 DEFAULT CHARSET=utf8;
+  `display_name` varchar(250) NOT NULL DEFAULT '',
+  PRIMARY KEY (`ID`),
+  KEY `user_login_key` (`user_login`),
+  KEY `user_nicename` (`user_nicename`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=341 ;
 
 --
 -- Dumping data for table `tbl_wp_users`
@@ -2429,811 +3216,11 @@ INSERT INTO `tbl_wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `u
 (330, 'andremertens', '49640f8ac1ce0ea25c5582394d6c96e3', 'andremertens', 'andremertens@yahoo.com.br', '', '2011-12-08 06:40:01', '', 0, 'andremertens'),
 (331, 'Rayanlp', '42f1ec3d293117b71a41fe3d87c905a8', 'Rayanlp', 'rayan.alshaya@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'Rayanlp'),
 (332, 'shystie', '1e7a16d255624c0301188ae4b1e03cfc', 'shystie', 'alanshuster@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'shystie'),
-(333, 'debasish132', '6e9e7caa71859b9bda383cff9994ef61', 'debasish132', 'debasishbasak132@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'debasish132');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `ci_sessions`
---
-ALTER TABLE `ci_sessions`
-  ADD PRIMARY KEY (`session_id`),
-  ADD KEY `last_activity_idx` (`last_activity`);
-
---
--- Indexes for table `tbl_address`
---
-ALTER TABLE `tbl_address`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_admin_designer`
---
-ALTER TABLE `tbl_admin_designer`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_banner`
---
-ALTER TABLE `tbl_banner`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_banner_file`
---
-ALTER TABLE `tbl_banner_file`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_catagory`
---
-ALTER TABLE `tbl_catagory`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_cms`
---
-ALTER TABLE `tbl_cms`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_color`
---
-ALTER TABLE `tbl_color`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_comment`
---
-ALTER TABLE `tbl_comment`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_contest`
---
-ALTER TABLE `tbl_contest`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_country`
---
-ALTER TABLE `tbl_country`
-  ADD PRIMARY KEY (`country_id`);
-
---
--- Indexes for table `tbl_country_shipping`
---
-ALTER TABLE `tbl_country_shipping`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_coupon`
---
-ALTER TABLE `tbl_coupon`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `code` (`code`);
-
---
--- Indexes for table `tbl_coupon_catagory`
---
-ALTER TABLE `tbl_coupon_catagory`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_currency`
---
-ALTER TABLE `tbl_currency`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_designer_payment`
---
-ALTER TABLE `tbl_designer_payment`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_discount`
---
-ALTER TABLE `tbl_discount`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_email`
---
-ALTER TABLE `tbl_email`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_files`
---
-ALTER TABLE `tbl_files`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `status` (`status`),
-  ADD KEY `timestamp` (`timestamp`);
-
---
--- Indexes for table `tbl_graphic`
---
-ALTER TABLE `tbl_graphic`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_ordaddress`
---
-ALTER TABLE `tbl_ordaddress`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_order`
---
-ALTER TABLE `tbl_order`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_order_history`
---
-ALTER TABLE `tbl_order_history`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_order_ordaddress`
---
-ALTER TABLE `tbl_order_ordaddress`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_order_product`
---
-ALTER TABLE `tbl_order_product`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_paymentmethod`
---
-ALTER TABLE `tbl_paymentmethod`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_payment_credit`
---
-ALTER TABLE `tbl_payment_credit`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_pcategory`
---
-ALTER TABLE `tbl_pcategory`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_post`
---
-ALTER TABLE `tbl_post`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_product`
---
-ALTER TABLE `tbl_product`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_product_catagory`
---
-ALTER TABLE `tbl_product_catagory`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_product_comment`
---
-ALTER TABLE `tbl_product_comment`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_product_coupon`
---
-ALTER TABLE `tbl_product_coupon`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_product_file`
---
-ALTER TABLE `tbl_product_file`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_product_size`
---
-ALTER TABLE `tbl_product_size`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_product_wishlist`
---
-ALTER TABLE `tbl_product_wishlist`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_project`
---
-ALTER TABLE `tbl_project`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_project_comment`
---
-ALTER TABLE `tbl_project_comment`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_project_file`
---
-ALTER TABLE `tbl_project_file`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_refund`
---
-ALTER TABLE `tbl_refund`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_refund_history`
---
-ALTER TABLE `tbl_refund_history`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_role`
---
-ALTER TABLE `tbl_role`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_shipping`
---
-ALTER TABLE `tbl_shipping`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_size`
---
-ALTER TABLE `tbl_size`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_system`
---
-ALTER TABLE `tbl_system`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_taxes`
---
-ALTER TABLE `tbl_taxes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_terms`
---
-ALTER TABLE `tbl_terms`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_transection`
---
-ALTER TABLE `tbl_transection`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_upcoming_design`
---
-ALTER TABLE `tbl_upcoming_design`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_upcoming_design_comment`
---
-ALTER TABLE `tbl_upcoming_design_comment`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_upcoming_design_file`
---
-ALTER TABLE `tbl_upcoming_design_file`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_user`
---
-ALTER TABLE `tbl_user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `user_name` (`username`,`email`);
-
---
--- Indexes for table `tbl_user_address`
---
-ALTER TABLE `tbl_user_address`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_user_cms`
---
-ALTER TABLE `tbl_user_cms`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_user_coupon`
---
-ALTER TABLE `tbl_user_coupon`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_user_file`
---
-ALTER TABLE `tbl_user_file`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_user_post`
---
-ALTER TABLE `tbl_user_post`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_video`
---
-ALTER TABLE `tbl_video`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_video_comment`
---
-ALTER TABLE `tbl_video_comment`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_wishlist`
---
-ALTER TABLE `tbl_wishlist`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_wp_commentmeta`
---
-ALTER TABLE `tbl_wp_commentmeta`
-  ADD PRIMARY KEY (`meta_id`),
-  ADD KEY `comment_id` (`comment_id`),
-  ADD KEY `meta_key` (`meta_key`);
-
---
--- Indexes for table `tbl_wp_comments`
---
-ALTER TABLE `tbl_wp_comments`
-  ADD PRIMARY KEY (`comment_ID`),
-  ADD KEY `comment_approved` (`comment_approved`),
-  ADD KEY `comment_post_ID` (`comment_post_ID`),
-  ADD KEY `comment_approved_date_gmt` (`comment_approved`,`comment_date_gmt`),
-  ADD KEY `comment_date_gmt` (`comment_date_gmt`),
-  ADD KEY `comment_parent` (`comment_parent`);
-
---
--- Indexes for table `tbl_wp_links`
---
-ALTER TABLE `tbl_wp_links`
-  ADD PRIMARY KEY (`link_id`),
-  ADD KEY `link_visible` (`link_visible`);
-
---
--- Indexes for table `tbl_wp_options`
---
-ALTER TABLE `tbl_wp_options`
-  ADD PRIMARY KEY (`option_id`),
-  ADD UNIQUE KEY `option_name` (`option_name`);
-
---
--- Indexes for table `tbl_wp_postmeta`
---
-ALTER TABLE `tbl_wp_postmeta`
-  ADD PRIMARY KEY (`meta_id`),
-  ADD KEY `post_id` (`post_id`),
-  ADD KEY `meta_key` (`meta_key`);
-
---
--- Indexes for table `tbl_wp_posts`
---
-ALTER TABLE `tbl_wp_posts`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `post_name` (`post_name`),
-  ADD KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
-  ADD KEY `post_parent` (`post_parent`),
-  ADD KEY `post_author` (`post_author`);
-
---
--- Indexes for table `tbl_wp_terms`
---
-ALTER TABLE `tbl_wp_terms`
-  ADD PRIMARY KEY (`term_id`),
-  ADD UNIQUE KEY `slug` (`slug`),
-  ADD KEY `name` (`name`);
-
---
--- Indexes for table `tbl_wp_term_relationships`
---
-ALTER TABLE `tbl_wp_term_relationships`
-  ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
-  ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
-
---
--- Indexes for table `tbl_wp_term_taxonomy`
---
-ALTER TABLE `tbl_wp_term_taxonomy`
-  ADD PRIMARY KEY (`term_taxonomy_id`),
-  ADD UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
-  ADD KEY `taxonomy` (`taxonomy`);
-
---
--- Indexes for table `tbl_wp_usermeta`
---
-ALTER TABLE `tbl_wp_usermeta`
-  ADD PRIMARY KEY (`umeta_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `meta_key` (`meta_key`);
-
---
--- Indexes for table `tbl_wp_users`
---
-ALTER TABLE `tbl_wp_users`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `user_login_key` (`user_login`),
-  ADD KEY `user_nicename` (`user_nicename`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `tbl_address`
---
-ALTER TABLE `tbl_address`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_admin_designer`
---
-ALTER TABLE `tbl_admin_designer`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `tbl_banner`
---
-ALTER TABLE `tbl_banner`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `tbl_banner_file`
---
-ALTER TABLE `tbl_banner_file`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_catagory`
---
-ALTER TABLE `tbl_catagory`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_cms`
---
-ALTER TABLE `tbl_cms`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT for table `tbl_color`
---
-ALTER TABLE `tbl_color`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_comment`
---
-ALTER TABLE `tbl_comment`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_contest`
---
-ALTER TABLE `tbl_contest`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
---
--- AUTO_INCREMENT for table `tbl_country`
---
-ALTER TABLE `tbl_country`
-  MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=279;
---
--- AUTO_INCREMENT for table `tbl_country_shipping`
---
-ALTER TABLE `tbl_country_shipping`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_coupon`
---
-ALTER TABLE `tbl_coupon`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_coupon_catagory`
---
-ALTER TABLE `tbl_coupon_catagory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_currency`
---
-ALTER TABLE `tbl_currency`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `tbl_designer_payment`
---
-ALTER TABLE `tbl_designer_payment`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_discount`
---
-ALTER TABLE `tbl_discount`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_email`
---
-ALTER TABLE `tbl_email`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT for table `tbl_files`
---
-ALTER TABLE `tbl_files`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
---
--- AUTO_INCREMENT for table `tbl_graphic`
---
-ALTER TABLE `tbl_graphic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_ordaddress`
---
-ALTER TABLE `tbl_ordaddress`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_order`
---
-ALTER TABLE `tbl_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_order_history`
---
-ALTER TABLE `tbl_order_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_order_ordaddress`
---
-ALTER TABLE `tbl_order_ordaddress`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_order_product`
---
-ALTER TABLE `tbl_order_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_paymentmethod`
---
-ALTER TABLE `tbl_paymentmethod`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `tbl_payment_credit`
---
-ALTER TABLE `tbl_payment_credit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_pcategory`
---
-ALTER TABLE `tbl_pcategory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_post`
---
-ALTER TABLE `tbl_post`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_product`
---
-ALTER TABLE `tbl_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_product_catagory`
---
-ALTER TABLE `tbl_product_catagory`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_product_comment`
---
-ALTER TABLE `tbl_product_comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_product_coupon`
---
-ALTER TABLE `tbl_product_coupon`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_product_file`
---
-ALTER TABLE `tbl_product_file`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_product_size`
---
-ALTER TABLE `tbl_product_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_product_wishlist`
---
-ALTER TABLE `tbl_product_wishlist`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=116;
---
--- AUTO_INCREMENT for table `tbl_project`
---
-ALTER TABLE `tbl_project`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_project_comment`
---
-ALTER TABLE `tbl_project_comment`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_project_file`
---
-ALTER TABLE `tbl_project_file`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_refund`
---
-ALTER TABLE `tbl_refund`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_refund_history`
---
-ALTER TABLE `tbl_refund_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_role`
---
-ALTER TABLE `tbl_role`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `tbl_shipping`
---
-ALTER TABLE `tbl_shipping`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT for table `tbl_size`
---
-ALTER TABLE `tbl_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT for table `tbl_system`
---
-ALTER TABLE `tbl_system`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `tbl_taxes`
---
-ALTER TABLE `tbl_taxes`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT for table `tbl_terms`
---
-ALTER TABLE `tbl_terms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `tbl_transection`
---
-ALTER TABLE `tbl_transection`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_upcoming_design`
---
-ALTER TABLE `tbl_upcoming_design`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_upcoming_design_comment`
---
-ALTER TABLE `tbl_upcoming_design_comment`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_upcoming_design_file`
---
-ALTER TABLE `tbl_upcoming_design_file`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_user`
---
-ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=391;
---
--- AUTO_INCREMENT for table `tbl_user_address`
---
-ALTER TABLE `tbl_user_address`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_user_cms`
---
-ALTER TABLE `tbl_user_cms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_user_file`
---
-ALTER TABLE `tbl_user_file`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_user_post`
---
-ALTER TABLE `tbl_user_post`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_video`
---
-ALTER TABLE `tbl_video`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_video_comment`
---
-ALTER TABLE `tbl_video_comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_wishlist`
---
-ALTER TABLE `tbl_wishlist`
-  MODIFY `id` bigint(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `tbl_wp_commentmeta`
---
-ALTER TABLE `tbl_wp_commentmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_wp_comments`
---
-ALTER TABLE `tbl_wp_comments`
-  MODIFY `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
---
--- AUTO_INCREMENT for table `tbl_wp_links`
---
-ALTER TABLE `tbl_wp_links`
-  MODIFY `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT for table `tbl_wp_options`
---
-ALTER TABLE `tbl_wp_options`
-  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1190;
---
--- AUTO_INCREMENT for table `tbl_wp_postmeta`
---
-ALTER TABLE `tbl_wp_postmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=169;
---
--- AUTO_INCREMENT for table `tbl_wp_posts`
---
-ALTER TABLE `tbl_wp_posts`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=65;
---
--- AUTO_INCREMENT for table `tbl_wp_terms`
---
-ALTER TABLE `tbl_wp_terms`
-  MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT for table `tbl_wp_term_taxonomy`
---
-ALTER TABLE `tbl_wp_term_taxonomy`
-  MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT for table `tbl_wp_usermeta`
---
-ALTER TABLE `tbl_wp_usermeta`
-  MODIFY `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=57;
---
--- AUTO_INCREMENT for table `tbl_wp_users`
---
-ALTER TABLE `tbl_wp_users`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=334;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+(333, 'debasish132', '6e9e7caa71859b9bda383cff9994ef61', 'debasish132', 'debasishbasak132@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'debasish132'),
+(334, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
+(335, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish.kumar.basak@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
+(336, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
+(337, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
+(338, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
+(339, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
+(340, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021');

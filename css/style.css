@@ -367,11 +367,14 @@ p.quick_information { font-family: Georgia, Constantia, "Lucida Bright", Lucidab
 .welcome_banner {
 	
 	width: 980px;
-	height: 185px;
-	/*background: url(../images/homepage_img_1.jpg) no-repeat;*/
-	margin: 0 auto;
-	
-	
+	height: 180px;
+	margin: 0px auto;
+	padding:0px;
+}
+
+.welcome_banner img{
+	margin:0px !important;
+	padding:0px !important;
 }
 
 .welcome_banner ul { 
@@ -688,9 +691,15 @@ h2.trigger a {text-transform: lowercase; font-size:12px; line-height:23px;text-d
 .top-menu ul li.tab-memu-select a { background: url("../images/Untitled-3.png") no-repeat scroll center bottom transparent; color:#7E7E7E; padding:0 0 25px 0;}
 .top-menu ul li.tab-memu-select-prev a { background: none; color:#cdcdcd; padding:0 0 25px 0;}
 .top-menu ul li.tab-memu-select a:hover, .top-menu ul li.tab-memu-select-prev a:hover { text-decoration: underline; }
-.bottom { padding: 15px 29px;   color: #808080;
-    font-size: 13px;
-    word-wrap:break-word;}
+.bottom { padding: 10px 10px;
+	color: #808080;
+	font-size: 13px;
+	line-height:20px;
+	word-wrap:break-word;
+}
+
+.bottom ul {margin:0px; padding:0px; margin-left:20px;}
+.bottom ul li{margin:0px; padding:0px;}
     
 /* slider css */
 #slideshow{
