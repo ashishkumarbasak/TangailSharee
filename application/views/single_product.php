@@ -587,7 +587,7 @@ function cart_refresh(){
           <div class="single_product_arrow_box_text">DESIGNED BY:<br />
             <span><?php echo $product->user->first_name.' '.$product->user->last_name;?></span></div>
           </a>
-          <div class="single_product_arrow_box_arrow"><img src="<?php echo base_url();?>images/twinne_final_arrowpng.png" alt="arrow" /></div>
+          <div class="single_product_arrow_box_arrow"><img src="<?php echo base_url();?>images/t_final_arrowpng.png" alt="arrow" /></div>
           <div class="clear"></div>
         </div>
         <div class="clear"></div>
@@ -751,7 +751,7 @@ function cart_refresh(){
           <div class="single_product_arrow_box_text">DESIGNED BY:<br />
             <span><?php echo $product->user->first_name.' '.$product->user->last_name;?></span></div>
           </a>
-          <div class="single_product_arrow_box_arrow"><img src="<?php echo base_url();?>images/twinne_final_arrowpng.png" alt="arrow" /></div>
+          <div class="single_product_arrow_box_arrow"><img src="<?php echo base_url();?>images/t_final_arrowpng.png" alt="arrow" /></div>
           <div class="clear"></div>
         </div>
         <div class="clear"></div>
@@ -877,11 +877,14 @@ function cart_refresh(){
                                            		//$is_called_already = "yes";
                                         	}
                                             if($pref_currency_type=="USD")
-                                                echo "<del>$".$orginal_price_value.'</del> $'.$product_currency_sale.''; 
+                                                echo '$'.$product_currency_sale.''; 
+                                                //echo "<del>$".$orginal_price_value.'</del> $'.$product_currency_sale.''; 
                                             else if($pref_currency_type=="EUR")
-                                                echo "<del>&euro;".$orginal_price_value.'</del> &euro;'.$product_currency_sale.''; 
+                                                echo '&euro;'.$product_currency_sale.''; 
+                                                //echo "<del>&euro;".$orginal_price_value.'</del> &euro;'.$product_currency_sale.''; 
                                             else
-                                                echo "<del>&pound;".$orginal_price_value.'</del> &pound;'.$product_currency_sale.'';                                
+                                                echo '&pound;'.$product_currency_sale.'';                                
+                                                //echo "<del>&pound;".$orginal_price_value.'</del> &pound;'.$product_currency_sale.'';                                
                 
              ?>
 				</div>
@@ -1053,12 +1056,14 @@ function cart_refresh(){
                                                 //$is_called_already = "yes";
                                             }
                                             if($pref_currency_type=="USD")
-                                                
-                                                echo "<del>$".$orginal_price_value.'</del> $'.$product_currency.''; 
+                                                echo '$'.$product_currency.''; 
+                                                //echo "<del>$".$orginal_price_value.'</del> $'.$product_currency.''; 
                                             else if($pref_currency_type=="EUR")
-                                                 echo "<del>&euro;".$orginal_price_value.'</del> &euro;'.$product_currency.''; 
+                                                 echo '&euro;'.$product_currency.''; 
+                                                 //echo "<del>&euro;".$orginal_price_value.'</del> &euro;'.$product_currency.''; 
                                             else
-                                               echo "<del>&pound;".$orginal_price_value.'</del> &pound;'.$product_currency.'';
+                                               echo '&pound;'.$product_currency.'';
+                                               //echo "<del>&pound;".$orginal_price_value.'</del> &pound;'.$product_currency.'';
                                         ?>
 				</div>
 			<?php } ?>
@@ -1096,12 +1101,14 @@ function cart_refresh(){
                                                 //$is_called_already = "yes";
                                             }
                                             if($pref_currency_type=="USD")
-                                                
-                                                echo "<del>$".$orginal_price_value.'</del> $'.$product_currency.''; 
+                                                echo '$'.$product_currency.''; 
+                                                //echo "<del>$".$orginal_price_value.'</del> $'.$product_currency.''; 
                                             else if($pref_currency_type=="EUR")
-                                                 echo "<del>&euro;".$orginal_price_value.'</del> &euro;'.$product_currency.''; 
+                                                 echo '&euro;'.$product_currency.''; 
+                                                 //echo "<del>&euro;".$orginal_price_value.'</del> &euro;'.$product_currency.''; 
                                             else
-                                               echo "<del>&pound;".$orginal_price_value.'</del> &pound;'.$product_currency.'';                              
+                                               echo '&pound;'.$product_currency.'';                              
+                                               //echo "<del>&pound;".$orginal_price_value.'</del> &pound;'.$product_currency.'';                              
                                         ?>
 				</div>
 			<?php } ?>

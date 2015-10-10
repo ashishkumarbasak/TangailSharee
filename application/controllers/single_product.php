@@ -41,7 +41,7 @@ class Single_product extends MY_Controller
 		$prod = @array_unique($pid);
 		//print_r($prod);
 		$sub_product=new Product();
-    	$sub_product->where('is_active','1');
+    		$sub_product->where('is_active','1');
 		$tags = explode(',',$product->tag);
 		$sub_product->like('tag',$tags[0]);
 		for($i=1;$i<count($tags); $i++)
@@ -49,6 +49,7 @@ class Single_product extends MY_Controller
 	    	$sub_product->or_like('tag',$tags[$i]);
 		}
 		$sub_product->where_in('id',$prod);
+		$sub_product->where('order_by < ', 1000, FALSE);
 		$sub_product->order_by('RAND()');
 		$sub_product->limit('8');
 		$sub_product->get();

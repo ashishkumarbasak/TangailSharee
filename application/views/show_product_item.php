@@ -1,5 +1,5 @@
  <div class="mid_content_top">
-      <?php $this->load->view('my_pagination');?>
+      <?php //$this->load->view('my_pagination');?>
       
        		<div class="mid_content_top_left" style="margin-top:8px;">
          		<ul>
@@ -12,7 +12,7 @@
       		<div class="mid_content_top_right" style="width:196px; margin-top:7px; position: relative; right: -8px;">
         <!-- <p class="facebook_suggestion"><a href="https://facebook.com/tangail-sharee.com"><strong>tangail-sharee</strong> on Facebook</a></p> //-->
 
-          <div style="width: 230px; position: absolute; left: 103px;">
+          <div style="width: 230px; position: absolute; left: 103px; margin-left:5px;">
           	<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -207,3 +207,4 @@
       <div class="clear"></div>
     </div>
     <div class="clear"></div>
+</div>

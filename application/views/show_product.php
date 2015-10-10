@@ -14,21 +14,21 @@
 	if($type=="man")
 		echo "Browse our collection of amazing man t-shirts designed by top world wide artists.";
 	elseif($type=="woman")
-		echo "Browse our collection of amazing woman t-shirts designed by top world wide artists."; 
+		echo "Browse our collection of amazing woman sharees designed by top tangail sharee designers."; 
 	else
-		echo "Browse our collection of amazing t-shirts designed by top world wide artists.";
+		echo "Browse our collection of amazing women sharees designed by top tangail sharee designers.";
 	?>" />
 <meta name="description" content="<?php 
 	if($type=="man")
 		echo "Browse our collection of amazing man t-shirts designed by top world wide artists.";
 	elseif($type=="woman")
-		echo "Browse our collection of amazing woman t-shirts designed by top world wide artists."; 
+		echo "Browse our collection of amazing woman sharees designed by top tangail sharee designers."; 
 	else
-		echo "Browse our collection of amazing t-shirts designed by top world wide artists.";
+		echo "Browse our collection of amazing woman sharees designed by top tangail sharee designers.";
 	?>">
-<meta name="keywords" content="browse, twinne, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 Twinne Ltd" />
-<meta name="author" content="Twinne Ltd" />
+<meta name="keywords" content="tangail saree,tangail,saree, jamdani, cotton, silk, half silk, handloom, jamdani saree, silk saree, cotton saree, half silk, half silk saree, handloom saree, bridal, bridal saree, katan, katan saree, dhaka, bangladeshi saree, dhakai saree, dhaka sahree, butique, muslin, muslin saree" />
+<meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
+<meta name="author" content="TANGAIL-SHAREE.com" />
 <link rel="canonical" href="<?php echo base_url(); ?>show_product?type=<?php echo $type; ?>" />
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
@@ -160,6 +160,7 @@ function cart_refresh(){
   	</div>
   <!--Home Page Content End-->
   <!--Footer Start -->
+  <div class="clear"></div>
   <?php $this->load->view("footer.php"); ?>
   <!--Footer End -->
   <div class="clear"></div>
