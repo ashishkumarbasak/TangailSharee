@@ -20,9 +20,9 @@
       <div class="social-media_box">
         <h3>Socialize</h3>
         <ul>
-          <li><a class="footer_facebook" target="_blank" href="https://www.facebook.com/Tangail-sharee.com"></a></li>
-          <li><a class="footer_twitter" target="_blank" href="https://twitter.com/Tangail-sharee"></a></li>
-          <li><a class="footer_pinterest" target="_blank" href="https://pinterest.com/Tangailsharee/"></a></li>
+          <li><a class="footer_facebook" target="_blank" href="https://www.facebook.com/TangailShareeDotCom"></a></li>
+          <li><a class="footer_twitter" target="_blank" href="https://twitter.com/Tangail_sharee"></a></li>
+          <li><a class="footer_pinterest" target="_blank" href="https://pinterest.com/Tangailsharee"></a></li>
         </ul>
         <div class="clear"></div>
       </div>
