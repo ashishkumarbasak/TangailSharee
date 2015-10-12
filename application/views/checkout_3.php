@@ -199,13 +199,13 @@ $(document).ready(function()
             <div class="billing_box">
 				<?php foreach($payment as $method){?>
 					<?php if($method->id==1){?>
-                	<input id="credit_card_payment_here" name="pmtmethod" value="opt1" type="radio" checked="checked" />
+                	<input id="credit_card_payment_here" name="pmtmethod" value="opt1" type="radio" />
                 	<div class="nocredit"><img src="<?php echo base_url();?>images/no_credit.jpg"></div>
                 	<span class="billing_text" id="billing_text_place"><label for="credit_card_payment_here" class="checkbox_bil"><?php echo $method->name; ?></label></span>
                     <div class="clear" style="height:5px;"></div>
 					<?php }
 					if($method->id==2){?>
-					<input id="paypal_payment_here" name="pmtmethod" value="opt2" type="radio" />
+					<input id="paypal_payment_here" name="pmtmethod" value="opt2" type="radio" checked="checked" />
 					<span class="billing_text"><label for="paypal_payment_here" class="checkbox_bil"><?php echo $method->name; ?></label></span>
 				<?php } }?>	
                 </div><br/><br/>
@@ -269,7 +269,7 @@ $(document).ready(function()
                 </div>
 				<?php } } ?>
 				<?php if(count($payment->all)>0){?>
-                <input type="submit" class="review_button open1" value="" />
+                <input type="submit" class="review_button open1" value="" style="margin-top:213px;"/>
 				<?php }?>
                 <div class="clear"></div>
               </div>

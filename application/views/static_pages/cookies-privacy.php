@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Terms and conditions</title>
-<meta name="description" content="tangail-sharee Terms and Conditions. Privacy policy and legal details to buy our unique t-shirts">
-<meta name="keywords" content="browse, tangail-sharee, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2012 tangail-sharee Ltd" />
-<meta name="author" content="Tangail-sharee Ltd" />
+<meta name="description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud.">
+<meta name="keywords" content="tangail saree,tangail,saree, jamdani, cotton, silk, half silk, handloom, jamdani saree, silk saree, cotton saree, half silk, half silk saree, handloom saree, bridal, bridal saree, katan, katan saree, dhaka, bangladeshi saree, dhakai saree, dhaka sahree, butique, muslin, muslin saree" />
+<meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
+<meta name="author" content="TANGAIL-SHAREE.com" />
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
 <!--Select Box Js Start-->
@@ -99,16 +99,24 @@ $(document).ready(function(){
 <div class="header">
 
   	<div class="header_cont" style="padding-top: 0px;">
-    <div class="logo"><a href="<?php echo base_url();?>home"><img src="<?php echo base_url(); ?>images/logo.jpg" alt="logo" /></a></div>
-    
-    <div class="nav_box">
-      <ul>	
-      	<li><a href="<?php echo base_url();?>">HOME</a></li>         
-        <li><a href="<?php echo base_url();?>show_product?type=woman">WOMEN</a></li>
-        <li><a href="<?php echo base_url();?>show_product?type=man">MEN</a></li>
-        <li><a href="http://help.tangail-sharee.com/">SUPPORT</a></li>
-      </ul>
-    </div>
+
+	<div class="logo" style="width:250px;">
+        <div class="nav_box" style="margin-top:54px;padding:0px;float:left;">
+                <ul style="madgin:0px; padding:0px; width:100%;">
+                        <li style="padding-left:0px;"><a style="font-size:20px;letter-spacing: 2px; padding-left:0px;" href="<?php echo base_url();?>">TANGAIL-SHAREE.<span style="font-size:16px;">com</span></a></li>
+                </ul>
+        </div>
+        <!-- <a href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>images/logo-tangail.gif" alt="logo" /></a> //-->   
+	</div>	
+
+	<div class="nav_box">
+      	<ul>
+        <li><a href="<?php echo base_url();?>">HOME</a></li>
+        <li><a href="<?php echo base_url();?>show_product?type=woman">SHAREES</a></li>
+        <li><a href="javascript:void(0);">ABOUT</a></li>
+        <li><a href="javascript:void(0);">SUPPORT</a></li>
+	</ul>
+	</div> 
     
     </div>
     
@@ -155,7 +163,7 @@ function cart_refresh(){
 
 <h2>General</h2>
 
-<p>This privacy statement sets out how tangail-sharee Ltd ("we" "us" or "our"), who operate this web site located at tangail-sharee.com ("Site"), use the information you give us. We may change this privacy statement at any time by posting such changes on the Site. Your continued use of the Site after notice of changes shall mean you have agreed to the new privacy statement.</p>
+<p>This privacy statement sets out how TANGAIL-SAHREE.com ("we" "us" or "our"), who operate this web site located at TANGAIL-SAHREE.com ("Site"), use the information you give us. We may change this privacy statement at any time by posting such changes on the Site. Your continued use of the Site after notice of changes shall mean you have agreed to the new privacy statement.</p>
 <p>
 This Cookies Policy explains what cookies are, how we use cookies and similar technologies on our website, and what you can do to manage how cookies are used.
 </p>
@@ -163,11 +171,11 @@ This Cookies Policy explains what cookies are, how we use cookies and similar te
 <h2>What are cookies</h2>
 
 <p>
-A cookie is a small text file which is sent to your device by the web server so that the website can remember some information about your browsing activity on the website.  The cookie will collect information relating to your use of our sites, information about your device such as the device���s IP address and browser type, demographic data and, if you arrived at our site via a link from third party site, the URL of the linking page. If you are a registered user or subscriber it may also collect your name and email address, which may be transferred to data processors for registered user or subscriber verification purposes.
+A cookie is a small text file which is sent to your device by the web server so that the website can remember some information about your browsing activity on the website.  The cookie will collect information relating to your use of our sites, information about your device such as the device's IP address and browser type, demographic data and, if you arrived at our site via a link from third party site, the URL of the linking page. If you are a registered user or subscriber it may also collect your name and email address, which may be transferred to data processors for registered user or subscriber verification purposes.
 
 Cookies record information about your online preferences and help us to tailor our websites to your interests. Information provided by cookies can help us to analyse your use of our sites and help us to provide you with a better user experience.
 
-Cookies are either ���session��� or ���persistent��� cookies, depending on how long they are stored for:
+Cookies are either "session" or "persistent" cookies, depending on how long they are stored for:
 <ul>
 <li>Session cookies are only stored for the duration of your visit to a website and are deleted from your device when you close your browser;</li>
 <li>Persistent cookies are saved on your device for a fixed period of time after the browser has closed and are activated each time you visit the website where the cookie was generated.</li>
@@ -190,53 +198,60 @@ We use these cookies to enable certain online functionality including:
 </p>
 <p>
 <strong>2. Analytical Performance Cookies</strong><br/>
-We use these cookies to measure users��� behaviour to better develop our websites.  By using web analytics services provided by Google Analytics we can analyse which pages are viewed and how long for and which links are followed, and we can use this information to provide products which is of interest. We also use this analysis to report on our performance and to sell advertising.
+We use these cookies to measure user's behaviour to better develop our websites.  By using web analytics services provided by Google Analytics we can analyse which pages are viewed and how long for and which links are followed, and we can use this information to provide products which is of interest. We also use this analysis to report on our performance and to sell advertising.
 </p>
 <p>
+<br>
 <strong>3. Behavioural Advertising Cookies</strong><br/>
-We use these cookies to measure general user behaviour across our sites and third party sites to build a profile based on users browsing patterns so that we and third parties can target advertising to users that will be more relevant to users��� interests. We use cookies to create profiles that trusted third parties can buy to allow them to better target their advertising with more relevant content.
+We use these cookies to measure general user behaviour across our sites and third party sites to build a profile based on users browsing patterns so that we and third parties can target advertising to users that will be more relevant to user's interests. We use cookies to create profiles that trusted third parties can buy to allow them to better target their advertising with more relevant content.
 <br /><br />
 The information generated by the cookie about your use of our sites (including your IP address) will be transmitted to and stored on servers in the United States and/or United Kingdom. They may also transfer this information to third parties where required to do so by law, or where such third parties process the information on their behalf.  By using this website, you consent to the processing of data about you by those service providers in the manner and for the purposes set out above.
 <br /><br />
 We cannot control nor do we have access to any cookies placed on your computer by third party advertisers and sponsors.
 </p>
 <p>
+<br>
 <strong>4. Other Third Party Cookies</strong><br/>
-You may notice on some pages of our websites that cookies have been set that are not related to tangail-sharee. When you visit a page with content embedded from, for example, YouTube or Facebook, these third party service providers may set their own cookies on your device. tangail-sharee does not control the use of these third party cookies and cannot access them due to the way that cookies work, as cookies can only be accessed by the party who originally set them. Please check the third party websites for more information about these cookies.
+You may notice on some pages of our websites that cookies have been set that are not related to TANGAIL-SAHREE.com. When you visit a page with content embedded from, for example, YouTube or Facebook, these third party service providers may set their own cookies on your device. TANGAIL-SAHREE.com does not control the use of these third party cookies and cannot access them due to the way that cookies work, as cookies can only be accessed by the party who originally set them. Please check the third party websites for more information about these cookies.
 </p>
 
 <h2>Controlo your cookies</h2>
 <p>Someone finds the idea of a website storing information on their device a little intrusive. If you would prefer to opt out of cookies, it is possible to control cookies by following the steps below, however you should be aware that you might lose some features and functionality of the website if you do so.</p>
+<br>
 <p>
 Cookies, including those which have already been set, can be deleted from your hard drive. You can also change the preferences/settings in your web browser to control cookies. In some cases, you can choose to accept cookies from the primary site, but block them from third parties. In others, you can block cookies from specific advertisers, or clear out all cookies. Deleting or blocking cookies may reduce functionality of the site. To learn more about how to reject cookies, visit <a href="http://www.allaboutcookies.org">www.allaboutcookies.org</a> or go to the help menu within your internet browser. If you experience any problems having deleted cookies, you should contact the supplier of your web browser.
 </p>
+<br>
 <p>Opting out of Analytical Performance Cookies:<br />
 
 If you would like to opt out of Analytics cookies, please do so by clicking on the links below:
 </p>
+<br>
 <p>
 Google Analytics: <a href="https://tools.google.com/dlpage/gaoptout">https://tools.google.com/dlpage/gaoptout</a>
 </p>
+<br>
 <p>
 Opting out of Third part Cookies:<br />
 
-If you would like to disable ���third party��� cookies generated by advertisers or providers of targeted advertising services or social media services, you can turn them off by going to the third party���s website and getting them to generate a one-time ���no thanks��� cookie that will stop any further cookies being written to your machine. Here are links to the main third party advertising platforms we use, each of which have instructions on how to do this:
+If you would like to disable "third party" cookies generated by advertisers or providers of targeted advertising services or social media services, you can turn them off by going to the third party's website and getting them to generate a one-time "no thanks" cookie that will stop any further cookies being written to your machine. Here are links to the main third party advertising platforms we use, each of which have instructions on how to do this:
 </p>
+<br>
 <p>
 You can find out how to decline other online behavioural advertising by visiting:<br />
 
-<a href="https://www.facebook.com/help/cookies">https://www.facebook.com/help/cookies</a>
+<a href="https://www.facebook.com/help/cookies">https://www.facebook.com/help/cookies</a><br>
 <a href="http://www.networkadvertising.org/managing/opt_out.asp">http://www.networkadvertising.org/managing/opt_out.asp</a>
 </p>
+<br>
 <p>	
 Do you need more information about cookies? Email us:
 </p>
-
+<br>
 <p>
-<br />
 <a href="mailto:info@tangail-sharee.com">info@tangail-sharee.com</a><br />
 </p>
-
+<br>
 
   
   	</div>

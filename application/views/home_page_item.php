@@ -28,7 +28,7 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=203991176319853";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-like" data-href="http://www.facebook.com/tangail-sharee.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="lucida grande"></div>
+<div class="fb-like" data-href="http://www.facebook.com/TangailShareeDotCom" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="lucida grande"></div>
           </div>
             
             

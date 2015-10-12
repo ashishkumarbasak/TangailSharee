@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: mysql.trip-bangladesh.com
--- Generation Time: Oct 09, 2015 at 12:11 PM
+-- Generation Time: Oct 12, 2015 at 01:23 PM
 -- Server version: 5.1.56
 -- PHP Version: 5.6.10
 
@@ -40,8 +40,12 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('ef000d399e23d0c4d585df4e80d01567', '90.166.217.84', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) Ap', 1444410164, 'a:2:{s:7:"user_id";N;s:7:"ref_url";s:0:"";}'),
-('dacfd1933c5c2962f19254380f77ba26', '90.166.217.84', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) Ap', 1444417579, 'a:2:{s:7:"user_id";N;s:7:"ref_url";s:0:"";}');
+('823198e233c117bf67087d3bd8fd6ca7', '173.0.82.126', 'PayPal IPN ( https://www.paypal.com/ipn )', 1444679166, 'a:1:{s:7:"user_id";N;}'),
+('a3139800d05461d5b84bb2f696278e98', '90.166.217.84', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:4', 1444675797, 'a:2:{s:7:"user_id";N;s:7:"ref_url";s:0:"";}'),
+('1fac413e616e04a3852eb4568387ec25', '173.0.82.126', 'PayPal IPN ( https://www.paypal.com/ipn )', 1444676563, 'a:1:{s:7:"user_id";N;}'),
+('a46e423c45491622dc4edfafd591f470', '90.166.217.84', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) Ap', 1444681271, 'a:2:{s:7:"user_id";N;s:7:"ref_url";s:0:"";}'),
+('ac8338a89bb3ff03923dd7f26305767c', '85.25.12.33', 'Mozilla', 1444680684, 'a:2:{s:7:"user_id";N;s:7:"ref_url";s:0:"";}'),
+('793e2eb81e3a08cf4333764fbf114ab4', '173.0.82.126', 'PayPal IPN ( https://www.paypal.com/ipn )', 1444678434, 'a:1:{s:7:"user_id";N;}');
 
 -- --------------------------------------------------------
 
@@ -59,12 +63,23 @@ CREATE TABLE IF NOT EXISTS `tbl_address` (
   `country` varchar(225) NOT NULL,
   `postcode` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `tbl_address`
 --
 
+INSERT INTO `tbl_address` (`id`, `address_line1`, `address_line2`, `address_line3`, `city`, `state`, `country`, `postcode`) VALUES
+(1, 'Sant Gervasi De Cassoles 41', 'Floor 1 Flat 4', '', 'Barcelona', 'Catalunya', 'Spain', '08022'),
+(2, 'Sant Gervasi De Cassoles 41', 'Floor 1 Flat 4', '', 'Barcelona', 'Catalunya', 'Spain', '08022'),
+(3, 'Sant Gervasi De Cassoles 41', 'Floor 1 Flat 4', '', 'Barcelona', 'Catalunya', 'Spain', '08022'),
+(4, 'Sant Gervasi De Cassoles 41', 'Floor 1 Flat 4', '', 'Barcelona', 'Catalunya', 'Spain', '08022'),
+(5, 'Sant Gervasi De Cassoles 41', 'Floor 1 Flat 4', '', 'Barcelona', 'Catalunya', 'Spain', '08022'),
+(6, 'Sant Gervasi De Cassoles 41', 'Floor 1 Flat 4', '', 'Barcelona', 'Catalunya', 'Spain', '08022'),
+(7, 'Sant Gervasi De Cassoles 41', 'Floor 1 Flat 4', '', 'Barcelona', 'Catalunya', 'Spain', '08022'),
+(8, 'Sant Gervasi De Cassoles 41', 'Floor 1 Flat 4', '', 'Barcelona', 'Catalunya', 'Spain', '08022'),
+(9, 'Sant Gervasi De Cassoles 41', 'Floor 1 Flat 4', '', 'Barcelona', 'Catalunya', 'Spain', '08022'),
+(10, 'Sant Gervasi De Cassoles 41', 'Floor 1 Flat 4', '', 'Barcelona', 'Catalunya', 'Spain', '08022');
 
 -- --------------------------------------------------------
 
@@ -1365,23 +1380,23 @@ CREATE TABLE IF NOT EXISTS `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`id`, `SKU`, `name`, `price`, `original_value`, `catagory_id`, `user_id`, `status`, `available`, `sold`, `is_active`, `for_man`, `for_woman`, `man_image`, `woman_image`, `date_added`, `points_to_buy`, `points_you_get`, `product_info`, `color_id`, `feature_image`, `tag`, `size_info`, `delivery_info`, `meta_tags`, `order_by`) VALUES
-(1, '10097UQBFJ001', 'Tangail Half Silk Saree', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444398785', 0, 0, '', 0, 52, '', '', '', '', 1),
-(2, '1009BBEFDW002', 'Tangail Cotton Saree', 49, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444398901', 0, 0, '', 0, 54, '', '', '', '', 4),
-(3, '1009Y5KPQB003', 'Tangail Cotton Saree', 49, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399023', 0, 0, '', 0, 56, '', '', '', '', 6),
-(4, '1009SDUOXI004', 'Tangail Cotton Saree', 51, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399133', 0, 0, '', 0, 58, '', '', '', '', 1001),
-(5, '10095INKUD005', 'Tangail Cotton Saree', 51, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399218', 0, 0, '', 0, 60, '', '', '', '', 9),
-(6, '1009NH8WAE006', 'Tangail Cotton Saree', 51, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399303', 0, 0, '', 0, 62, '', '', '', '', 7),
-(7, '1009VU1YZ4007', 'Tangail Cotton Saree', 49, 0, 0, 2, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399470', 0, 0, '', 0, 64, '', '', '', '', 10),
-(8, '1009HPOFFH008', 'Tangail Half Silk Saree', 69, 0, 0, 2, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399622', 0, 0, '', 0, 66, '', '', '', '', 1002),
-(9, '1009HW9ZF4009', 'Tangail Silk Saree', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401153', 0, 0, '', 0, 68, '', '', '', '', 3),
-(10, '1009JYHLEP010', 'Tangail Silk Jamdani Saree', 79, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401273', 0, 0, '', 0, 70, '', '', '', '', 8),
-(11, '1009KAHDB8011', 'Tangail Silk Jamdani Saree', 79, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401352', 0, 0, '', 0, 72, '', '', '', '', 2),
-(12, '1009E6H99Y012', 'Tangail Silk Jamdani Saree', 79, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401464', 0, 0, '', 0, 74, '', '', '', '', 5),
-(13, '10091SPXLQ013', 'Tangail Pure Silk Saree', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401635', 0, 0, '', 0, 76, '', '', '', '', 1003),
-(14, '1009TXVC1U014', 'Tangail Gass Moslin Saree', 59, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401936', 0, 0, '', 0, 78, '', '', '', '', 1004),
-(15, '1009KO204J015', 'Tangail Pure Silk Saree', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444403004', 0, 0, '', 0, 80, '', '', '', '', 11),
-(16, '10097YLTOW016', 'Tangail Cotton Saree', 49, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444403184', 0, 0, '', 0, 82, '', '', '', '', 12),
-(17, '1009D0VGBF017', 'Soft Cotton Sari', 49, 0, 0, 2, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444403818', 0, 0, '', 0, 87, '', '', '', '', 1000);
+(1, '10097UQBFJ001', 'Tangail Half Silk Sharee', 69, 0, 0, 3, 'Out of stock', 0, 1, '1', '0', '1', NULL, NULL, '1444398785', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Half Silk Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 52, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 1),
+(2, '1009BBEFDW002', 'Tangail Cotton Sharee', 49, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444398901', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Cotton Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 54, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 4),
+(3, '1009Y5KPQB003', 'Tangail Cotton Sharee', 49, 0, 0, 4, 'Out of stock', 0, 1, '1', '0', '1', NULL, NULL, '1444399023', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Cotton Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 56, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 6),
+(4, '1009SDUOXI004', 'Tangail Cotton Sharee', 51, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399133', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Cotton Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 58, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 1001),
+(5, '10095INKUD005', 'Tangail Cotton Sharee', 51, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399218', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Cotton Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 60, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 9),
+(6, '1009NH8WAE006', 'Tangail Cotton Sharee', 51, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399303', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Cotton Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 62, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 7),
+(7, '1009VU1YZ4007', 'Tangail Cotton Sharee', 49, 0, 0, 2, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399470', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Cotton Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 64, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 10),
+(8, '1009HPOFFH008', 'Tangail Half Silk Sharee', 69, 0, 0, 2, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444399622', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Half Silk Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 66, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 1002),
+(9, '1009HW9ZF4009', 'Tangail Silk Sharee', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401153', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Silk Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 68, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 3),
+(10, '1009JYHLEP010', 'Tangail Silk Jamdani Sharee', 79, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401273', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Silk Jamdani Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 70, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 8),
+(11, '1009KAHDB8011', 'Tangail Silk Jamdani Sharee', 79, 0, 0, 3, 'Out of stock', 0, 1, '1', '0', '1', NULL, NULL, '1444401352', 0, 0, '<ul><li>Original Tant sharee</li><li>Pure Silk Jamdani Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 72, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 2),
+(12, '1009E6H99Y012', 'Tangail Silk Jamdani Sharee', 79, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401464', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Silk Jamdani Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 74, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 5),
+(13, '10091SPXLQ013', 'Tangail Pure Silk Sharee', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401635', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Silk Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 76, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 1003),
+(14, '1009TXVC1U014', 'Tangail Gas Moslin Sharee', 59, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444401936', 0, 0, '<ul><li>Original Tant sharee</li><li>Gas Moslin Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 78, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 1004),
+(15, '1009KO204J015', 'Tangail Pure Silk Sharee', 69, 0, 0, 3, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444403004', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Silk Sharee</li><li>Unstitched Blouse Fabric</li></ul>', 0, 80, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 11),
+(16, '10097YLTOW016', 'Tangail Cotton Sharee', 49, 0, 0, 4, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444403184', 0, 0, '<ul><li>Original Tant Sharee Designed By Shantiranjan Basak</li><li>Pure Cotton</li><li>Unstitched Blouse Fabric</li></ul>', 0, 82, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 12),
+(17, '1009D0VGBF017', 'Soft Cotton Sharee', 49, 0, 0, 2, 'Out of stock', 0, 0, '1', '0', '1', NULL, NULL, '1444403818', 0, 0, '<ul><li>Original Tant Sharee</li><li>Pure Soft Cotton Materials</li><li>Unstitched Blouse Fabric</li></ul>', 0, 87, '', '', 'Worldwide Free Shipping with Tracking Number (10-15 Working Days)', '', 1005);
 
 -- --------------------------------------------------------
 
@@ -1517,7 +1532,7 @@ CREATE TABLE IF NOT EXISTS `tbl_product_size` (
 INSERT INTO `tbl_product_size` (`id`, `product_id`, `size_id`, `catagory`, `stock`, `sold`) VALUES
 (1, 1, 5, 'woman', 5, 0),
 (2, 1, 6, 'woman', 5, 0),
-(3, 1, 7, 'woman', 5, 0),
+(3, 1, 7, 'woman', 4, 0),
 (4, 1, 8, 'woman', 5, 0),
 (5, 2, 5, 'woman', 5, 0),
 (6, 2, 6, 'woman', 5, 0),
@@ -1525,7 +1540,7 @@ INSERT INTO `tbl_product_size` (`id`, `product_id`, `size_id`, `catagory`, `stoc
 (8, 2, 8, 'woman', 5, 0),
 (9, 3, 5, 'woman', 5, 0),
 (10, 3, 6, 'woman', 5, 0),
-(11, 3, 7, 'woman', 5, 0),
+(11, 3, 7, 'woman', 4, 0),
 (12, 3, 8, 'woman', 5, 0),
 (13, 4, 5, 'woman', 5, 0),
 (14, 4, 6, 'woman', 5, 0),
@@ -1557,7 +1572,7 @@ INSERT INTO `tbl_product_size` (`id`, `product_id`, `size_id`, `catagory`, `stoc
 (40, 10, 8, 'woman', 5, 0),
 (41, 11, 5, 'woman', 5, 0),
 (42, 11, 6, 'woman', 5, 0),
-(43, 11, 7, 'woman', 5, 0),
+(43, 11, 7, 'woman', 4, 0),
 (44, 11, 8, 'woman', 5, 0),
 (45, 12, 5, 'woman', 5, 0),
 (46, 12, 6, 'woman', 5, 0),
@@ -2132,7 +2147,7 @@ CREATE TABLE IF NOT EXISTS `tbl_wishlist` (
   `name` varchar(225) DEFAULT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `tbl_wishlist`
@@ -2147,7 +2162,10 @@ INSERT INTO `tbl_wishlist` (`id`, `name`, `user_id`) VALUES
 (8, NULL, 397),
 (9, NULL, 398),
 (10, NULL, 399),
-(11, NULL, 1);
+(11, NULL, 1),
+(12, NULL, 5),
+(13, NULL, 6),
+(14, NULL, 7);
 
 -- --------------------------------------------------------
 
@@ -2880,7 +2898,7 @@ CREATE TABLE IF NOT EXISTS `tbl_wp_users` (
   PRIMARY KEY (`ID`),
   KEY `user_login_key` (`user_login`),
   KEY `user_nicename` (`user_nicename`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=341 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=344 ;
 
 --
 -- Dumping data for table `tbl_wp_users`
@@ -3223,4 +3241,7 @@ INSERT INTO `tbl_wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `u
 (337, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
 (338, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
 (339, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
-(340, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021');
+(340, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
+(341, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
+(342, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021'),
+(343, 'ashish021', 'e7c96e81c25a6f9c325123c7a7dd6725', 'ashish021', 'ashish021@gmail.com', '', '2011-12-08 06:40:01', '', 0, 'ashish021');

@@ -2,7 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Gallery</title>
+<title>TANGAIL-SHAREE.com | A online store of outstanding and gorgeous tangail sarees</title>
+<meta property="og:description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud." />
+<meta name="description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud." />
+<meta name="keywords" content="tangail saree,tangail,saree, jamdani, cotton, silk, half silk, handloom, jamdani saree, silk saree, cotton saree, half silk, half silk saree, handloom saree, bridal, bridal saree, katan, katan saree, dhaka, bangladeshi saree, dhakai saree, dhaka sahree, butique, muslin, muslin saree" />
+<meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
+<meta name="author" content="TANGAIL-SHAREE.com" />
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://tangail-sharee.com/" />
+<meta property="og:title" content="TANGAIL-SHAREE.com | A online store of outstanding and gorgeous tangail sarees" />
+<meta property="og:site_name" content="TANGAIL-SHAREE.com" />
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
 <!--Select Box Js Start-->
@@ -102,7 +111,7 @@ $(document).ready(function(){
     	<h3>Your payment has not been processed at this time, please try again to complete order process. We apoligize for the incovenience</h3>
 		<?php }?>
  <div class="clear"></div>
-      <div class="mid_content_top_right">
+      <div class="mid_content_top_right" style="display:none;">
         <h3>Stay tuned!</h3>
         <div class="facebook">
           <img alt="facebook" src="<?php echo base_url();?>images/facebook_like.jpg" />

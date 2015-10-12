@@ -2,7 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Gallery</title>
+<title>TANGAIL-SHAREE.com | A online store of outstanding and gorgeous tangail sarees</title>
+<meta property="og:description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud." />
+<meta name="description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud." />
+<meta name="keywords" content="tangail saree,tangail,saree, jamdani, cotton, silk, half silk, handloom, jamdani saree, silk saree, cotton saree, half silk, half silk saree, handloom saree, bridal, bridal saree, katan, katan saree, dhaka, bangladeshi saree, dhakai saree, dhaka sahree, butique, muslin, muslin saree" />
+<meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
+<meta name="author" content="TANGAIL-SHAREE.com" />
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://tangail-sharee.com/" />
+<meta property="og:title" content="TANGAIL-SHAREE.com | A online store of outstanding and gorgeous tangail sarees" />
+<meta property="og:site_name" content="TANGAIL-SHAREE.com" />
+
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
 <!--Select Box Js Start-->
@@ -95,7 +105,7 @@ $(document).ready(function(){
 		<br><br>
 		We are working right now to ship your order the soonest possible. You will receive a confirmation by email once the order is delivered to you. 
 		<br><br> 
-		In case you need help, feel free to contact our customer service through the <a href="mailto:support@tangail-sharee.com"><u>support system</u></a> or the <a href="mailto:info@tangail-sharee.com"><u>contact page</u></a>.
+		In case you need help, feel free to contact our customer service through the <a href="<?php echo base_url()?>pages/contact_us"><u>contact page</u></a>.
 		<br><br> 
 		Hoping to see you soon
 		<br><br> 

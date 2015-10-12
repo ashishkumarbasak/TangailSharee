@@ -206,7 +206,7 @@ small{ color:#999999;}
     border-width: 1px;
     color: #444444;
 }
-.review_button{width:279px; height:32px; background:url(../images/all_ico_but_2.png) no-repeat 0 -786px; border:0px; float:right; cursor:pointer; margin:103px 0 0 0;}
+.review_button{width:279px; height:32px; background:url(../images/all_ico_but_2.png) no-repeat 0 -786px; border:0px; float:right; cursor:pointer; margin:113px 0 0 0;}
 .review_button:hover { background-position: 0 -823px; }
 .review_place_order_left{ width:260px; float:left; margin:10px 0 0 0;}
 .review_place_order_right{ width:260px; float:right; margin:10px 0 0 0;}

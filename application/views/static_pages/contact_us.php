@@ -2,11 +2,11 @@
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Contact us | Tangail-sharee</title>
-<meta name="keywords" content="browse, Tangail-sharee.com, catalog, collection, unique, men&#039;s, women&#039;s, salethreadless, t-shirts, tee shirts, tshirts, clothing, design, art" />
-<meta name="copyright" content="(c) 2013 Tangail-sharee.com" />
-<meta name="author" content="Tangail-sharee.com" />
-<meta name="description" content="bring real art on t-shirts. Not photographic artworks, or no-sense illustrations, but real art created by super-talented designers belonging to different fields">
+<title>Contact us | TANGAIL-SHAREE.com</title>
+<meta name="description" content="TANGAIL-SHAREE.com is a online store of outstanding and gorgeous original tangail sarees from Bangladesh. We are providing the best collection of sarees for you and also making our bengali culture more proud.">
+<meta name="keywords" content="tangail saree,tangail,saree, jamdani, cotton, silk, half silk, handloom, jamdani saree, silk saree, cotton saree, half silk, half silk saree, handloom saree, bridal, bridal saree, katan, katan saree, dhaka, bangladeshi saree, dhakai saree, dhaka sahree, butique, muslin, muslin saree" />
+<meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
+<meta name="author" content="TANGAIL-SHAREE.com" />
 <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/colorbox.css" type="text/css" media="screen" />
 <!--Select Box Js Start-->
@@ -99,18 +99,27 @@ $(document).ready(function(){
 <div class="header">
 
   	<div class="header_cont" style="padding-top: 0px;">
-    <div class="logo"><a href="<?php echo base_url();?>home"><img src="<?php echo base_url(); ?>images/logo.jpg" alt="logo" /></a></div>
+
+	<div class="logo" style="width:250px;">
+        <div class="nav_box" style="margin-top:54px;padding:0px;float:left;">
+                <ul style="madgin:0px; padding:0px; width:100%;">
+                        <li style="padding-left:0px;"><a style="font-size:20px;letter-spacing: 2px; padding-left:0px;" href="<?php echo base_url();?>">TANGAIL-SHAREE.<span style="font-size:16px;">com</span></a></li>
+                </ul>
+        </div>
+        <!-- <a href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>images/logo-tangail.gif" alt="logo" /></a> //-->   
+	</div>	
+
+	<div class="nav_box">
+      	<ul>
+        <li><a href="<?php echo base_url();?>">HOME</a></li>
+        <li><a href="<?php echo base_url();?>show_product?type=woman">SHAREES</a></li>
+        <li><a href="javascript:void(0);">ABOUT</a></li>
+        <li><a href="javascript:void(0);">SUPPORT</a></li>
+	</ul>
+	</div> 
     
-     <div class="nav_box">
-      <ul>	
-      	<li><a href="<?php echo base_url();?>">HOME</a></li>         
-        <li><a href="<?php echo base_url();?>show_product?type=woman">WOMEN</a></li>
-        <li><a href="<?php echo base_url();?>show_product?type=man">MEN</a></li>
-        <li><a href="http://help.tangail-sharee.com/">SUPPORT</a></li>
-      </ul>
     </div>
     
-    </div>
     <div class="clear"></div>
    
   </div>
@@ -152,23 +161,21 @@ function cart_refresh(){
 <div class="about_us_container">  	
 <h1>Contact us</h1>
 
-<div class="about_us_text">
+<div class="about_us_text" style="font-size:12px;">
 
-<p>If you have any queries regarding your order, payment or your account you can send us an email at:<br /><br />
+<p style="font-size:12px;">If you have any queries regarding your order, payment or your account you can send us an email at:<br /><br />
 
-<a href="mailto:help@tangail-sharee.com">help@tangail-sharee.com</a></p>
+<a href="mailto:support@tangail-sharee.com" style="font-size:12px;">support@tangail-sharee.com</a></p>
 
-<p> or contact us through the <a href="http://help.tangail-sharee.com">support center</a>.</p>
+<p style="font-size:12px;">If you have any commercial or distribution proposal send us an email at:<br /><br />
 
-<p>If you have any commercial or distribution proposal send us an email at:<br /><br />
+<a href="mailto:sales@tangail-sharee.com" style="font-size:12px;">sales@tangail-sharee.com</a></p>
 
-<a href="mailto:sales@tangail-sharee.com">sales@tangail-sharee.com</a></p>
+<p style="font-size:12px;">If you have any general enquiries or wants to join TANGAIL-SHAREE.com send us an email at:<br /><br />
 
-<p>If you have any general enquiries or you are a designer who wants to join Tangail-sharee send us an email at:<br /><br />
+<a href="mailto:info@tangail-sharee.com" style="font-size:12px;">info@tangail-sharee.com</a></p>
 
-<a href="mailto:info@tangail-sharee.com">info@tangail-sharee.com</a></p>
-
-<p>We will respond to your email within 48 hours</p>
+<p style="font-size:12px;">We will respond to your email within 48 hours</p>
 
 </div> 
  

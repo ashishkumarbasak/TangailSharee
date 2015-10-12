@@ -41,7 +41,7 @@
     <ul class="footer_links">    	
     	<li><a href="#">Home</a></li>
     	<li>/</li>
-    	<li><a href="mailto:info@tangail-sharee.com">Contact</a></li>
+    	<li><a href="<?php echo base_url();?>pages/contact_us">Contact</a></li>
     	<li>/</li>
     	<li><a href="mailto:support@tangail-sharee.com">Support</a></li>
     	<li>/</li>

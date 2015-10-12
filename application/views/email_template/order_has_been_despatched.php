@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-	New Order Notification at tangail-sharee!
+	New Order Notification at TANGAIL-SHAREE.com!
 </title>
 </head>
 <body>
 Dear <?php if(isset($profile_name)) echo $profile_name; ?>,
 <br><br>
-Your online order with tangail-sharee has been despatched. The following products are on their way to you:
+Your online order with TANGAIL-SHAREE.com has been despatched. The following products are on their way to you:
 <br><br>
 Your order ID is <?php echo $order->SKU; ?>
 <br><br>
@@ -17,11 +17,9 @@ Order details:
 <br><br>
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="order-product-table" style="margin-bottom: 20px;border: 1px solid #d2d2d2;border-right:0px;">
   <tr>
-    <th style="padding: 5px 0 5px 5px;text-align: left;border: 1px solid #d2d2d2;background:#d2d2d2;">Product ID</th>
-    <th style="padding: 5px 0 5px 5px;text-align: left;border: 1px solid #d2d2d2;background:#d2d2d2;">Item</th>
+    <th style="padding: 5px 0 5px 5px;text-align: left;border: 1px solid #d2d2d2;background:#d2d2d2;" colspan="2">Product ID</th>
+    <th style="padding: 5px 0 5px 5px;text-align: left;border: 1px solid #d2d2d2;background:#d2d2d2;" colspan="2">Item</th>
     <th style="padding: 5px 0 5px 5px;text-align: left;border: 1px solid #d2d2d2;background:#d2d2d2;">Product Image</th>
-    <th style="padding: 5px 0 5px 5px;text-align: left;border: 1px solid #d2d2d2;background:#d2d2d2;text-align:center !important;">Size</th>
-    <th style="padding: 5px 0 5px 5px;text-align: left;border: 1px solid #d2d2d2;background:#d2d2d2;text-align:center !important;">Genre</th>
     <th style="padding: 5px 0 5px 5px;text-align: left;border: 1px solid #d2d2d2;background:#d2d2d2;text-align:center !important;">Quantity</th>
     <th style="padding: 5px 0 5px 5px;text-align: left;border: 1px solid #d2d2d2;background:#d2d2d2;text-align:center !important;">Total</th>
   </tr>
@@ -35,11 +33,9 @@ Order details:
 	    		}
 	    		?>
   <tr <?php echo $style; ?>>
-    <td style="border: 1px solid #d2d2d2;padding: 5px 0 5px 5px;border-left:0px;border-bottom:0px;"><?php echo $prod->SKU; ?></td>
-    <td style="border: 1px solid #d2d2d2;padding: 5px 0 5px 5px;border-left:0px;border-bottom:0px;"><?php echo $prod->name; ?></td>
+    <td style="border: 1px solid #d2d2d2;padding: 5px 0 5px 5px;border-left:0px;border-bottom:0px;" colspan="2"><?php echo $prod->SKU; ?></td>
+    <td style="border: 1px solid #d2d2d2;padding: 5px 0 5px 5px;border-left:0px;border-bottom:0px;" colspan="2"><?php echo $prod->name; ?></td>
     <td style="border: 1px solid #d2d2d2;padding: 5px 0 5px 5px;border-left:0px;border-bottom:0px;"><img src="<?php echo base_url(); ?>images/product_image/short_image/<?php if($prod->size_catagory=="man") echo $prod->man->filename; elseif($prod->size_catagory=="woman") echo $prod->woman->filename; ?>" alt="" /></td>
-    <td style="border: 1px solid #d2d2d2;padding: 5px 0 5px 5px;border-left:0px;border-bottom:0px;text-align:center !important;"><?php echo $prod->size_name; ?></td>
-    <td style="border: 1px solid #d2d2d2;padding: 5px 0 5px 5px;border-left:0px;border-bottom:0px;text-align:center !important;"><?php echo $prod->size_catagory; ?></td>
     <td style="border: 1px solid #d2d2d2;padding: 5px 0 5px 5px;border-left:0px;border-bottom:0px;text-align:center !important;"><?php echo $prod->join_quantity; ?></td>
     <?php $quantity = $prod->join_quantity - $prod->join_rdm_quantity;?>
     <?php if($prod->join_request_refund!="Payment Refunded") $sub_total += $quantity * $prod->join_prize; ?>
@@ -114,7 +110,7 @@ Order details:
   </tr>
 </table>
 <?php if(isset($tracking_number) && $tracking_number!=NULL){ ?>
-If your delivery option include a tracking number, you can go to www.royalmail.com/, select the option "tracking" and enter the tracking number to locate your items.
+If your delivery option include a tracking number, you can go to www.dhl.com/, select the option "tracking" and enter the tracking number to locate your items.
 <br>
 <br>
 TRACKING NUMBER: <?php echo $tracking_number; ?>
@@ -124,17 +120,17 @@ TRACKING NUMBER: <?php echo $tracking_number; ?>
 We are working right now to ship your order the soonest possible. You will receive a confirmation by email once the order is delivered to you. 
 <br>
 <br>
-In case you need help, feel free to contact our customer service through the <a href="https://tangail-sharee.tenderapp.com">support system</a> or the <a href="<?php echo base_url();?>pages/contact_us">contact page</a>.
+In case you need help, feel free to contact our customer service through the <a href="<?php echo base_url();?>pages/contact_us">contact page</a>.
 <br>
 <br>
-Again, thank you for choosing to buy from tangail-sharee!
+Again, thank you for choosing to buy from TANGAIL-SHAREE.com!
 <br>
 <br>
 Hoping to see you soon
 <br>
 <br>
 Best,<br>
-The tangail-sharee Team<br>
+The TANGAIL-SHAREE.com Team<br>
 http://tangail-sharee.com<br>
 </body>
 </html>
