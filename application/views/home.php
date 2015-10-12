@@ -11,6 +11,7 @@
 <meta name="copyright" content="(c) 2015 TANGAIL-SHAREE.com" />
 <meta name="author" content="TANGAIL-SHAREE.com" />
 <meta property="og:type" content="website"/>
+<meta name="p:domain_verify" content="70c4b5d3b9e60283da6b3a5085fb740e"/>
 <meta property="og:url" content="<?php echo base_url(); ?>" />
 <meta property="og:title" content="<?php echo lang('home_page_title'); ?>" />
 <meta property="og:site_name" content="TANGAIL-SHAREE.com" />
