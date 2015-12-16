@@ -41,7 +41,11 @@ class Home extends MY_Controller {
 			$prod=array_unique($pid);
     		
     	$product->where_in('id',$prod);
-	$product->where('order_by < ', 1000, FALSE);
+	$rand_choice = rand(1,20);
+	if($rand_choice>=10)
+		$product->where('order_by >= ', 1000, FALSE);
+	else
+		$product->where('order_by < ', 1000, FALSE);
     	$product->order_by('RAND()');
     	$product->limit(8)->get();
 

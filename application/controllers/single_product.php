@@ -51,7 +51,7 @@ class Single_product extends MY_Controller
 		$sub_product->where_in('id',$prod);
 		$sub_product->where('order_by < ', 1000, FALSE);
 		$sub_product->order_by('RAND()');
-		$sub_product->limit('8');
+		$sub_product->limit('12');
 		$sub_product->get();
 		
 		$count = $sub_product->result_count();
@@ -62,7 +62,7 @@ class Single_product extends MY_Controller
 			$sub_product->where('is_active','1');
 			$sub_product->where_in('id',$prod);
 			$sub_product->order_by('RAND()');
-			$sub_product->limit('8');
+			$sub_product->limit('12');
 			$sub_product->get();
 		}
 		/* if there is no related match based on tag */

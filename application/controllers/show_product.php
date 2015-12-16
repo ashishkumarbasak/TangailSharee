@@ -59,7 +59,11 @@ class Show_product extends MY_Controller {
         $pagination=getPaginationData((int)$count, (int)$page, (int)$size);
         $pagination['url']=base_url()."show_product?type=".$types.'&';
         $product->where('is_active','1');
-        $product->where_in('id',$prod)->order_by('order_by','asc')->get_paged($pagination['page'],$pagination['size']);
+	//$random_choice = rand(1,20);
+	//if($random_choice>=10)
+        //	$product->where_in('id',$prod)->order_by('order_by','asc')->get_paged($pagination['page'],$pagination['size']);
+	//else
+        $product->where_in('id',$prod)->order_by('order_by','desc')->get_paged($pagination['page'],$pagination['size']);
         
         $k=0;$products = array();
     	foreach ($product as $p)

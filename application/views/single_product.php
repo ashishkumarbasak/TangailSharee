@@ -991,7 +991,7 @@ function cart_refresh(){
 		if ($p->file->filename)
 		{
       	?>
-    		<div class="single_product-imagebox">
+    		<div class="single_product-imagebox" style="margin-bottom:15px;">
       		<div class="single_product-image"> <a href="<?php echo base_url(); ?>single_product?id=<?php echo $p->id; ?>&type=<?php echo $p->file->join_type; ?>"><img src="<?php echo base_url();?>images/product_image/thumb_image/<?php echo $p->file->filename; ?>" alt="ijmage" /></a>
         		<!-- This contains the hidden content for inline calls -->
        			<!-- <div style='display:none' class="login_page">
@@ -1070,7 +1070,7 @@ function cart_refresh(){
     		</div>
     	<?php 
 		} else { ?>
-    		<div class="single_product-imagebox">
+    		<div class="single_product-imagebox" style="margin-bottom:15px;">
       		<div class="single_product-image"> <a href="<?php echo base_url(); ?>single_product?id=<?php echo $p->id; ?>"><img src="<?php echo base_url();?>images/145X168.jpg" alt="ijmage" /></a></div>
       		<?php if($p->original_value > 0){ ?>
         		<div class="price2_box">
@@ -1117,7 +1117,7 @@ function cart_refresh(){
 			}
         
 		$i++;
-		if($i==6) break; 
+		if($i==12) break; 
 		}
 	} 
 		
